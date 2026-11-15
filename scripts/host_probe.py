@@ -27,6 +27,10 @@ import requests
 load_dotenv()
 SOURCE = 'https://www.infosys.com/investors/reports-filings/quarterly-results/2025-2026/q4/documents/transcripts/earningscall.pdf'
 SOURCES = {'small': SOURCE, 'large': 'https://www.infosys.com/investors/reports-filings/annual-report/annual/documents/infosys-ar-26.pdf'}
+SOURCES.update({
+    'small-exchange': 'https://nsearchives.nseindia.in/corporate/Infosys_28102026173824_SE_filing_Earnings_call_transcript.pdf',
+    'large-exchange': 'https://nsearchives.nseindia.in/corporate/Infosys_23102026160704_BM_Outcome_Oct232026_1.pdf',
+})
 REQUIRED = ['DATABASE_URL', 'AWS_ENDPOINT_URL_S3', 'AWS_REGION', 'AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY', 'DOCUMENT_BUCKET', 'PROBE_TOKEN']
 BOOT = str(uuid.uuid4())
 MAX_BYTES = 50 * 1024 * 1024

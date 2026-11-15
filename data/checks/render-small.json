@@ -57,6 +57,18 @@
         "seconds": 0.023
       },
       "elapsed_seconds": 0.406
+    },
+    {
+      "action": "step",
+      "at_utc": "2026-11-15T14:38:27.327799+00:00",
+      "http_status": 503,
+      "response": {
+        "error_type": "HTTPError",
+        "source_http_status": 403,
+        "source_host": "www.infosys.com",
+        "boot_id": "5866ac7b-b06b-4cf2-93a7-e038123927f5"
+      },
+      "elapsed_seconds": 1.171
     }
   ]
 }

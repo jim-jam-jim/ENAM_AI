@@ -65,6 +65,7 @@ python scripts/probe_client.py verify --job-id YOUR-LOCALLY-GENERATED-UUID
 The client is a diagnostic operator tool, not a dependency of the future deployed app. No credentials are accepted on its command line.
 
 ## Current account observations and extended probe
+Render now verifies database access, but direct Infosys transcript and annual-report URLs return HTTP 403. New `small-exchange` and `large-exchange` presets use actual NSE-feed transcript/results URLs. Use separate new job IDs for these; the large exchange file is a 195-page/26.7 MB results bundle, not the annual report. Its success would not prove annual-report ingestion. Original company-site failure remains a source coverage limitation.
 User confirmed Neon Singapore, Object Storage tab, private finn-sources bucket. Local SELECT 1/client TLS and HeadBucket passed. No hosted tests have run.
 
 Small local-to-Neon probe also passed: hash round trip, persisted 22 extracted pages and job state across fresh processes, completed retry with 22 unique pages and unchanged update timestamp. This does not establish forced interruption recovery or Render restart behaviour. Record: data/checks/local-neon-job-small.json.

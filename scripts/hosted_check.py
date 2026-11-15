@@ -13,7 +13,7 @@ load_dotenv()
 BASE='https://finn-source-probe-tkef.onrender.com'
 parser=argparse.ArgumentParser()
 parser.add_argument('action',choices=['health','step','verify','unauthorised'])
-parser.add_argument('--source',choices=['small','large'],default='small')
+parser.add_argument('--source',choices=['small','large','small-exchange','large-exchange'],default='small')
 parser.add_argument('--count',type=int,default=1)
 args=parser.parse_args()
 path=Path('data/checks/render-'+args.source+'.json')
