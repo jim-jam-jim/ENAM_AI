@@ -1,0 +1,34 @@
+{
+  "checked_on": "2026-11-15",
+  "method": "Read passages extracted by Render and persisted in Neon; no local PDF upload used.",
+  "sources": [
+    {
+      "preset": "small-exchange",
+      "company": "Infosys Limited",
+      "type": "Combined media conference and earnings-call transcripts",
+      "period": "Q2 FY2027",
+      "call_date": "2026-10-23",
+      "filing_date": "2026-10-28",
+      "identity_pages": [1, 2, 25],
+      "period_evidence": "PDF page 25 opens with Infosys Limited Q2 FY27 Earnings Conference Call; page 1 links the 2026-2027/q2 results page.",
+      "bytes": 3742339,
+      "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+      "url": "https://nsearchives.nseindia.in/corporate/Infosys_28102026173824_SE_filing_Earnings_call_transcript.pdf",
+      "limitation": "Different period from the blocked Q4 FY2026 company-site transcript; includes media conference pages, not solely an earnings call. Page 2 has an obsolete 2025 copyright footer."
+    },
+    {
+      "preset": "large-exchange",
+      "company": "Infosys Limited",
+      "type": "Board outcome and financial-results bundle, not annual report",
+      "period": "Quarter and half year ended 2026-09-30 (Q2 FY2027)",
+      "filing_date": "2026-10-23",
+      "identity_pages": [1, 2],
+      "period_evidence": "Page 1 identifies quarter and half year ended September 30, 2026; page 2 signs For Infosys Limited and describes enclosed results and annexures.",
+      "reporting_basis": "Bundle includes consolidated and standalone Ind AS plus IFRS; identify basis per metric.",
+      "bytes": 26721438,
+      "sha256": "65e459d2b8bc4ed1e754d15250e209f68db29d06e0b98593c7a023d29b6ef151",
+      "url": "https://nsearchives.nseindia.in/corporate/Infosys_23102026160704_BM_Outcome_Oct232026_1.pdf",
+      "limitation": "Does not replace or verify ingestion of the blocked annual report. Stale hidden Fiscal 2023 header previously checked against rendered Fiscal 2027 factsheet."
+    }
+  ]
+}

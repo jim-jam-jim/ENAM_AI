@@ -28,3 +28,6 @@ Price responses cover 13 August–13 November 2026; this is cached EOD data, not
 
 ## Recommendation
 Start INFY because evidence, dates and comparable cash figures have been inspected, not because of familiarity. DABUR adds a consumer business and different document formatting; HCLTECH adds another available, readable corpus. These three are proposed, not silently fixed portfolio choices. Select the remaining portfolio across sectors/sizes after access checks. Do not imply the four-company spike covers all 15.
+
+## Actual hosted NSE checks
+Render downloaded, stored and extracted both Infosys NSE bundles (48-page Q2 FY2027 media/earnings transcript and 195-page quarter/half-year results to 30 September 2026). Identity checked on transcript pages 1/2/25 and results pages 1/2. Restart/resume and hashes passed; see HOSTED_CHECKS.md. Infosys-hosted original transcript and annual report returned HTTP 403. These alternative documents do not prove annual-report ingestion or same-period replacement.

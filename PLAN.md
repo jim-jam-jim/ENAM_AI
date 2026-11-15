@@ -1,13 +1,15 @@
 # Plan and progress
 
 ## Current milestone: first evidence workflow and hosted feasibility
+
+Latest status (supersedes pending entries below): NSE documents have passed hosted download, object round trip and restart persistence. See docs/HOSTED_CHECKS.md and data/checks/render-*-exchange.json. Full application deployment, cold-start testing and forced in-flight interruption remain pending.
 Approved scope is in PRD.md. First read-only Next.js/FastAPI workflow is implemented; validation is in progress. No deadline schedule is assumed.
 
 Completed:
 - Read both challenge PDFs fully in initial planning; inspected local workspace and empty remote repository; connected origin without overwriting or publishing.
 - Created project rules and approved product documentation.
 - Local public-source probe: prices for INFY/DABUR/HCLTECH/CERA; readable annual reports/transcripts; NSE feeds; downloaded exchange attachments. See data/checks and docs/DATA_ACCESS.md.
-- Checked official free-tier hosting/storage documentation; Neon is user-selected for PostgreSQL. Host and object-storage verification remain pending.
+- Checked official free-tier hosting/storage documentation; Neon is user-selected for PostgreSQL. Bounded hosted object-storage verification has now passed; see latest status.
 - Prepared render.yaml, Dockerfile.probe, .env.example, a protected two-stage diagnostic and private-credential client. Docker is not installed in the inspected environment, so image build remains unverified.
 - Built one labelled briefing review with manually verified Infosys figures and code-calculated FCF change. Browser checked at 390x844 and 320x740: no horizontal overflow; window filter and expandable evidence/routine sections work. Screenshot: preview/mobile-briefing.jpg.
 - Four diagnostic HTTP boundary tests passed outside the sandbox; sandbox loopback restrictions initially caused failures. pypdf read all 22 pages of the chosen transcript. Python compile checks passed. These are not cloud integration tests.
@@ -23,7 +25,7 @@ Awaiting review/setup:
 4. **Submission preparation:** mobile browser tests; calculations, citations, duplicates, missing documents and restart checks; working link, repository, original history links/exports and honest covering note. No email sending.
 
 ## Blockers/open decisions
-- Neon Singapore and Object Storage tab confirmed by user; private finn-sources bucket exists. Database and storage credentials configured privately and tested locally. Render account/hosted probe PENDING.
+- Neon Singapore and Object Storage tab confirmed by user; private finn-sources bucket exists. Database and storage credentials configured privately and tested locally. Render diagnostic is deployed and NSE ingestion/restart checks have run.
 - Approved backend: static Next.js export served by FastAPI; one Python application API.
 - Runtime API provider and key unavailable; no working AI research claim.
 - Exact cutoff and time available unknown; any scope reduction requires user choice.
@@ -43,3 +45,6 @@ At each milestone: report working behaviour, checks actually run, incomplete wor
 - Commit 01b7362 saved after audit. Normal GitHub push rejected with 403: local Git credential authenticates as wonx2983, lacking permission to jim-jam-jim/ENAM_AI. Await user repository authentication/access fix; do not replace global credentials or force-push.
 - Resolved: user confirmed repository access fixed; repeated audit passed, and normal push of main through e046663 succeeded. Remote tracking is configured. Next: Render Free diagnostic setup; all Render-origin checks still pending.
 - Small local-to-Neon diagnostic passed: original PDF uploaded/retrieved with same SHA-256, 22 extracted pages/checkpoint survived fresh processes, completed retry retained 22 unique pages and unchanged updated_at. Evidence: data/checks/local-neon-job-small.json. This is not Render restart/forced interruption or large-document verification.
+
+## Hosted milestone result
+NSE transcript (48 pages) and results bundle (195 pages) passed Render download, object hash verification and extraction. Restart preserved the completed transcript and the 20-page results checkpoint; resume completed 195 unique pages. Completed retry was unchanged. Active large-document processing 124.958 s; observed peak RSS 170.03 MiB against 512 MiB. Next: integrate the verified source path into the first application workflow; test cold start and forced in-flight recovery. Annual-report source access, runtime provider and unattended refresh remain unresolved. See docs/HOSTED_CHECKS.md.

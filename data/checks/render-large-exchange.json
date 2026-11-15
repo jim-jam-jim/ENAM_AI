@@ -1,0 +1,318 @@
+{
+  "origin": "https://finn-source-probe-tkef.onrender.com",
+  "job_id": "54ee3a54-ff5c-4206-b1d1-77066dd28ab2",
+  "results": [
+    {
+      "action": "step",
+      "at_utc": "2026-11-15T14:42:27.849390+00:00",
+      "http_status": 200,
+      "response": {
+        "job_id": "54ee3a54-ff5c-4206-b1d1-77066dd28ab2",
+        "phase": "stored",
+        "boot_id": "94d5cefc-79ef-4ebb-83d0-9b40d4b08a53",
+        "page_count": null,
+        "completed_pages": null,
+        "sha256": "65e459d2b8bc4ed1e754d15250e209f68db29d06e0b98593c7a023d29b6ef151",
+        "memory": {
+          "process_peak_rss_kib": 135016,
+          "cgroup_peak_bytes": "124882944",
+          "cgroup_limit_bytes": "536870912"
+        },
+        "seconds": 2.528
+      },
+      "elapsed_seconds": 2.844
+    },
+    {
+      "action": "step",
+      "at_utc": "2026-11-15T14:42:49.983016+00:00",
+      "http_status": 200,
+      "response": {
+        "job_id": "54ee3a54-ff5c-4206-b1d1-77066dd28ab2",
+        "phase": "extracting",
+        "boot_id": "94d5cefc-79ef-4ebb-83d0-9b40d4b08a53",
+        "page_count": 195,
+        "completed_pages": 20,
+        "sha256": "65e459d2b8bc4ed1e754d15250e209f68db29d06e0b98593c7a023d29b6ef151",
+        "memory": {
+          "process_peak_rss_kib": 174108,
+          "cgroup_peak_bytes": "164069376",
+          "cgroup_limit_bytes": "536870912"
+        },
+        "seconds": 10.811
+      },
+      "elapsed_seconds": 10.984
+    },
+    {
+      "action": "verify",
+      "at_utc": "2026-11-15T14:43:01.759895+00:00",
+      "http_status": 200,
+      "response": {
+        "job_id": "54ee3a54-ff5c-4206-b1d1-77066dd28ab2",
+        "phase": "extracting",
+        "boot_id": "94d5cefc-79ef-4ebb-83d0-9b40d4b08a53",
+        "object_hash_matches": true,
+        "page_count": 195,
+        "passages_present": true,
+        "completed_pages": 20,
+        "unique_pages": 20,
+        "updated_at": "2026-11-15T14:43:00.958167+00:00",
+        "seconds": 0.749
+      },
+      "elapsed_seconds": 1.0
+    },
+    {
+      "action": "verify",
+      "at_utc": "2026-11-15T14:45:10.146296+00:00",
+      "http_status": 200,
+      "response": {
+        "job_id": "54ee3a54-ff5c-4206-b1d1-77066dd28ab2",
+        "phase": "extracting",
+        "boot_id": "6c662e1b-0abc-4919-a569-d1174044b16b",
+        "object_hash_matches": true,
+        "page_count": 195,
+        "passages_present": true,
+        "completed_pages": 20,
+        "unique_pages": 20,
+        "updated_at": "2026-11-15T14:43:00.958167+00:00",
+        "seconds": 1.073
+      },
+      "elapsed_seconds": 1.359
+    },
+    {
+      "action": "step",
+      "at_utc": "2026-11-15T14:45:23.449097+00:00",
+      "http_status": 200,
+      "response": {
+        "job_id": "54ee3a54-ff5c-4206-b1d1-77066dd28ab2",
+        "phase": "extracting",
+        "boot_id": "6c662e1b-0abc-4919-a569-d1174044b16b",
+        "page_count": 195,
+        "completed_pages": 40,
+        "sha256": "65e459d2b8bc4ed1e754d15250e209f68db29d06e0b98593c7a023d29b6ef151",
+        "memory": {
+          "process_peak_rss_kib": 135508,
+          "cgroup_peak_bytes": "131219456",
+          "cgroup_limit_bytes": "536870912"
+        },
+        "seconds": 11.409
+      },
+      "elapsed_seconds": 11.781
+    },
+    {
+      "action": "step",
+      "at_utc": "2026-11-15T14:45:35.227570+00:00",
+      "http_status": 200,
+      "response": {
+        "job_id": "54ee3a54-ff5c-4206-b1d1-77066dd28ab2",
+        "phase": "extracting",
+        "boot_id": "6c662e1b-0abc-4919-a569-d1174044b16b",
+        "page_count": 195,
+        "completed_pages": 60,
+        "sha256": "65e459d2b8bc4ed1e754d15250e209f68db29d06e0b98593c7a023d29b6ef151",
+        "memory": {
+          "process_peak_rss_kib": 162724,
+          "cgroup_peak_bytes": "159657984",
+          "cgroup_limit_bytes": "536870912"
+        },
+        "seconds": 13.315
+      },
+      "elapsed_seconds": 13.469
+    },
+    {
+      "action": "step",
+      "at_utc": "2026-11-15T14:45:48.700847+00:00",
+      "http_status": 200,
+      "response": {
+        "job_id": "54ee3a54-ff5c-4206-b1d1-77066dd28ab2",
+        "phase": "extracting",
+        "boot_id": "6c662e1b-0abc-4919-a569-d1174044b16b",
+        "page_count": 195,
+        "completed_pages": 80,
+        "sha256": "65e459d2b8bc4ed1e754d15250e209f68db29d06e0b98593c7a023d29b6ef151",
+        "memory": {
+          "process_peak_rss_kib": 168344,
+          "cgroup_peak_bytes": "165154816",
+          "cgroup_limit_bytes": "536870912"
+        },
+        "seconds": 12.358
+      },
+      "elapsed_seconds": 12.5
+    },
+    {
+      "action": "step",
+      "at_utc": "2026-11-15T14:46:16.484770+00:00",
+      "http_status": 200,
+      "response": {
+        "job_id": "54ee3a54-ff5c-4206-b1d1-77066dd28ab2",
+        "phase": "extracting",
+        "boot_id": "6c662e1b-0abc-4919-a569-d1174044b16b",
+        "page_count": 195,
+        "completed_pages": 100,
+        "sha256": "65e459d2b8bc4ed1e754d15250e209f68db29d06e0b98593c7a023d29b6ef151",
+        "memory": {
+          "process_peak_rss_kib": 171544,
+          "cgroup_peak_bytes": "168648704",
+          "cgroup_limit_bytes": "536870912"
+        },
+        "seconds": 12.018
+      },
+      "elapsed_seconds": 12.156
+    },
+    {
+      "action": "step",
+      "at_utc": "2026-11-15T14:46:28.635665+00:00",
+      "http_status": 200,
+      "response": {
+        "job_id": "54ee3a54-ff5c-4206-b1d1-77066dd28ab2",
+        "phase": "extracting",
+        "boot_id": "6c662e1b-0abc-4919-a569-d1174044b16b",
+        "page_count": 195,
+        "completed_pages": 120,
+        "sha256": "65e459d2b8bc4ed1e754d15250e209f68db29d06e0b98593c7a023d29b6ef151",
+        "memory": {
+          "process_peak_rss_kib": 171544,
+          "cgroup_peak_bytes": "172019712",
+          "cgroup_limit_bytes": "536870912"
+        },
+        "seconds": 13.94
+      },
+      "elapsed_seconds": 14.063
+    },
+    {
+      "action": "step",
+      "at_utc": "2026-11-15T14:46:42.703589+00:00",
+      "http_status": 200,
+      "response": {
+        "job_id": "54ee3a54-ff5c-4206-b1d1-77066dd28ab2",
+        "phase": "extracting",
+        "boot_id": "6c662e1b-0abc-4919-a569-d1174044b16b",
+        "page_count": 195,
+        "completed_pages": 140,
+        "sha256": "65e459d2b8bc4ed1e754d15250e209f68db29d06e0b98593c7a023d29b6ef151",
+        "memory": {
+          "process_peak_rss_kib": 171544,
+          "cgroup_peak_bytes": "172019712",
+          "cgroup_limit_bytes": "536870912"
+        },
+        "seconds": 11.07
+      },
+      "elapsed_seconds": 11.406
+    },
+    {
+      "action": "step",
+      "at_utc": "2026-11-15T14:47:23.769943+00:00",
+      "http_status": 200,
+      "response": {
+        "job_id": "54ee3a54-ff5c-4206-b1d1-77066dd28ab2",
+        "phase": "extracting",
+        "boot_id": "6c662e1b-0abc-4919-a569-d1174044b16b",
+        "page_count": 195,
+        "completed_pages": 160,
+        "sha256": "65e459d2b8bc4ed1e754d15250e209f68db29d06e0b98593c7a023d29b6ef151",
+        "memory": {
+          "process_peak_rss_kib": 171544,
+          "cgroup_peak_bytes": "172019712",
+          "cgroup_limit_bytes": "536870912"
+        },
+        "seconds": 12.578
+      },
+      "elapsed_seconds": 12.937
+    },
+    {
+      "action": "step",
+      "at_utc": "2026-11-15T14:47:36.708898+00:00",
+      "http_status": 200,
+      "response": {
+        "job_id": "54ee3a54-ff5c-4206-b1d1-77066dd28ab2",
+        "phase": "extracting",
+        "boot_id": "6c662e1b-0abc-4919-a569-d1174044b16b",
+        "page_count": 195,
+        "completed_pages": 180,
+        "sha256": "65e459d2b8bc4ed1e754d15250e209f68db29d06e0b98593c7a023d29b6ef151",
+        "memory": {
+          "process_peak_rss_kib": 171544,
+          "cgroup_peak_bytes": "172019712",
+          "cgroup_limit_bytes": "536870912"
+        },
+        "seconds": 14.046
+      },
+      "elapsed_seconds": 14.297
+    },
+    {
+      "action": "step",
+      "at_utc": "2026-11-15T14:47:51.015034+00:00",
+      "http_status": 200,
+      "response": {
+        "job_id": "54ee3a54-ff5c-4206-b1d1-77066dd28ab2",
+        "phase": "complete",
+        "boot_id": "6c662e1b-0abc-4919-a569-d1174044b16b",
+        "page_count": 195,
+        "completed_pages": 195,
+        "sha256": "65e459d2b8bc4ed1e754d15250e209f68db29d06e0b98593c7a023d29b6ef151",
+        "memory": {
+          "process_peak_rss_kib": 171544,
+          "cgroup_peak_bytes": "172019712",
+          "cgroup_limit_bytes": "536870912"
+        },
+        "seconds": 10.885
+      },
+      "elapsed_seconds": 11.219
+    },
+    {
+      "action": "verify",
+      "at_utc": "2026-11-15T14:48:13.700272+00:00",
+      "http_status": 200,
+      "response": {
+        "job_id": "54ee3a54-ff5c-4206-b1d1-77066dd28ab2",
+        "phase": "complete",
+        "boot_id": "6c662e1b-0abc-4919-a569-d1174044b16b",
+        "object_hash_matches": true,
+        "page_count": 195,
+        "passages_present": true,
+        "completed_pages": 195,
+        "unique_pages": 195,
+        "updated_at": "2026-11-15T14:48:02.197568+00:00",
+        "seconds": 0.701
+      },
+      "elapsed_seconds": 0.906
+    },
+    {
+      "action": "step",
+      "at_utc": "2026-11-15T14:48:15.245757+00:00",
+      "http_status": 200,
+      "response": {
+        "job_id": "54ee3a54-ff5c-4206-b1d1-77066dd28ab2",
+        "phase": "complete",
+        "boot_id": "6c662e1b-0abc-4919-a569-d1174044b16b",
+        "page_count": 195,
+        "completed_pages": 195,
+        "sha256": "65e459d2b8bc4ed1e754d15250e209f68db29d06e0b98593c7a023d29b6ef151",
+        "memory": {
+          "process_peak_rss_kib": 171544,
+          "cgroup_peak_bytes": "172019712",
+          "cgroup_limit_bytes": "536870912"
+        },
+        "seconds": 0.095
+      },
+      "elapsed_seconds": 0.25
+    },
+    {
+      "action": "verify",
+      "at_utc": "2026-11-15T14:48:16.140642+00:00",
+      "http_status": 200,
+      "response": {
+        "job_id": "54ee3a54-ff5c-4206-b1d1-77066dd28ab2",
+        "phase": "complete",
+        "boot_id": "6c662e1b-0abc-4919-a569-d1174044b16b",
+        "object_hash_matches": true,
+        "page_count": 195,
+        "passages_present": true,
+        "completed_pages": 195,
+        "unique_pages": 195,
+        "updated_at": "2026-11-15T14:48:02.197568+00:00",
+        "seconds": 0.594
+      },
+      "elapsed_seconds": 0.969
+    }
+  ]
+}

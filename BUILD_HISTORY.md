@@ -35,3 +35,8 @@ This file supplements the original conversations; it is not their replacement. N
 - Current chat: original conversation exists in Codex; export/share location not yet available.
 - Earlier planning chat: user says it exists; link/export not supplied.
 - Repository: https://github.com/jim-jam-jim/ENAM_AI (local changes not yet pushed).
+
+## Hosted NSE run and restart — 15 November 2026
+- Both NSE PDFs downloaded on Render and passed Neon object hash checks. User manually restarted the service: completed 48-page transcript persisted; results bundle resumed from 20 to 195 unique pages. Completed retry retained timestamp. Large document active steps totalled 124.958 seconds with observed 170.03 MiB peak RSS; source company/type/period verified from persisted passages. Raw responses and identity checks retained.
+- Read-only identity inspection initially hit python-dotenv stdin discovery AssertionError; explicit .env path fixed it without logging credentials. Documentation update hit Windows default encoding failure; UTF-8 read/write fixed it.
+- No forced in-flight kill, cold-start or annual-report success claimed. Original Infosys HTTP 403 remains recorded. Original chat remains the development-history source, with export/link still pending.

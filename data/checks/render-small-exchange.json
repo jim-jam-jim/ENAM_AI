@@ -1,0 +1,140 @@
+{
+  "origin": "https://finn-source-probe-tkef.onrender.com",
+  "job_id": "c3a74628-02ec-4597-8dba-15f9484a0b55",
+  "results": [
+    {
+      "action": "step",
+      "at_utc": "2026-11-15T14:42:24.034111+00:00",
+      "http_status": 200,
+      "response": {
+        "job_id": "c3a74628-02ec-4597-8dba-15f9484a0b55",
+        "phase": "stored",
+        "boot_id": "94d5cefc-79ef-4ebb-83d0-9b40d4b08a53",
+        "page_count": null,
+        "completed_pages": null,
+        "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+        "memory": {
+          "process_peak_rss_kib": 89520,
+          "cgroup_peak_bytes": "79482880",
+          "cgroup_limit_bytes": "536870912"
+        },
+        "seconds": 1.77
+      },
+      "elapsed_seconds": 1.953
+    },
+    {
+      "action": "verify",
+      "at_utc": "2026-11-15T14:42:26.627068+00:00",
+      "http_status": 200,
+      "response": {
+        "job_id": "c3a74628-02ec-4597-8dba-15f9484a0b55",
+        "phase": "stored",
+        "boot_id": "94d5cefc-79ef-4ebb-83d0-9b40d4b08a53",
+        "object_hash_matches": true,
+        "page_count": null,
+        "passages_present": false,
+        "completed_pages": 0,
+        "unique_pages": 0,
+        "updated_at": "2026-11-15T14:42:25.988545+00:00",
+        "seconds": 0.233
+      },
+      "elapsed_seconds": 0.531
+    },
+    {
+      "action": "step",
+      "at_utc": "2026-11-15T14:42:41.423482+00:00",
+      "http_status": 200,
+      "response": {
+        "job_id": "c3a74628-02ec-4597-8dba-15f9484a0b55",
+        "phase": "extracting",
+        "boot_id": "94d5cefc-79ef-4ebb-83d0-9b40d4b08a53",
+        "page_count": 48,
+        "completed_pages": 20,
+        "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+        "memory": {
+          "process_peak_rss_kib": 135016,
+          "cgroup_peak_bytes": "124882944",
+          "cgroup_limit_bytes": "536870912"
+        },
+        "seconds": 2.095
+      },
+      "elapsed_seconds": 2.453
+    },
+    {
+      "action": "step",
+      "at_utc": "2026-11-15T14:42:43.888472+00:00",
+      "http_status": 200,
+      "response": {
+        "job_id": "c3a74628-02ec-4597-8dba-15f9484a0b55",
+        "phase": "extracting",
+        "boot_id": "94d5cefc-79ef-4ebb-83d0-9b40d4b08a53",
+        "page_count": 48,
+        "completed_pages": 40,
+        "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+        "memory": {
+          "process_peak_rss_kib": 135016,
+          "cgroup_peak_bytes": "124882944",
+          "cgroup_limit_bytes": "536870912"
+        },
+        "seconds": 2.552
+      },
+      "elapsed_seconds": 2.688
+    },
+    {
+      "action": "step",
+      "at_utc": "2026-11-15T14:42:46.574364+00:00",
+      "http_status": 200,
+      "response": {
+        "job_id": "c3a74628-02ec-4597-8dba-15f9484a0b55",
+        "phase": "complete",
+        "boot_id": "94d5cefc-79ef-4ebb-83d0-9b40d4b08a53",
+        "page_count": 48,
+        "completed_pages": 48,
+        "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+        "memory": {
+          "process_peak_rss_kib": 135016,
+          "cgroup_peak_bytes": "124882944",
+          "cgroup_limit_bytes": "536870912"
+        },
+        "seconds": 1.233
+      },
+      "elapsed_seconds": 1.593
+    },
+    {
+      "action": "verify",
+      "at_utc": "2026-11-15T14:42:48.787345+00:00",
+      "http_status": 200,
+      "response": {
+        "job_id": "c3a74628-02ec-4597-8dba-15f9484a0b55",
+        "phase": "complete",
+        "boot_id": "94d5cefc-79ef-4ebb-83d0-9b40d4b08a53",
+        "object_hash_matches": true,
+        "page_count": 48,
+        "passages_present": true,
+        "completed_pages": 48,
+        "unique_pages": 48,
+        "updated_at": "2026-11-15T14:42:48.152986+00:00",
+        "seconds": 0.222
+      },
+      "elapsed_seconds": 0.375
+    },
+    {
+      "action": "verify",
+      "at_utc": "2026-11-15T14:45:08.151961+00:00",
+      "http_status": 200,
+      "response": {
+        "job_id": "c3a74628-02ec-4597-8dba-15f9484a0b55",
+        "phase": "complete",
+        "boot_id": "6c662e1b-0abc-4919-a569-d1174044b16b",
+        "object_hash_matches": true,
+        "page_count": 48,
+        "passages_present": true,
+        "completed_pages": 48,
+        "unique_pages": 48,
+        "updated_at": "2026-11-15T14:42:48.152986+00:00",
+        "seconds": 1.13
+      },
+      "elapsed_seconds": 1.343
+    }
+  ]
+}

@@ -1,6 +1,6 @@
-# Deployment feasibility — pending actual hosted run
+# Deployment feasibility — bounded hosted diagnostic verified
 
-Neon PostgreSQL is user-selected. Render is the accepted initial candidate. Render deployment is pending. Neon credentials, database TLS and a small-document storage round trip have been verified locally, not from Render. No paid dependency authorised.
+Neon PostgreSQL is user-selected. Render is the accepted initial candidate. The diagnostic is deployed on Render. NSE downloads, object round trips and checkpoint persistence across restart passed; see HOSTED_CHECKS.md for measurements. The full application is not deployed. No paid dependency authorised.
 
 ## Backend comparison — static Next.js + FastAPI approved
 | Option | Benefit | Cost/risk |
@@ -24,7 +24,7 @@ On a sleeping free service, progress can pause. Say “Paused; resumes when serv
 - Neon Free: 1 GB PostgreSQL/project, 100 CU-hours/project/month, 5 GB object storage/project and 5 GB public transfer/project/month shared across products. Database scales to zero after five idle minutes. Keep connections brief and retry transient wake failures with a bounded delay.
 - Neon Object Storage: generally available, including Free. Supported regions currently Ohio, N. Virginia, Frankfurt and Singapore. Choose Singapore for both candidates if available. Existing Neon projects in unsupported regions need a supported-region project; do not assume the user's current project qualifies.
 - Storage supports Put/Get/Head and signed URLs; S3 lifecycle/versioning rules are not fully enforced. Use immutable content-hash keys and application-controlled retention. No full PDFs in database rows. Keep source copies private.
-- Initial application budgets proposed: one active document job; 50 MB source limit with explicit oversized-document state; cached originals and extracted passages; avoid fetching all portfolio annual reports on every refresh. Real peak memory and duration remain unmeasured on Render.
+- Initial application budgets proposed: one active document job; 50 MB source limit with explicit oversized-document state; cached originals and extracted passages; avoid fetching all portfolio annual reports on every refresh. Measured diagnostic memory and duration are in HOSTED_CHECKS.md; these are not universal document bounds.
 
 Sources: [Render free](https://render.com/docs/free), [compute](https://render.com/docs/compute-plans), [request duration](https://render.com/docs/render-vs-vercel-comparison), [Neon pricing](https://neon.com/pricing), [storage limits](https://neon.com/docs/storage/overview), [S3 compatibility](https://neon.com/docs/storage/s3-compatibility).
 
@@ -48,7 +48,7 @@ Diagnostic resources use `finn_probe_jobs` table and `probe/` object prefix. The
 6. Let service and database sleep normally. Measure first request and show a waking state in the later UI. Deliberately time out the client mid-stage, then query the same ID; retry the last checkpoint rather than create a new job. The diagnostic is serial and checkpointed; application leases/cancellation remain to implement.
 7. Repeat representative prices/feed/large-PDF checks from Render in the next extension; the small transcript alone does not establish all-source or memory coverage. Record actual memory, duration, cold start and quota usage before accepting deployment.
 
-All seven acceptance items remain PENDING until run. No model or account setup is inferred from coding-agent access. The initial diagnostic has no scheduler, multi-user authentication or full research pipeline.
+This is the original acceptance procedure; completed checks and remaining gaps are recorded in HOSTED_CHECKS.md. No model or account setup is inferred from coding-agent access. The initial diagnostic has no scheduler, multi-user authentication or full research pipeline.
 
 Local verification completed: Python compilation; four HTTP boundary tests (health accuracy, rejected missing token, missing config names without secret values, malformed UUID before DB access); pypdf extraction of all 22 transcript pages. Docker executable was unavailable, so no image build is claimed. Local tests initially failed under sandbox socket restrictions and passed after approved rerun outside the sandbox.
 
@@ -66,7 +66,7 @@ The client is a diagnostic operator tool, not a dependency of the future deploye
 
 ## Current account observations and extended probe
 Render now verifies database access, but direct Infosys transcript and annual-report URLs return HTTP 403. New `small-exchange` and `large-exchange` presets use actual NSE-feed transcript/results URLs. Use separate new job IDs for these; the large exchange file is a 195-page/26.7 MB results bundle, not the annual report. Its success would not prove annual-report ingestion. Original company-site failure remains a source coverage limitation.
-User confirmed Neon Singapore, Object Storage tab, private finn-sources bucket. Local SELECT 1/client TLS and HeadBucket passed. No hosted tests have run.
+User confirmed Neon Singapore, Object Storage tab, private finn-sources bucket. Local SELECT 1/client TLS and HeadBucket passed. Hosted NSE checks have now run; see HOSTED_CHECKS.md.
 
 Small local-to-Neon probe also passed: hash round trip, persisted 22 extracted pages and job state across fresh processes, completed retry with 22 unique pages and unchanged update timestamp. This does not establish forced interruption recovery or Render restart behaviour. Record: data/checks/local-neon-job-small.json.
 

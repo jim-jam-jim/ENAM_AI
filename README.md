@@ -26,10 +26,10 @@ python -X utf8 scripts/probe_sources.py --manifest data/discovered_candidates.js
 The discovery script currently targets the recorded first successful download directory; it is a reproducible investigation helper, not a generic ticker engine. The checked-in discovered manifest can be fetched independently. No API key is needed for these local public-source checks. Network restrictions may require approval outside the execution sandbox.
 
 ## Deployment and secrets
-Neon PostgreSQL is selected; Render application hosting and Neon Object Storage are candidates pending hosted verification. See docs/DEPLOYMENT.md and .env.example for setup. Do not store secrets in Git or chat. Do not store full PDF bytes in PostgreSQL. No runtime model provider is selected or required for the source check.
+Neon PostgreSQL is selected; Render and Neon Object Storage have passed the bounded NSE PDF diagnostic; full application deployment remains pending. See docs/DEPLOYMENT.md and .env.example for setup. Do not store secrets in Git or chat. Do not store full PDF bytes in PostgreSQL. No runtime model provider is selected or required for the source check.
 
 ## Verification and limitations
-Successful download/text extraction does not prove numeric table correctness, automatic discovery coverage, production reliability or deployment success. Prepared URLs and date windows are explicit in data manifests. Full PDF text can contain stale hidden headers; use rendered checks for selected evidence. Source access has been tested locally only. No hosted persistence/restart/cold-start test, production research, continuous refresh or 15-company portfolio is complete yet.
+Successful download/text extraction does not prove numeric table correctness, automatic discovery coverage, production reliability or deployment success. Prepared URLs and date windows are explicit in data manifests. Full PDF text can contain stale hidden headers; use rendered checks for selected evidence. NSE PDF downloads, object hash round trips and checkpoint persistence across a Render restart have passed. See docs/HOSTED_CHECKS.md for measurements and limits. Cold-start testing, production research, continuous refresh and the 15-company portfolio remain incomplete.
 
 ## Visual review and diagnostic checks
 ```powershell
@@ -43,7 +43,7 @@ python -m pip install -r requirements-probe.txt
 python -m unittest discover -s tests -v
 python scripts/host_probe.py
 ```
-The standard-library diagnostic listens on PORT (default 10000); set .env before cloud integration checks. Its Docker/Render configuration is prepared but not deployed. requirements-probe.txt uses bounded version ranges; a deployment lock and Docker build remain pending.
+The standard-library diagnostic listens on PORT (default 10000); set .env before cloud integration checks. Its diagnostic Docker image is deployed on Render; it does not yet serve the application. requirements-probe.txt uses bounded version ranges; a deployment lock and Docker build remain pending.
 
 After setting PROBE_BASE_URL and PROBE_TOKEN privately, use `python scripts/probe_client.py health`, then `python scripts/probe_client.py step --job-id UUID` and `python scripts/probe_client.py verify --job-id UUID` with the same locally generated UUID. See docs/DEPLOYMENT.md for restart sequence.
 

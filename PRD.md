@@ -36,4 +36,4 @@ Three main views only. Professional light/neutral starting palette with one mute
 ## Exclusions and open questions
 No trading, voice, external notifications, elaborate authentication, biographies, portfolio optimisation, exhaustive financial dashboards, comprehensive guidance audits, multi-question monitoring or separate vector database.
 
-Open: Render deployment verification; Neon Object Storage availability in selected project/region; runtime model provider; refresh execution while free host sleeps; final alert baseline; exact deadline/time available. Neon PostgreSQL is selected by the user. Do not reduce the agreed coverage targets silently.
+Open: full application deployment and cold-start verification; runtime model provider; refresh execution while free host sleeps; final alert baseline; exact deadline/time available. Neon PostgreSQL is selected by the user. Do not reduce the agreed coverage targets silently.
