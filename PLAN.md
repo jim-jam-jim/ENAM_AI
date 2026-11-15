@@ -23,7 +23,7 @@ Awaiting review/setup:
 4. **Submission preparation:** mobile browser tests; calculations, citations, duplicates, missing documents and restart checks; working link, repository, original history links/exports and honest covering note. No email sending.
 
 ## Blockers/open decisions
-- Neon Singapore and Object Storage tab confirmed by user; private finn-sources bucket exists. DATABASE_URL setup pending. Render account/hosted probe PENDING.
+- Neon Singapore and Object Storage tab confirmed by user; private finn-sources bucket exists. Database and storage credentials configured privately and tested locally. Render account/hosted probe PENDING.
 - Approved backend: static Next.js export served by FastAPI; one Python application API.
 - Runtime API provider and key unavailable; no working AI research claim.
 - Exact cutoff and time available unknown; any scope reduction requires user choice.
@@ -36,3 +36,6 @@ At each milestone: report working behaviour, checks actually run, incomplete wor
 - New application browser check unavailable in this chat. Prior design-preview screenshot/checks are separate; no new mobile visual verification claimed.
 - Neon SELECT 1 and actual client TLS passed locally; HeadBucket passed. Credentials are in ignored .env. These are not hosted checks.
 - Large-document probe extended with per-page checkpoints and Linux memory counters. Hosted upload/hash/restart/interruption/large-document checks all pending. Unattended refresh remains unresolved.
+- Actual local HTTP smoke passed: static home 200, briefing contains two available disclosures, event calculation -8.1%, evidence page 4 includes both source figures, missing evidence returns 404. Browser remains unavailable for the new app.
+- Commit 01b7362 saved after audit. Normal GitHub push rejected with 403: local Git credential authenticates as wonx2983, lacking permission to jim-jam-jim/ENAM_AI. Await user repository authentication/access fix; do not replace global credentials or force-push.
+- Small local-to-Neon diagnostic passed: original PDF uploaded/retrieved with same SHA-256, 22 extracted pages/checkpoint survived fresh processes, completed retry retained 22 unique pages and unchanged updated_at. Evidence: data/checks/local-neon-job-small.json. This is not Render restart/forced interruption or large-document verification.

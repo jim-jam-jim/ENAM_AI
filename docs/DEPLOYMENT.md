@@ -1,6 +1,6 @@
 # Deployment feasibility — pending actual hosted run
 
-Neon PostgreSQL is user-selected. Render is the accepted initial candidate. No Render account, credentials, deployment, Neon connection or object upload has been verified. No paid dependency authorised.
+Neon PostgreSQL is user-selected. Render is the accepted initial candidate. Render deployment is pending. Neon credentials, database TLS and a small-document storage round trip have been verified locally, not from Render. No paid dependency authorised.
 
 ## Backend comparison — static Next.js + FastAPI approved
 | Option | Benefit | Cost/risk |
@@ -66,6 +66,8 @@ The client is a diagnostic operator tool, not a dependency of the future deploye
 
 ## Current account observations and extended probe
 User confirmed Neon Singapore, Object Storage tab, private finn-sources bucket. Local SELECT 1/client TLS and HeadBucket passed. No hosted tests have run.
+
+Small local-to-Neon probe also passed: hash round trip, persisted 22 extracted pages and job state across fresh processes, completed retry with 22 unique pages and unchanged update timestamp. This does not establish forced interruption recovery or Render restart behaviour. Record: data/checks/local-neon-job-small.json.
 
 Large probe: start a new UUID with `--source large`, then repeat step using the same ID until complete. It processes at most 20 pages per call and commits each page checkpoint. Response includes completed_pages and Linux peak RSS/cgroup peak/limit where available. This supersedes the earlier two-step extraction description; the small probe can require multiple extraction calls too. The first source URL is fixed for the lifetime of the job ID.
 

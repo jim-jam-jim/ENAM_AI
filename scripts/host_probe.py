@@ -116,15 +116,18 @@ def memory_usage():
 
 def verify(job_id):
     with db() as conn:
-        row = conn.execute('SELECT phase,payload FROM finn_probe_jobs WHERE id=%s', (job_id,)).fetchone()
+        row = conn.execute('SELECT phase,payload,updated_at FROM finn_probe_jobs WHERE id=%s', (job_id,)).fetchone()
     if not row:
         return {'job_id':str(job_id), 'phase':'not_found', 'boot_id':BOOT}
-    phase,payload = row
+    phase,payload,updated_at = row
     matches = None
     if payload.get('object_key'):
         matches = hashlib.sha256(read_object(storage(),payload['object_key'])).hexdigest() == payload['sha256']
     return {'job_id':str(job_id),'phase':phase,'boot_id':BOOT,'object_hash_matches':matches,
-            'page_count':payload.get('page_count'),'passages_present':bool(payload.get('pages'))}
+            'page_count':payload.get('page_count'),'passages_present':bool(payload.get('pages')),
+            'completed_pages':len(payload.get('pages',[])),
+            'unique_pages':len({p['page'] for p in payload.get('pages',[])}),
+            'updated_at':updated_at.isoformat()}
 
 class Handler(BaseHTTPRequestHandler):
     def log_message(self, *args):

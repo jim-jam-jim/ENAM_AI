@@ -18,6 +18,9 @@ This file supplements the original conversations; it is not their replacement. N
 - Saved initial local milestone commit aefdbd7 after sandbox denied Git index writes and approved external execution succeeded. Staged whitespace check found a trailing space in preview CSS; removed it in a follow-up. No GitHub push or deployment performed.
 
 ## Export/link status
+- Small local-to-Neon probe passed through stored -> extracting (20 pages) -> complete (22 pages) across separate Python processes. Retrieved hash matched. Completed retry retained 22 unique pages and unchanged updated_at. Results retained in data/checks/local-neon-job-small.json; no forced-kill/Render/large-document claim.
+- Commit 01b7362 saved; normal push rejected by GitHub (403, authenticated as wonx2983 without repo write permission). Asked user to authenticate correct owner or grant repository access. No force push or global credential changes.
+- Running local static/API HTTP smoke passed (home, briefing, calculated comparison, passage and missing-source response). Browser tool remains unavailable, so no working-app screenshot claimed.
 - Follow-up user approvals: static Next.js + FastAPI, durable checkpoints, neutral direction, INFY first and DABUR/HCLTECH examples, audited non-force push.
 - Implemented local read-only evidence workflow and static export. npm sandbox DNS failed; approved installation succeeded. Eight tests pass. A later Windows connection reset on unauthorized POST was fixed by consuming its bounded body before rejecting it.
 - Secret scanner initially matched its own broad private-key regex; narrowed to actual key headers. Candidate files contain no detected secrets or forbidden PDFs/environment files. Metadata/test records retained.

@@ -1,0 +1,88 @@
+{
+  "job_id": "16204a27-1897-4e44-8811-cdf6ecead5e0",
+  "origin": "local Windows; NOT Render",
+  "results": [
+    {
+      "job_id": "16204a27-1897-4e44-8811-cdf6ecead5e0",
+      "phase": "stored",
+      "boot_id": "7c763bfd-3b0f-48c2-b8ce-fb65e967124e",
+      "page_count": null,
+      "completed_pages": null,
+      "sha256": "94a66c0c1fb837fbf7c90cb3c126c72f1598139f62a278bf875a744f1e158781",
+      "memory": {
+        "measurement": "host measurement unavailable on this OS"
+      }
+    },
+    {
+      "job_id": "16204a27-1897-4e44-8811-cdf6ecead5e0",
+      "phase": "stored",
+      "boot_id": "df3007d7-a7bf-4f72-9917-220e5751fe13",
+      "object_hash_matches": true,
+      "page_count": null,
+      "passages_present": false
+    },
+    {
+      "job_id": "16204a27-1897-4e44-8811-cdf6ecead5e0",
+      "phase": "extracting",
+      "boot_id": "53091bde-b0e0-453d-baf3-736f39d0cf0f",
+      "page_count": 22,
+      "completed_pages": 20,
+      "sha256": "94a66c0c1fb837fbf7c90cb3c126c72f1598139f62a278bf875a744f1e158781",
+      "memory": {
+        "measurement": "host measurement unavailable on this OS"
+      }
+    },
+    {
+      "job_id": "16204a27-1897-4e44-8811-cdf6ecead5e0",
+      "phase": "complete",
+      "boot_id": "a97be861-1be2-45ea-bfc0-48d3bef79f54",
+      "page_count": 22,
+      "completed_pages": 22,
+      "sha256": "94a66c0c1fb837fbf7c90cb3c126c72f1598139f62a278bf875a744f1e158781",
+      "memory": {
+        "measurement": "host measurement unavailable on this OS"
+      }
+    },
+    {
+      "job_id": "16204a27-1897-4e44-8811-cdf6ecead5e0",
+      "phase": "complete",
+      "boot_id": "7cfe1dd4-b8ef-460c-b6dc-301b675fd94d",
+      "object_hash_matches": true,
+      "page_count": 22,
+      "passages_present": true
+    },
+    {
+      "job_id": "16204a27-1897-4e44-8811-cdf6ecead5e0",
+      "phase": "complete",
+      "boot_id": "d65fc506-caf5-47eb-99f9-6cc249ab6fa2",
+      "object_hash_matches": true,
+      "page_count": 22,
+      "passages_present": true,
+      "completed_pages": 22,
+      "unique_pages": 22,
+      "updated_at": "2026-11-15T10:00:56.293587+00:00"
+    },
+    {
+      "job_id": "16204a27-1897-4e44-8811-cdf6ecead5e0",
+      "phase": "complete",
+      "boot_id": "239433aa-c621-4d1e-b438-1fac09d17d50",
+      "page_count": 22,
+      "completed_pages": 22,
+      "sha256": "94a66c0c1fb837fbf7c90cb3c126c72f1598139f62a278bf875a744f1e158781",
+      "memory": {
+        "measurement": "host measurement unavailable on this OS"
+      }
+    },
+    {
+      "job_id": "16204a27-1897-4e44-8811-cdf6ecead5e0",
+      "phase": "complete",
+      "boot_id": "23c24403-1467-4cc6-a119-a5146465477d",
+      "object_hash_matches": true,
+      "page_count": 22,
+      "passages_present": true,
+      "completed_pages": 22,
+      "unique_pages": 22,
+      "updated_at": "2026-11-15T10:00:56.293587+00:00"
+    }
+  ]
+}
