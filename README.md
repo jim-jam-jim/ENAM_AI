@@ -1,6 +1,9 @@
 # FINN
 
-An evidence-first mobile investor briefing, with one saved question per company. The MVP is approved; this repository currently contains feasibility checks and planning documents, not a working investment application.
+An evidence-first mobile investor briefing. The first read-only Infosys briefing/event/evidence workflow uses static Next.js and FastAPI. Research, saved questions and full portfolio coverage remain incomplete.
+
+## Actual local app
+Install requirements.txt, run `npm ci` and `npm run build` inside web, then run `python -m uvicorn server.main:app --host 127.0.0.1 --port 8766` from the project root. Open http://127.0.0.1:8766. All application APIs are Python-owned. data/curated/infy.json contains curated real evidence, not automatic ingestion. The original design-review preview remains separate and labelled.
 
 ## Current contents
 - PRD.md: approved scope/acceptance criteria; PLAN.md: progress and blockers.

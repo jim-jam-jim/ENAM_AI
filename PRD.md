@@ -1,6 +1,6 @@
 # FINN MVP
 
-Status: product direction approved 15 November 2026. Backend and hosting implementation remain proposals. Exact submission cutoff and available work time are unknown.
+Status: product direction approved 15 November 2026. Static Next.js served by FastAPI, one Python API and durable checkpoints are approved; hosting verification remains pending. Exact submission cutoff and available work time are unknown.
 
 ## User, problem and purpose
 An investor following a small portfolio needs to find disclosures worth investigating without reading every filing. FINN provides a prioritised briefing, then lets the investor inspect evidence and save one question per company. Saved questions add context without hiding unrelated material events. Within the first minute the investor should be able to open an important event and its source.
@@ -31,9 +31,9 @@ Source: ENAM_AI_Engineer_Build_Challenge_Main.pdf, pp. 1–3; reference glossary
 - Completed data must survive application restarts. Interrupted jobs display state and resume from durable checkpoints; no guarantee of background progress while a free host sleeps.
 
 ## Interface
-Three main views only. Professional light/neutral starting palette with one muted accent; color carries meaning. Readable phone typography, spacing and hierarchy; long names, dates, numbers and links wrap. No decorative charts, excessive rounded cards, oversized greetings, emojis, mascots, glow/neon/rainbow styling. Controls work or clearly explain unavailability. Review one representative mobile briefing before building the remaining views.
+Three main views only. Professional light/neutral starting palette with one muted accent; color carries meaning. Readable phone typography, spacing and hierarchy; long names, dates, numbers and links wrap. No decorative charts, excessive rounded cards, oversized greetings, emojis, mascots, glow/neon/rainbow styling. Controls work or clearly explain unavailability. Neutral visual direction approved as a starting point. Preserve design-review preview labels; use concise freshness, coverage and availability labels in the actual product. Infosys is the first workflow; Dabur and HCLTech are the initial prepared examples. Keep final unfamiliar-ticker test separate.
 
 ## Exclusions and open questions
 No trading, voice, external notifications, elaborate authentication, biographies, portfolio optimisation, exhaustive financial dashboards, comprehensive guidance audits, multi-question monitoring or separate vector database.
 
-Open: backend choice; Render deployment verification; Neon Object Storage availability in selected project/region; runtime model provider; refresh execution while free host sleeps; final alert baseline; exact deadline/time available. Neon PostgreSQL is selected by the user. Do not reduce the agreed coverage targets silently.
+Open: Render deployment verification; Neon Object Storage availability in selected project/region; runtime model provider; refresh execution while free host sleeps; final alert baseline; exact deadline/time available. Neon PostgreSQL is selected by the user. Do not reduce the agreed coverage targets silently.

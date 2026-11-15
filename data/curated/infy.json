@@ -1,0 +1,73 @@
+{
+  "coverage": {
+    "companies": [
+      "INFY"
+    ],
+    "target_companies": 15,
+    "filing_window_start": "2026-10-01",
+    "filing_window_end": "2026-11-15",
+    "retrieved_at": "2026-11-15T09:15:53.221340+00:00",
+    "available_events": 2,
+    "note": "2 curated disclosures; full feed coverage pending",
+    "refresh": "Cached; automatic refresh unavailable"
+  },
+  "price": {
+    "date": "2026-11-13",
+    "close": 1141.5,
+    "volume": 5936229,
+    "currency": "INR",
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/INFY.NS?range=3mo&interval=1d",
+    "retrieved_at": "2026-11-15T09:13:53.693147+00:00"
+  },
+  "events": [
+    {
+      "id": "infy-results-20261023",
+      "company": "Infosys Limited",
+      "ticker": "INFY",
+      "published_at": "2026-10-23T16:08:26+05:30",
+      "priority": "material",
+      "category": "Results",
+      "title": "Free cash flow declined year on year",
+      "reason": "Results contain a comparable cash-flow measure worth reviewing, independently of any saved question.",
+      "interpretation": "Lower free cash flow warrants investigation; this figure alone does not explain the cause or establish weaker cash conversion.",
+      "evidence_id": "infy-fcf-202609",
+      "source_url": "https://nsearchives.nseindia.in/corporate/Infosys_23102026160704_BM_Outcome_Oct232026_1.pdf",
+      "metric": {
+        "label": "Free cash flow",
+        "current": "8898",
+        "previous": "9677",
+        "current_period": "Quarter ended 30 Sep 2026",
+        "previous_period": "Quarter ended 30 Sep 2025",
+        "units": "INR crore",
+        "basis": "Consolidated; company-defined FCF based on IFRS cash flows"
+      }
+    },
+    {
+      "id": "infy-conference-20261104",
+      "company": "Infosys Limited",
+      "ticker": "INFY",
+      "published_at": "2026-11-04T21:01:36+05:30",
+      "priority": "routine",
+      "category": "Investor conference",
+      "title": "Investor conference notice",
+      "reason": "Conference scheduling notice; grouped for review.",
+      "evidence_id": null,
+      "source_url": "https://nsearchives.nseindia.in/corporate/INFY_04112026210117_SE_filing_Investor_conference_04112026_signed.pdf",
+      "availability": "Feed metadata available; document passage not yet extracted."
+    }
+  ],
+  "evidence": {
+    "infy-fcf-202609": {
+      "id": "infy-fcf-202609",
+      "url": "https://nsearchives.nseindia.in/corporate/Infosys_23102026160704_BM_Outcome_Oct232026_1.pdf",
+      "document_date": "2026-10-23",
+      "retrieved_at": "2026-11-15T09:15:53.221340+00:00",
+      "sha256": "65e459d2b8bc4ed1e754d15250e209f68db29d06e0b98593c7a023d29b6ef151",
+      "pdf_page": 4,
+      "printed_page": "Fact sheet 2 of 4",
+      "passage": " \nFact Sheet\nConsolidated Financial Data - Second Quarter, Fiscal 2023\n \nwww.infosys.com \nPage 2 of 4                              \n \nFact Sheet \nConsolidated Financial Data - Second Quarter, Fiscal 2027 \nEffort & Utilization – Consolidated IT Services \n \n \n \n \n \n(in %) \nSep 30, 2026\nJun 30, 2026\nSep 30, 2025\n22.6\n                     \n22.8\n                     \n23.2\n                     \n77.4\n                     \n77.2\n                     \n76.8\n                     \n81.9\n                     \n82.1\n                     \n82.2\n                     \n85.4\n                     \n84.9\n                     \n85.1\n                     \nIncluding trainees\nExcluding trainees\nQuarter ended\nEffort \nOnsite\nOffshore\nUtilization\n \n \nEmployee Metrics \n(Nos.) \nSep 30, 2026\nJun 30, 2026\nSep 30, 2025\n332,542\n               \n328,062\n               \n331,991\n               \n314,508\n               \n310,039\n               \n314,500\n               \n18,034\n                 \n18,023\n                 \n17,491\n                 \n12.7%\n13.0%\n14.3%\n39.8%\n39.6%\n39.5%\nVoluntary Attrition % (LTM - IT Services)\n% of Women Employees\nQuarter ended\nTotal employees\nS/W professionals\nSales & Support\n \n \nCash Metrics \nIn US $ million \nSep 30, 2026\nJun 30, 2026\nSep 30, 2025\n928\n                       \n955\n                       \n1,101\n                   \n4,720\n                   \n3,916\n                   \n6,173\n                   \nQuarter ended\nFCF(1)\nConsolidated cash and investments(2)\n \n \nIn ₹ crore \nSep 30, 2026\nJun 30, 2026\nSep 30, 2025\n8,898\n                   \n9,051\n                   \n9,677\n                   \n45,232\n                 \n37,065\n                 \n54,809\n                 \nConsolidated cash and investments(2)\nFCF(1)\nQuarter ended\n \n \n(1) Free cash flow is defined as net cash provided by operating activities less capital expenditure as per the consolidated statement of cash flows prepared under IFRS \n(non-IFRS measure) \n(2) Consolidated cash and investments comprise of cash and cash equivalents, current and non-current investments excluding investments in equity and preference \nshares, unquoted compulsorily convertible debentures and others \n \n \n \n",
+      "validation": "Figures and table dates checked against rendered PDF page; extracted text includes a stale Fiscal 2023 header.",
+      "basis": "Consolidated; company-defined FCF based on IFRS cash flows"
+    }
+  }
+}

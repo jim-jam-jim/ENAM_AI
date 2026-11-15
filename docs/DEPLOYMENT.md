@@ -2,7 +2,7 @@
 
 Neon PostgreSQL is user-selected. Render is the accepted initial candidate. No Render account, credentials, deployment, Neon connection or object upload has been verified. No paid dependency authorised.
 
-## Backend recommendation, still open
+## Backend comparison — static Next.js + FastAPI approved
 | Option | Benefit | Cost/risk |
 | --- | --- | --- |
 | Next.js server + bounded Python subprocesses in one container | One application API in Next.js; familiar server rendering | Node and Python share 512 MB; Python job protocol/cancellation and durable orchestration must be maintained across languages |
@@ -63,3 +63,10 @@ python scripts/probe_client.py step --job-id YOUR-LOCALLY-GENERATED-UUID
 python scripts/probe_client.py verify --job-id YOUR-LOCALLY-GENERATED-UUID
 ```
 The client is a diagnostic operator tool, not a dependency of the future deployed app. No credentials are accepted on its command line.
+
+## Current account observations and extended probe
+User confirmed Neon Singapore, Object Storage tab, private finn-sources bucket. Local SELECT 1/client TLS and HeadBucket passed. No hosted tests have run.
+
+Large probe: start a new UUID with `--source large`, then repeat step using the same ID until complete. It processes at most 20 pages per call and commits each page checkpoint. Response includes completed_pages and Linux peak RSS/cgroup peak/limit where available. This supersedes the earlier two-step extraction description; the small probe can require multiple extraction calls too. The first source URL is fixed for the lifetime of the job ID.
+
+Downloads are capped at 50 MB/60 seconds. Whole-file pypdf memory and individual slow pages remain limitations requiring host measurements. No claim of large-document verification until that run. Completed jobs skip extraction; runtime app leases/concurrency are still future work, while diagnostic requests execute serially.

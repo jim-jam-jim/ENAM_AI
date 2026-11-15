@@ -11,6 +11,7 @@ load_dotenv()
 parser = argparse.ArgumentParser()
 parser.add_argument('action', choices=['step','verify','health'])
 parser.add_argument('--job-id', type=uuid.UUID)
+parser.add_argument('--source',choices=['small','large'],default='small')
 args = parser.parse_args()
 base = os.environ.get('PROBE_BASE_URL','').rstrip('/')
 url = urlparse(base)
@@ -21,7 +22,7 @@ if args.action != 'health' and not args.job_id:
 headers = {'Authorization':'Bearer '+os.environ.get('PROBE_TOKEN','')}
 try:
     if args.action == 'step':
-        response = requests.post(base+'/step',json={'job_id':str(args.job_id)},headers=headers,timeout=(15,90))
+        response = requests.post(base+'/step',json={'job_id':str(args.job_id),'source':args.source},headers=headers,timeout=(15,90))
     elif args.action == 'verify':
         response = requests.get(base+'/verify',params={'job_id':str(args.job_id)},headers=headers,timeout=(15,90))
     else:

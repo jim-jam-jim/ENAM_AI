@@ -11,6 +11,7 @@ import json
 import os
 import time
 import uuid
+from pathlib import Path
 from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from urllib.parse import parse_qs, urlparse
@@ -25,9 +26,10 @@ import requests
 
 load_dotenv()
 SOURCE = 'https://www.infosys.com/investors/reports-filings/quarterly-results/2025-2026/q4/documents/transcripts/earningscall.pdf'
+SOURCES = {'small': SOURCE, 'large': 'https://www.infosys.com/investors/reports-filings/annual-report/annual/documents/infosys-ar-26.pdf'}
 REQUIRED = ['DATABASE_URL', 'AWS_ENDPOINT_URL_S3', 'AWS_REGION', 'AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY', 'DOCUMENT_BUCKET', 'PROBE_TOKEN']
 BOOT = str(uuid.uuid4())
-MAX_BYTES = 2 * 1024 * 1024  # Deliberately small transcript probe, not full ingestion.
+MAX_BYTES = 50 * 1024 * 1024
 
 def storage():
     return boto3.client('s3', endpoint_url=os.environ['AWS_ENDPOINT_URL_S3'],
@@ -53,20 +55,22 @@ def read_object(client, key):
         raise ValueError('Probe object exceeds size limit')
     return data
 
-def step(job_id):
+def step(job_id, source_name='small'):
+    if source_name not in SOURCES:
+        raise ValueError('Unknown diagnostic source')
     with db() as conn:
         conn.execute('INSERT INTO finn_probe_jobs(id, phase, payload) VALUES (%s,%s,%s) ON CONFLICT DO NOTHING',
-                     (job_id, 'queued', Jsonb({'source_url': SOURCE, 'created_at_utc': datetime.now(timezone.utc).isoformat()})))
+                     (job_id, 'queued', Jsonb({'source_url': SOURCES[source_name], 'created_at_utc': datetime.now(timezone.utc).isoformat()})))
         phase, payload = conn.execute('SELECT phase,payload FROM finn_probe_jobs WHERE id=%s', (job_id,)).fetchone()
         client = storage()
         if phase == 'queued':
             started = time.monotonic()
-            with requests.get(SOURCE, stream=True, timeout=(10,20), headers={'User-Agent':'FINN-host-probe/0.1'}) as response:
+            with requests.get(payload['source_url'], stream=True, timeout=(10,20), headers={'User-Agent':'FINN-host-probe/0.1'}) as response:
                 response.raise_for_status()
                 chunks, size = [], 0
                 for chunk in response.iter_content(64*1024):
                     size += len(chunk)
-                    if size > MAX_BYTES or time.monotonic()-started > 40:
+                    if size > MAX_BYTES or time.monotonic()-started > 60:
                         raise ValueError('Download exceeded diagnostic budget')
                     chunks.append(chunk)
                 data = b''.join(chunks)
@@ -77,19 +81,38 @@ def step(job_id):
             client.put_object(Bucket=os.environ['DOCUMENT_BUCKET'], Key=key, Body=data, ContentType='application/pdf')
             payload.update(sha256=digest, object_key=key, bytes=len(data), fetched_at_utc=datetime.now(timezone.utc).isoformat(), fetch_seconds=round(time.monotonic()-started,3))
             phase = 'stored'
-        elif phase == 'stored':
+        elif phase in ['stored','extracting']:
             data = read_object(client, payload['object_key'])
             if hashlib.sha256(data).hexdigest() != payload['sha256']:
                 raise ValueError('Object hash mismatch')
             reader = PdfReader(io.BytesIO(data))
-            passages = [{'page': i+1, 'text': page.extract_text()} for i,page in enumerate(reader.pages)]
-            if not any(len(p['text'].strip()) > 80 for p in passages):
-                raise ValueError('No readable source passages')
-            payload.update(pages=passages, page_count=len(passages), extraction='pypdf', completed_at_utc=datetime.now(timezone.utc).isoformat())
-            phase = 'complete'
-        conn.execute('UPDATE finn_probe_jobs SET phase=%s,payload=%s,updated_at=now() WHERE id=%s', (phase, Jsonb(payload), job_id))
+            passages = payload.get('pages',[])
+            cursor = len(passages)
+            stage_start = time.monotonic()
+            # Commit page checkpoints individually so a killed operation can resume.
+            for i in range(cursor,min(cursor+20,len(reader.pages))):
+                passages.append({'page':i+1,'text':reader.pages[i].extract_text()})
+                phase='complete' if len(passages)==len(reader.pages) else 'extracting'
+                payload.update(pages=passages,page_count=len(reader.pages),extraction='pypdf',completed_pages=len(passages))
+                if phase=='complete':
+                    if not any(len(p['text'].strip())>80 for p in passages):
+                        raise ValueError('No readable source passages')
+                    payload['completed_at_utc']=datetime.now(timezone.utc).isoformat()
+                conn.execute('UPDATE finn_probe_jobs SET phase=%s,payload=%s,updated_at=now() WHERE id=%s',(phase,Jsonb(payload),job_id))
+                if time.monotonic()-stage_start>20:
+                    break
+        if phase != 'complete' or not payload.get('completed_at_utc'):
+            conn.execute('UPDATE finn_probe_jobs SET phase=%s,payload=%s,updated_at=now() WHERE id=%s', (phase, Jsonb(payload), job_id))
     return {'job_id':str(job_id), 'phase':phase, 'boot_id':BOOT,
-            'page_count':payload.get('page_count'), 'sha256':payload.get('sha256')}
+            'page_count':payload.get('page_count'), 'completed_pages':payload.get('completed_pages'), 'sha256':payload.get('sha256'), 'memory':memory_usage()}
+
+def memory_usage():
+    if os.name != 'posix':
+        return {'measurement':'host measurement unavailable on this OS'}
+    import resource
+    return {'process_peak_rss_kib':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
+            'cgroup_peak_bytes':Path('/sys/fs/cgroup/memory.peak').read_text().strip() if Path('/sys/fs/cgroup/memory.peak').exists() else None,
+            'cgroup_limit_bytes':Path('/sys/fs/cgroup/memory.max').read_text().strip() if Path('/sys/fs/cgroup/memory.max').exists() else None}
 
 def verify(job_id):
     with db() as conn:
@@ -149,18 +172,26 @@ class Handler(BaseHTTPRequestHandler):
         if self.path != '/step':
             self.reply(404, {'error':'Not found'})
             return
-        if not self.allowed():
-            return
         try:
             length = int(self.headers.get('Content-Length','0'))
             if length < 1 or length > 1024:
                 raise ValueError('Invalid body size')
-            payload = json.loads(self.rfile.read(length))
+            body = self.rfile.read(length)
+        except ValueError:
+            self.reply(400, {'error':'Invalid body size'})
+            return
+        if not self.allowed():
+            return
+        try:
+            payload = json.loads(body)
             job_id = uuid.UUID(payload['job_id'])
+            source_name=payload.get('source','small')
+            if source_name not in SOURCES:
+                raise ValueError('Invalid source')
         except (ValueError, KeyError, TypeError):
             self.reply(400, {'error':'Expected a small JSON body with UUID job_id'})
             return
-        self.execute(lambda: step(job_id))
+        self.execute(lambda: step(job_id,source_name))
 
     def execute(self, action):
         started = time.monotonic()

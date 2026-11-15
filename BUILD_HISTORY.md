@@ -18,6 +18,13 @@ This file supplements the original conversations; it is not their replacement. N
 - Saved initial local milestone commit aefdbd7 after sandbox denied Git index writes and approved external execution succeeded. Staged whitespace check found a trailing space in preview CSS; removed it in a follow-up. No GitHub push or deployment performed.
 
 ## Export/link status
+- Follow-up user approvals: static Next.js + FastAPI, durable checkpoints, neutral direction, INFY first and DABUR/HCLTECH examples, audited non-force push.
+- Implemented local read-only evidence workflow and static export. npm sandbox DNS failed; approved installation succeeded. Eight tests pass. A later Windows connection reset on unauthorized POST was fixed by consuming its bounded body before rejecting it.
+- Secret scanner initially matched its own broad private-key regex; narrowed to actual key headers. Candidate files contain no detected secrets or forbidden PDFs/environment files. Metadata/test records retained.
+- User configured Neon Singapore/private bucket and credentials privately. Local SELECT 1, client TLS and HeadBucket passed. Initial pg_stat_ssl check described the pooler upstream hop; actual client TLS verified instead. No hosted tests yet.
+- Browser tool unavailable for new app verification in this chat; previous design preview is not a screenshot of the working app. Large-document diagnostic checkpoint code prepared, host measurements pending.
+- Documentation patch attempts with stale context failed without applying; a shell quoting error in a proposed documentation update was corrected by using direct patches.
+
 - Current chat: original conversation exists in Codex; export/share location not yet available.
 - Earlier planning chat: user says it exists; link/export not supplied.
 - Repository: https://github.com/jim-jam-jim/ENAM_AI (local changes not yet pushed).
