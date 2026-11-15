@@ -34,7 +34,8 @@ elif args.stage=='documents':
         data=call('GET','/api/companies/'+ticker)
         for doc in data.get('documents',[]):
             if doc['kind'] not in ['annual_report','transcript']:continue
-            call('POST','/diagnostics/documents/'+doc['id']+'/fetch',protected=True)
+            if not doc.get('host_fetch_check',{}).get('matches_stored'):
+                call('POST','/diagnostics/documents/'+doc['id']+'/fetch',protected=True)
             for _ in range(100):
                 state=call('POST','/api/documents/'+doc['id']+'/advance')
                 if state.get('phase') in ['complete','failed','identity_review','busy'] or not state.get('phase'):break

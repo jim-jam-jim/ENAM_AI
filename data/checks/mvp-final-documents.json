@@ -1,0 +1,177 @@
+[
+  {
+    "ticker": "DABUR",
+    "kind": "annual_report",
+    "phase": "complete",
+    "page_count": 623,
+    "completed_pages": 623,
+    "identity_match": true,
+    "document_type_match": true,
+    "period_mentions": [
+      "2026-27",
+      "2025 -26",
+      "2025-26",
+      "2025 - 26"
+    ],
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/81d939d7-ea85-443b-98c5-934c71afa68c.pdf",
+    "sha256": "e2677edfd9cc5a5035df98140ab2b8b54ab6c463d3456dca12d9c1980c9391b3",
+    "host_fetch_check": {
+      "bytes": 28311115,
+      "origin": "finn-source-probe-tkef",
+      "sha256": "e2677edfd9cc5a5035df98140ab2b8b54ab6c463d3456dca12d9c1980c9391b3",
+      "checked_at": "2026-11-15T17:06:35.988780+00:00",
+      "matches_stored": true
+    }
+  },
+  {
+    "ticker": "HCLTECH",
+    "kind": "transcript",
+    "phase": "complete",
+    "page_count": 26,
+    "completed_pages": 26,
+    "identity_match": true,
+    "document_type_match": true,
+    "period_mentions": [],
+    "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ccce0001-ff5d-4875-b1e5-5c558669f49c.pdf",
+    "sha256": "baf227e394b6f6be0659c3c482d707ffc62e98c9bfe248d417560d3527af75ed",
+    "host_fetch_check": {
+      "bytes": 570587,
+      "origin": "finn-source-probe-tkef",
+      "sha256": "baf227e394b6f6be0659c3c482d707ffc62e98c9bfe248d417560d3527af75ed",
+      "checked_at": "2026-11-15T17:03:31.353714+00:00",
+      "matches_stored": true
+    }
+  },
+  {
+    "ticker": "HCLTECH",
+    "kind": "annual_report",
+    "phase": "complete",
+    "page_count": 485,
+    "completed_pages": 485,
+    "identity_match": true,
+    "document_type_match": true,
+    "period_mentions": [
+      "FY 2025",
+      "FY 202",
+      "FY \n2025"
+    ],
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4bc45f66-7fb5-4fab-a87a-b32321b63059.pdf",
+    "sha256": "aebe94916d38b46f2425688756d8ccebf73b0460803daa7af07cf72c928ca96e",
+    "host_fetch_check": {
+      "bytes": 16831072,
+      "origin": "finn-source-probe-tkef",
+      "sha256": "aebe94916d38b46f2425688756d8ccebf73b0460803daa7af07cf72c928ca96e",
+      "checked_at": "2026-11-15T17:03:33.083059+00:00",
+      "matches_stored": true
+    }
+  },
+  {
+    "ticker": "DABUR",
+    "kind": "transcript",
+    "phase": "complete",
+    "page_count": 20,
+    "completed_pages": 20,
+    "identity_match": true,
+    "document_type_match": true,
+    "period_mentions": [
+      "2026-27"
+    ],
+    "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=fb1c13ad-a722-44f3-963c-027b3cf3a093.pdf",
+    "sha256": "cd168fe1152c1f8cec06e6bf829915b7826d33009f5e9745e65e54f29754f72a",
+    "host_fetch_check": {
+      "bytes": 672082,
+      "origin": "finn-source-probe-tkef",
+      "sha256": "cd168fe1152c1f8cec06e6bf829915b7826d33009f5e9745e65e54f29754f72a",
+      "checked_at": "2026-11-15T17:08:11.873513+00:00",
+      "matches_stored": true
+    }
+  },
+  {
+    "ticker": "INFY",
+    "kind": "annual_report",
+    "phase": "complete",
+    "page_count": 383,
+    "completed_pages": 383,
+    "identity_match": true,
+    "document_type_match": true,
+    "period_mentions": [
+      "2025-26"
+    ],
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/19dd605c-2b6b-4084-8dca-9d578a3eb7a0.pdf",
+    "sha256": "889ee382d055a528a645ae28017b17df9da306328997dfc1d14d9b98757d88c2",
+    "host_fetch_check": {
+      "bytes": 8985010,
+      "origin": "finn-source-probe-tkef",
+      "sha256": "889ee382d055a528a645ae28017b17df9da306328997dfc1d14d9b98757d88c2",
+      "checked_at": "2026-11-15T16:53:58.646447+00:00",
+      "matches_stored": true
+    }
+  },
+  {
+    "ticker": "VOLTAS",
+    "kind": "annual_report",
+    "phase": "complete",
+    "page_count": 278,
+    "completed_pages": 278,
+    "identity_match": true,
+    "document_type_match": true,
+    "period_mentions": [
+      "2025-26",
+      "2024-25",
+      "2025\u201326"
+    ],
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/40b16328-fb45-49a5-b8ae-e7b1849cd2ba.pdf",
+    "sha256": "51aa9ec1c589a1504e519e29373ec3c012aabb9ed605ddfb64b867044cc5752b",
+    "host_fetch_check": {
+      "bytes": 17535603,
+      "origin": "finn-source-probe-tkef",
+      "sha256": "51aa9ec1c589a1504e519e29373ec3c012aabb9ed605ddfb64b867044cc5752b",
+      "checked_at": "2026-11-15T17:03:37.378417+00:00",
+      "matches_stored": true
+    }
+  },
+  {
+    "ticker": "INFY",
+    "kind": "transcript",
+    "phase": "complete",
+    "page_count": 48,
+    "completed_pages": 48,
+    "identity_match": true,
+    "document_type_match": true,
+    "period_mentions": [
+      "2026-2027",
+      "2026-\n2027"
+    ],
+    "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7982fc61-7765-4981-ab3d-6aec36ba2137.pdf",
+    "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+    "host_fetch_check": {
+      "bytes": 3742339,
+      "origin": "finn-source-probe-tkef",
+      "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+      "checked_at": "2026-11-15T16:58:11.198251+00:00",
+      "matches_stored": true
+    }
+  },
+  {
+    "ticker": "VOLTAS",
+    "kind": "transcript",
+    "phase": "complete",
+    "page_count": 21,
+    "completed_pages": 21,
+    "identity_match": true,
+    "document_type_match": true,
+    "period_mentions": [
+      "FY 2027",
+      "FY 2026"
+    ],
+    "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=770b03bf-b8c4-4922-8236-36f8e774247a.pdf",
+    "sha256": "ea3631fcab6158e7bf203b51ad38e17b6d1dad2e1ef2af34a85505da705e4dfd",
+    "host_fetch_check": {
+      "bytes": 626008,
+      "origin": "finn-source-probe-tkef",
+      "sha256": "ea3631fcab6158e7bf203b51ad38e17b6d1dad2e1ef2af34a85505da705e4dfd",
+      "checked_at": "2026-11-15T17:03:38.790783+00:00",
+      "matches_stored": true
+    }
+  }
+]

@@ -1,9 +1,9 @@
 # FINN
 
-An evidence-first mobile investor briefing. The first read-only Infosys briefing/event/evidence workflow uses static Next.js and FastAPI. Research, saved questions and full portfolio coverage remain incomplete.
+FINN is a mobile investor briefing with inspectable evidence, a 15-company mock portfolio, company research, one saved question per company, and configurable in-app EOD alerts. Static Next.js assets are served by one FastAPI application. See docs/MVP_ACCEPTANCE.md for the authoritative verification status: implemented features are not all accepted yet.
 
 ## Actual local app
-Install requirements.txt, run `npm ci` and `npm run build` inside web, then run `python -m uvicorn server.main:app --host 127.0.0.1 --port 8766` from the project root. Open http://127.0.0.1:8766. All application APIs are Python-owned. data/curated/infy.json contains curated real evidence, not automatic ingestion. The original design-review preview remains separate and labelled.
+Install requirements.txt, run `npm ci` and `npm run build` inside web, then run `python -m uvicorn server.main:app --host 127.0.0.1 --port 8766` from the project root. Open http://127.0.0.1:8766. All application APIs are Python-owned. data/curated/infy.json is the reviewed seed for the historical example; the running API reads Neon records and stored source passages. The original design-review preview remains separate and labelled.
 
 ## Current contents
 - PRD.md: approved scope/acceptance criteria; PLAN.md: progress and blockers.
@@ -55,3 +55,8 @@ Current application reads finn_read_models from Neon; it never falls back to fro
 The API initialises additive finn_records storage on startup, preserving diagnostic and published data. /api/portfolio reads 15 mock holdings. Refresh sources advances a durable 30-step price/filing refresh; progress resumes on request, with a one-hour reuse interval. Company research discovers primary report/transcript links using Screener only as an index, stores PDFs in Neon object storage and page passages in PostgreSQL. Process documents before asking Gemini. Research sends selected passages, validates exact quotations and caches answers. Saved questions and thresholds belong to an anonymous browser workspace retained in localStorage; no account recovery or cross-device sync.
 
 Gemini variables: GEMINI_API_KEY, GEMINI_MODEL=gemini-3.5-flash-lite, GEMINI_FREE_TIER_CONFIRMED=true only after confirming paid billing is disabled, GEMINI_REQUESTS_PER_DAY=20, GEMINI_REQUESTS_PER_MINUTE=2. No frontend secret variables. Failed attempts consume the conservative application quota. App caps cannot disable billing on a Google project; use an unbilled project.
+
+## Current service limitations
+Hosted announcement refresh works for all 15 companies. Yahoo returns HTTP 429 from Render; retained EOD histories are real but stale, and alert results use that cached data. Manual refresh only, no scheduler. Model generation is free-tier Gemini 3.5 Flash-Lite; provider errors stop generation without canned answers or paid fallback. The original Infosys company-site PDFs return hosted HTTP 403; BSE/NSE primary filings are retained as separately identified sources. See docs/MVP_ACCEPTANCE.md and docs/SUBMISSION_DRAFT.md before review or submission.
+
+Current verified corpus sizes (annual/transcript pages): INFY 383/48, DABUR 623/20, HCLTECH 485/26, VOLTAS 278/21. Hosted research answers passed for DABUR/HCLTECH/VOLTAS, but remain limited to retrieved excerpts; INFY broad research encountered provider 503. Final UI fixes are in 37dac53; see acceptance record for live deployment status.

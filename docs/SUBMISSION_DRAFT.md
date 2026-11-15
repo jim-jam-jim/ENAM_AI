@@ -12,12 +12,12 @@ FINN starts with a portfolio briefing and lets an investor inspect the source be
 4. Open Company research for INFY, DABUR or HCLTECH. Check source readiness, ask a question, inspect quotations, and save the question.
 5. Try an unfamiliar NSE ticker through the same document workflow. VOLTAS is the separate acceptance-test ticker, not a prepared example.
 
-## Must be resolved before calling the MVP complete
-- Finish hosted annual-report/transcript extraction and identity/period review for all four tested companies.
-- Verify real Gemini answers and citations on the host, without repeating successful calls unnecessarily.
-- Finish full Render-origin portfolio refresh and saved-question/alert persistence checks.
-- Test subsequent-evidence assessment with clearly labelled test history, without changing real disclosure dates.
-- Complete final deployed mobile/desktop interaction checks after fixes.
+## Remaining limitations to disclose
+- All four companies have completed hosted annual-report/transcript extraction. Cited hosted answers passed for Dabur, HCLTech and VOLTAS, with limited coverage; Infosys broad research hit provider HTTP 503 twice.
+- Hosted announcements work for all 15 companies. Hosted Yahoo prices return HTTP 429; real cached histories remain stale. Alerts use those cached histories and state this limitation.
+- Saved questions/settings survive redeploy. Subsequent-evidence assessment passed in an explicitly labelled historical replay, not new live monitoring.
+- Final deployed mobile/desktop visual verification is unavailable because browser tooling is unavailable. Earlier local layout checks are not a substitute.
+- Original conversation exports/links remain to be supplied. This draft is honest review material, not a claim of complete challenge acceptance.
 
 ## Deliberate limits
 Manual refresh only; no scheduled or continuous monitoring. A sleeping service pauses work. Source coverage is partial and access can fail. No trading, voice, elaborate authentication, OCR guarantee or paid model fallback. Browser workspace settings have no cross-device account recovery.

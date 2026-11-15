@@ -1,0 +1,27 @@
+[
+  {
+    "path": "/api/briefing?days=1",
+    "status": 200,
+    "event_count": 0
+  },
+  {
+    "path": "/api/briefing?days=0",
+    "status": 422,
+    "event_count": null
+  },
+  {
+    "path": "/api/evidence/missing",
+    "status": 404,
+    "event_count": null
+  },
+  {
+    "path": "/api/passages/000000000000000000000000:1",
+    "status": 404,
+    "event_count": null
+  },
+  {
+    "path": "/verify?job_id=54ee3a54-ff5c-4206-b1d1-77066dd28ab2",
+    "status": 401,
+    "event_count": null
+  }
+]

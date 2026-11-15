@@ -1,0 +1,65 @@
+[
+  {
+    "ticker": "RELIANCE",
+    "price_matches": true,
+    "volume_matches": true,
+    "baseline_sessions": 20,
+    "latest_excluded": true
+  },
+  {
+    "ticker": "HDFCBANK",
+    "price_matches": true,
+    "volume_matches": true,
+    "baseline_sessions": 20,
+    "latest_excluded": true
+  },
+  {
+    "ticker": "ICICIBANK",
+    "price_matches": true,
+    "volume_matches": true,
+    "baseline_sessions": 20,
+    "latest_excluded": true
+  },
+  {
+    "ticker": "SBIN",
+    "price_matches": true,
+    "volume_matches": true,
+    "baseline_sessions": 20,
+    "latest_excluded": true
+  },
+  {
+    "ticker": "ITC",
+    "price_matches": true,
+    "volume_matches": true,
+    "baseline_sessions": 20,
+    "latest_excluded": true
+  },
+  {
+    "ticker": "LT",
+    "price_matches": true,
+    "volume_matches": true,
+    "baseline_sessions": 20,
+    "latest_excluded": true
+  },
+  {
+    "ticker": "MARUTI",
+    "price_matches": true,
+    "volume_matches": true,
+    "baseline_sessions": 20,
+    "latest_excluded": true
+  },
+  {
+    "ticker": "SUNPHARMA",
+    "price_matches": true,
+    "volume_matches": true,
+    "baseline_sessions": 20,
+    "latest_excluded": true
+  },
+  {
+    "ticker": "TITAN",
+    "price_matches": true,
+    "volume_matches": true,
+    "baseline_sessions": 20,
+    "latest_excluded": true
+  }
+]

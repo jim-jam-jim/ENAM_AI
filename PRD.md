@@ -1,6 +1,6 @@
 # FINN MVP
 
-Status: product direction approved 15 November 2026. Static Next.js served by FastAPI, one Python API and durable checkpoints are approved; hosting verification remains pending. Exact submission cutoff and available work time are unknown.
+Status: product direction approved 15 November 2026. Static Next.js served by FastAPI, one Python API and durable checkpoints are approved; the application is deployed; final acceptance status is tracked in docs/MVP_ACCEPTANCE.md. Exact submission cutoff and available work time are unknown.
 
 ## User, problem and purpose
 An investor following a small portfolio needs to find disclosures worth investigating without reading every filing. FINN provides a prioritised briefing, then lets the investor inspect evidence and save one question per company. Saved questions add context without hiding unrelated material events. Within the first minute the investor should be able to open an important event and its source.

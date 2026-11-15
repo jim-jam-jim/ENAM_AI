@@ -11,6 +11,479 @@
       "data": {
         "detail": "Gemini unavailable (HTTP 404); no fallback used"
       }
+    },
+    {
+      "at": "2026-11-15T17:03:58.977635+00:00",
+      "path": "/api/companies/INFY/research",
+      "method": "POST",
+      "status": 409,
+      "seconds": 8.656,
+      "data": {
+        "detail": "Gemini unavailable (HTTP 503); no fallback used"
+      }
+    },
+    {
+      "at": "2026-11-15T17:05:57.149953+00:00",
+      "path": "/api/companies/INFY/research",
+      "method": "POST",
+      "status": 409,
+      "seconds": 6.688,
+      "data": {
+        "detail": "Gemini unavailable (HTTP 503); no fallback used"
+      }
+    },
+    {
+      "at": "2026-11-15T17:09:02.602192+00:00",
+      "path": "/api/companies/DABUR/research",
+      "method": "POST",
+      "status": 200,
+      "seconds": 8.063,
+      "data": {
+        "claims": [
+          {
+            "text": "For impairment testing, the recoverable amount of CGUs like Hobi Kozmetik, Namaste, and Badshah Masala is determined using value-in-use calculations based on five-year management-approved financial budgets and fixed terminal value multiples.",
+            "kind": "interpretation",
+            "quote": "The recoverable amount of the above mentioned Groups, for impairment testing is determined based on value-in-use calculations which uses cash flow projections based on financial budgets approved by management covering a five-year period, as the Group believes this to be the most appropriate timescale for reviewing and considering annual performance before applying a fixed terminal value multiple to the final cash flows.",
+            "source_id": "2a15f496704f2dd505bc0960:437"
+          },
+          {
+            "text": "India FMCG grew 10.7%, supported by a volume growth of 5.5% and pricing of 5.2%, while the international business grew at 20%.",
+            "kind": "interpretation",
+            "quote": "India FMCG grew 10.7%, coming on the back of decent volume growth at 5.5%, and pricing at 5.2%. International business continues strong growth momentum; it's growing at 20%.",
+            "source_id": "6c6b05581a314e85789e57a5:12"
+          }
+        ],
+        "limitations": "The provided documents do not supply complete balance sheet cash-flow statements or full historical cash generation metrics, nor do they detail the absolute cash amounts generated outside of underlying assumptions used for impairment testing and select segment growth rates.",
+        "verdict": "inconclusive",
+        "id": "49a846776b5090b1fb4fad10",
+        "owner": "30435702-2ce9-4b61-945b-24598157e33b",
+        "ticker": "DABUR",
+        "question": "What do the annual report and earnings call say about cash generation and growth? Separate reported facts from interpretation and identify missing comparisons.",
+        "model": "gemini-3.5-flash-lite",
+        "created_at": "2026-11-15T17:09:02.077459+00:00",
+        "sources": [
+          {
+            "id": "2a15f496704f2dd505bc0960:437",
+            "page": 437,
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/81d939d7-ea85-443b-98c5-934c71afa68c.pdf",
+            "kind": "annual_report",
+            "sha256": "e2677edfd9cc5a5035df98140ab2b8b54ab6c463d3456dca12d9c1980c9391b3",
+            "fetched_at": "2026-11-15T16:37:34.726146+00:00",
+            "period_mentions": [
+              "2026-27",
+              "2025 -26",
+              "2025-26",
+              "2025 - 26"
+            ]
+          },
+          {
+            "id": "2a15f496704f2dd505bc0960:252",
+            "page": 252,
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/81d939d7-ea85-443b-98c5-934c71afa68c.pdf",
+            "kind": "annual_report",
+            "sha256": "e2677edfd9cc5a5035df98140ab2b8b54ab6c463d3456dca12d9c1980c9391b3",
+            "fetched_at": "2026-11-15T16:37:34.726146+00:00",
+            "period_mentions": [
+              "2026-27",
+              "2025 -26",
+              "2025-26",
+              "2025 - 26"
+            ]
+          },
+          {
+            "id": "2a15f496704f2dd505bc0960:226",
+            "page": 226,
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/81d939d7-ea85-443b-98c5-934c71afa68c.pdf",
+            "kind": "annual_report",
+            "sha256": "e2677edfd9cc5a5035df98140ab2b8b54ab6c463d3456dca12d9c1980c9391b3",
+            "fetched_at": "2026-11-15T16:37:34.726146+00:00",
+            "period_mentions": [
+              "2026-27",
+              "2025 -26",
+              "2025-26",
+              "2025 - 26"
+            ]
+          },
+          {
+            "id": "2a15f496704f2dd505bc0960:231",
+            "page": 231,
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/81d939d7-ea85-443b-98c5-934c71afa68c.pdf",
+            "kind": "annual_report",
+            "sha256": "e2677edfd9cc5a5035df98140ab2b8b54ab6c463d3456dca12d9c1980c9391b3",
+            "fetched_at": "2026-11-15T16:37:34.726146+00:00",
+            "period_mentions": [
+              "2026-27",
+              "2025 -26",
+              "2025-26",
+              "2025 - 26"
+            ]
+          },
+          {
+            "id": "2a15f496704f2dd505bc0960:431",
+            "page": 431,
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/81d939d7-ea85-443b-98c5-934c71afa68c.pdf",
+            "kind": "annual_report",
+            "sha256": "e2677edfd9cc5a5035df98140ab2b8b54ab6c463d3456dca12d9c1980c9391b3",
+            "fetched_at": "2026-11-15T16:37:34.726146+00:00",
+            "period_mentions": [
+              "2026-27",
+              "2025 -26",
+              "2025-26",
+              "2025 - 26"
+            ]
+          },
+          {
+            "id": "6c6b05581a314e85789e57a5:17",
+            "page": 17,
+            "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=fb1c13ad-a722-44f3-963c-027b3cf3a093.pdf",
+            "kind": "transcript",
+            "sha256": "cd168fe1152c1f8cec06e6bf829915b7826d33009f5e9745e65e54f29754f72a",
+            "fetched_at": "2026-11-15T16:38:32.195849+00:00",
+            "period_mentions": [
+              "2026-27"
+            ]
+          },
+          {
+            "id": "6c6b05581a314e85789e57a5:18",
+            "page": 18,
+            "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=fb1c13ad-a722-44f3-963c-027b3cf3a093.pdf",
+            "kind": "transcript",
+            "sha256": "cd168fe1152c1f8cec06e6bf829915b7826d33009f5e9745e65e54f29754f72a",
+            "fetched_at": "2026-11-15T16:38:32.195849+00:00",
+            "period_mentions": [
+              "2026-27"
+            ]
+          },
+          {
+            "id": "6c6b05581a314e85789e57a5:12",
+            "page": 12,
+            "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=fb1c13ad-a722-44f3-963c-027b3cf3a093.pdf",
+            "kind": "transcript",
+            "sha256": "cd168fe1152c1f8cec06e6bf829915b7826d33009f5e9745e65e54f29754f72a",
+            "fetched_at": "2026-11-15T16:38:32.195849+00:00",
+            "period_mentions": [
+              "2026-27"
+            ]
+          },
+          {
+            "id": "6c6b05581a314e85789e57a5:13",
+            "page": 13,
+            "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=fb1c13ad-a722-44f3-963c-027b3cf3a093.pdf",
+            "kind": "transcript",
+            "sha256": "cd168fe1152c1f8cec06e6bf829915b7826d33009f5e9745e65e54f29754f72a",
+            "fetched_at": "2026-11-15T16:38:32.195849+00:00",
+            "period_mentions": [
+              "2026-27"
+            ]
+          },
+          {
+            "id": "6c6b05581a314e85789e57a5:15",
+            "page": 15,
+            "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=fb1c13ad-a722-44f3-963c-027b3cf3a093.pdf",
+            "kind": "transcript",
+            "sha256": "cd168fe1152c1f8cec06e6bf829915b7826d33009f5e9745e65e54f29754f72a",
+            "fetched_at": "2026-11-15T16:38:32.195849+00:00",
+            "period_mentions": [
+              "2026-27"
+            ]
+          }
+        ],
+        "citation_check": "Exact quotations matched to stored passages; interpretation still requires investor judgment",
+        "cached": false
+      }
+    },
+    {
+      "at": "2026-11-15T17:20:49.181898+00:00",
+      "path": "/api/companies/HCLTECH/research",
+      "method": "POST",
+      "status": 200,
+      "seconds": 3.781,
+      "data": {
+        "claims": [
+          {
+            "text": "Over the 12 months leading up to October 12, 2026, Free Cash Flow was at $1.78 billion and Operating Cash Flow was at $1.96 billion.",
+            "kind": "reported",
+            "quote": "In terms of cash generation, over the last 12 months, Free Cash Flow has been at $1.78 billion, whereas Operating Cash Flow is at $1.96 billion.",
+            "source_id": "414302412fbe60d6def74b86:15"
+          }
+        ],
+        "limitations": "The provided documents do not offer full historical cash flow details beyond the specific annual report periods and last-twelve-months earnings call disclosures, and lack a standardized multi-year organic growth comparison framework for cash generation.",
+        "verdict": "inconclusive",
+        "id": "9e0a5c7036986f4173c99bf8",
+        "owner": "30435702-2ce9-4b61-945b-24598157e33b",
+        "ticker": "HCLTECH",
+        "question": "What do the annual report and earnings call say about cash generation and growth? Separate reported facts from interpretation and identify missing comparisons.",
+        "model": "gemini-3.5-flash-lite",
+        "created_at": "2026-11-15T17:20:49.146679+00:00",
+        "sources": [
+          {
+            "id": "56e95f8a6761a3447c8cd5f9:228",
+            "page": 228,
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4bc45f66-7fb5-4fab-a87a-b32321b63059.pdf",
+            "kind": "annual_report",
+            "sha256": "aebe94916d38b46f2425688756d8ccebf73b0460803daa7af07cf72c928ca96e",
+            "fetched_at": "2026-11-15T16:38:26.996116+00:00",
+            "period_mentions": [
+              "FY 2025",
+              "FY 202",
+              "FY \n2025"
+            ]
+          },
+          {
+            "id": "56e95f8a6761a3447c8cd5f9:155",
+            "page": 155,
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4bc45f66-7fb5-4fab-a87a-b32321b63059.pdf",
+            "kind": "annual_report",
+            "sha256": "aebe94916d38b46f2425688756d8ccebf73b0460803daa7af07cf72c928ca96e",
+            "fetched_at": "2026-11-15T16:38:26.996116+00:00",
+            "period_mentions": [
+              "FY 2025",
+              "FY 202",
+              "FY \n2025"
+            ]
+          },
+          {
+            "id": "56e95f8a6761a3447c8cd5f9:314",
+            "page": 314,
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4bc45f66-7fb5-4fab-a87a-b32321b63059.pdf",
+            "kind": "annual_report",
+            "sha256": "aebe94916d38b46f2425688756d8ccebf73b0460803daa7af07cf72c928ca96e",
+            "fetched_at": "2026-11-15T16:38:26.996116+00:00",
+            "period_mentions": [
+              "FY 2025",
+              "FY 202",
+              "FY \n2025"
+            ]
+          },
+          {
+            "id": "56e95f8a6761a3447c8cd5f9:83",
+            "page": 83,
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4bc45f66-7fb5-4fab-a87a-b32321b63059.pdf",
+            "kind": "annual_report",
+            "sha256": "aebe94916d38b46f2425688756d8ccebf73b0460803daa7af07cf72c928ca96e",
+            "fetched_at": "2026-11-15T16:38:26.996116+00:00",
+            "period_mentions": [
+              "FY 2025",
+              "FY 202",
+              "FY \n2025"
+            ]
+          },
+          {
+            "id": "56e95f8a6761a3447c8cd5f9:145",
+            "page": 145,
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4bc45f66-7fb5-4fab-a87a-b32321b63059.pdf",
+            "kind": "annual_report",
+            "sha256": "aebe94916d38b46f2425688756d8ccebf73b0460803daa7af07cf72c928ca96e",
+            "fetched_at": "2026-11-15T16:38:26.996116+00:00",
+            "period_mentions": [
+              "FY 2025",
+              "FY 202",
+              "FY \n2025"
+            ]
+          },
+          {
+            "id": "414302412fbe60d6def74b86:15",
+            "page": 15,
+            "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ccce0001-ff5d-4875-b1e5-5c558669f49c.pdf",
+            "kind": "transcript",
+            "sha256": "baf227e394b6f6be0659c3c482d707ffc62e98c9bfe248d417560d3527af75ed",
+            "fetched_at": "2026-11-15T16:37:39.453118+00:00",
+            "period_mentions": []
+          },
+          {
+            "id": "414302412fbe60d6def74b86:25",
+            "page": 25,
+            "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ccce0001-ff5d-4875-b1e5-5c558669f49c.pdf",
+            "kind": "transcript",
+            "sha256": "baf227e394b6f6be0659c3c482d707ffc62e98c9bfe248d417560d3527af75ed",
+            "fetched_at": "2026-11-15T16:37:39.453118+00:00",
+            "period_mentions": []
+          },
+          {
+            "id": "414302412fbe60d6def74b86:18",
+            "page": 18,
+            "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ccce0001-ff5d-4875-b1e5-5c558669f49c.pdf",
+            "kind": "transcript",
+            "sha256": "baf227e394b6f6be0659c3c482d707ffc62e98c9bfe248d417560d3527af75ed",
+            "fetched_at": "2026-11-15T16:37:39.453118+00:00",
+            "period_mentions": []
+          },
+          {
+            "id": "414302412fbe60d6def74b86:24",
+            "page": 24,
+            "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ccce0001-ff5d-4875-b1e5-5c558669f49c.pdf",
+            "kind": "transcript",
+            "sha256": "baf227e394b6f6be0659c3c482d707ffc62e98c9bfe248d417560d3527af75ed",
+            "fetched_at": "2026-11-15T16:37:39.453118+00:00",
+            "period_mentions": []
+          },
+          {
+            "id": "414302412fbe60d6def74b86:3",
+            "page": 3,
+            "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ccce0001-ff5d-4875-b1e5-5c558669f49c.pdf",
+            "kind": "transcript",
+            "sha256": "baf227e394b6f6be0659c3c482d707ffc62e98c9bfe248d417560d3527af75ed",
+            "fetched_at": "2026-11-15T16:37:39.453118+00:00",
+            "period_mentions": []
+          }
+        ],
+        "citation_check": "Exact quotations matched to stored passages; interpretation still requires investor judgment",
+        "cached": false
+      }
+    },
+    {
+      "at": "2026-11-15T17:20:53.475649+00:00",
+      "path": "/api/companies/VOLTAS/research",
+      "method": "POST",
+      "status": 200,
+      "seconds": 3.047,
+      "data": {
+        "claims": [
+          {
+            "text": "For the year ended 31 March, 2026, Voltas reported consolidated total income of `14,483 crores compared to `15,737 crores in the previous year, with a profit before tax of `557 crores and profit after tax of `370 crores.",
+            "kind": "interpretation",
+            "quote": "For the year ended 31 March, 2026, the Company reported a consolidated total income of `14,483 crores, compared to `15,737 crores in the previous year. The pro/f_it before tax stood at `557 crores, while the pro/f_it after tax amounted to `370 crores.",
+            "source_id": "cf13ac37a3be9802d6b82b1e:84"
+          }
+        ],
+        "limitations": "The provided sources do not contain a complete cash flow statement or explicit multi-year comparisons for operating, investing, and financing cash flows, limiting detailed cash generation analysis.",
+        "verdict": "inconclusive",
+        "id": "3dd571d33aee50842a77b1c5",
+        "owner": "30435702-2ce9-4b61-945b-24598157e33b",
+        "ticker": "VOLTAS",
+        "question": "What do the annual report and earnings call say about cash generation and growth? Separate reported facts from interpretation and identify missing comparisons.",
+        "model": "gemini-3.5-flash-lite",
+        "created_at": "2026-11-15T17:20:53.387399+00:00",
+        "sources": [
+          {
+            "id": "cf13ac37a3be9802d6b82b1e:222",
+            "page": 222,
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/40b16328-fb45-49a5-b8ae-e7b1849cd2ba.pdf",
+            "kind": "annual_report",
+            "sha256": "51aa9ec1c589a1504e519e29373ec3c012aabb9ed605ddfb64b867044cc5752b",
+            "fetched_at": "2026-11-15T16:39:43.216167+00:00",
+            "period_mentions": [
+              "2025-26",
+              "2024-25",
+              "2025\u201326"
+            ]
+          },
+          {
+            "id": "cf13ac37a3be9802d6b82b1e:155",
+            "page": 155,
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/40b16328-fb45-49a5-b8ae-e7b1849cd2ba.pdf",
+            "kind": "annual_report",
+            "sha256": "51aa9ec1c589a1504e519e29373ec3c012aabb9ed605ddfb64b867044cc5752b",
+            "fetched_at": "2026-11-15T16:39:43.216167+00:00",
+            "period_mentions": [
+              "2025-26",
+              "2024-25",
+              "2025\u201326"
+            ]
+          },
+          {
+            "id": "cf13ac37a3be9802d6b82b1e:134",
+            "page": 134,
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/40b16328-fb45-49a5-b8ae-e7b1849cd2ba.pdf",
+            "kind": "annual_report",
+            "sha256": "51aa9ec1c589a1504e519e29373ec3c012aabb9ed605ddfb64b867044cc5752b",
+            "fetched_at": "2026-11-15T16:39:43.216167+00:00",
+            "period_mentions": [
+              "2025-26",
+              "2024-25",
+              "2025\u201326"
+            ]
+          },
+          {
+            "id": "cf13ac37a3be9802d6b82b1e:84",
+            "page": 84,
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/40b16328-fb45-49a5-b8ae-e7b1849cd2ba.pdf",
+            "kind": "annual_report",
+            "sha256": "51aa9ec1c589a1504e519e29373ec3c012aabb9ed605ddfb64b867044cc5752b",
+            "fetched_at": "2026-11-15T16:39:43.216167+00:00",
+            "period_mentions": [
+              "2025-26",
+              "2024-25",
+              "2025\u201326"
+            ]
+          },
+          {
+            "id": "cf13ac37a3be9802d6b82b1e:148",
+            "page": 148,
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/40b16328-fb45-49a5-b8ae-e7b1849cd2ba.pdf",
+            "kind": "annual_report",
+            "sha256": "51aa9ec1c589a1504e519e29373ec3c012aabb9ed605ddfb64b867044cc5752b",
+            "fetched_at": "2026-11-15T16:39:43.216167+00:00",
+            "period_mentions": [
+              "2025-26",
+              "2024-25",
+              "2025\u201326"
+            ]
+          },
+          {
+            "id": "fcf8b9bc47bc0b2193860718:3",
+            "page": 3,
+            "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=770b03bf-b8c4-4922-8236-36f8e774247a.pdf",
+            "kind": "transcript",
+            "sha256": "ea3631fcab6158e7bf203b51ad38e17b6d1dad2e1ef2af34a85505da705e4dfd",
+            "fetched_at": "2026-11-15T16:40:41.768446+00:00",
+            "period_mentions": [
+              "FY 2027",
+              "FY 2026"
+            ]
+          },
+          {
+            "id": "fcf8b9bc47bc0b2193860718:18",
+            "page": 18,
+            "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=770b03bf-b8c4-4922-8236-36f8e774247a.pdf",
+            "kind": "transcript",
+            "sha256": "ea3631fcab6158e7bf203b51ad38e17b6d1dad2e1ef2af34a85505da705e4dfd",
+            "fetched_at": "2026-11-15T16:40:41.768446+00:00",
+            "period_mentions": [
+              "FY 2027",
+              "FY 2026"
+            ]
+          },
+          {
+            "id": "fcf8b9bc47bc0b2193860718:20",
+            "page": 20,
+            "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=770b03bf-b8c4-4922-8236-36f8e774247a.pdf",
+            "kind": "transcript",
+            "sha256": "ea3631fcab6158e7bf203b51ad38e17b6d1dad2e1ef2af34a85505da705e4dfd",
+            "fetched_at": "2026-11-15T16:40:41.768446+00:00",
+            "period_mentions": [
+              "FY 2027",
+              "FY 2026"
+            ]
+          },
+          {
+            "id": "fcf8b9bc47bc0b2193860718:12",
+            "page": 12,
+            "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=770b03bf-b8c4-4922-8236-36f8e774247a.pdf",
+            "kind": "transcript",
+            "sha256": "ea3631fcab6158e7bf203b51ad38e17b6d1dad2e1ef2af34a85505da705e4dfd",
+            "fetched_at": "2026-11-15T16:40:41.768446+00:00",
+            "period_mentions": [
+              "FY 2027",
+              "FY 2026"
+            ]
+          },
+          {
+            "id": "fcf8b9bc47bc0b2193860718:17",
+            "page": 17,
+            "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=770b03bf-b8c4-4922-8236-36f8e774247a.pdf",
+            "kind": "transcript",
+            "sha256": "ea3631fcab6158e7bf203b51ad38e17b6d1dad2e1ef2af34a85505da705e4dfd",
+            "fetched_at": "2026-11-15T16:40:41.768446+00:00",
+            "period_mentions": [
+              "FY 2027",
+              "FY 2026"
+            ]
+          }
+        ],
+        "citation_check": "Exact quotations matched to stored passages; interpretation still requires investor judgment",
+        "cached": false
+      }
     }
   ]
 }

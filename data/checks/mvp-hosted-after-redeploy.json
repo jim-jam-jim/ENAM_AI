@@ -1,0 +1,19 @@
+[
+  {
+    "path": "/api/companies/INFY",
+    "status": 200,
+    "value": {
+      "ticker": "INFY",
+      "question": "Is growth supported by cash generation?",
+      "saved_at": "2026-11-15T16:54:45.011571+00:00"
+    }
+  },
+  {
+    "path": "/api/alerts",
+    "status": 200,
+    "value": {
+      "price_threshold": 1.5,
+      "volume_multiple": 1.5
+    }
+  }
+]

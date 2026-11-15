@@ -1,0 +1,477 @@
+{
+  "workspace": "8f4ace29-daa3-4fbc-9705-6981b119dbef",
+  "label": "Historical replay; test question predates a real filing; real event dates unchanged",
+  "checks": [
+    {
+      "path": "/api/companies/INFY",
+      "status": 200,
+      "data": {
+        "ticker": "INFY",
+        "documents": [
+          {
+            "id": "b1252f1dfe088f4fe8f99554",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/19dd605c-2b6b-4084-8dca-9d578a3eb7a0.pdf",
+            "host": "local",
+            "kind": "annual_report",
+            "bytes": 8985010,
+            "phase": "complete",
+            "sha256": "889ee382d055a528a645ae28017b17df9da306328997dfc1d14d9b98757d88c2",
+            "ticker": "INFY",
+            "company": "Infosys Ltd",
+            "created_at": "2026-11-15T16:32:50.622251+00:00",
+            "fetched_at": "2026-11-15T16:38:55.348484+00:00",
+            "object_key": "sources/sha256/889ee382d055a528a645ae28017b17df9da306328997dfc1d14d9b98757d88c2.pdf",
+            "page_count": 383,
+            "updated_at": "2026-11-15T16:58:09.809151+00:00",
+            "completed_at": "2026-11-15T16:58:10.338519+00:00",
+            "discovery_url": "https://www.screener.in/company/INFY/consolidated/",
+            "identity_match": true,
+            "completed_pages": 383,
+            "discovery_label": "Annual Report 2026",
+            "period_mentions": [
+              "2025-26"
+            ],
+            "host_fetch_check": {
+              "bytes": 8985010,
+              "origin": "finn-source-probe-tkef",
+              "sha256": "889ee382d055a528a645ae28017b17df9da306328997dfc1d14d9b98757d88c2",
+              "checked_at": "2026-11-15T16:53:58.646447+00:00",
+              "matches_stored": true
+            },
+            "document_type_match": true
+          },
+          {
+            "id": "edf542b8d69c82d164b79756",
+            "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7982fc61-7765-4981-ab3d-6aec36ba2137.pdf",
+            "host": "local",
+            "kind": "transcript",
+            "bytes": 3742339,
+            "phase": "complete",
+            "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+            "ticker": "INFY",
+            "company": "Infosys Ltd",
+            "created_at": "2026-11-15T16:32:53.298062+00:00",
+            "fetched_at": "2026-11-15T16:40:28.726398+00:00",
+            "object_key": "sources/sha256/b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2.pdf",
+            "page_count": 48,
+            "updated_at": "2026-11-15T16:58:22.823416+00:00",
+            "completed_at": "2026-11-15T16:58:23.513293+00:00",
+            "discovery_url": "https://www.screener.in/company/INFY/consolidated/",
+            "identity_match": true,
+            "completed_pages": 48,
+            "discovery_label": "Transcript",
+            "period_mentions": [
+              "2026-2027",
+              "2026-\n2027"
+            ],
+            "host_fetch_check": {
+              "bytes": 3742339,
+              "origin": "finn-source-probe-tkef",
+              "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+              "checked_at": "2026-11-15T16:58:11.198251+00:00",
+              "matches_stored": true
+            },
+            "document_type_match": true
+          }
+        ],
+        "saved_question": {
+          "ticker": "INFY",
+          "question": "Is growth supported by cash generation?",
+          "saved_at": "2026-10-27T17:38:42+05:30",
+          "test_label": "Historical replay; test question predates a real filing; real event dates unchanged"
+        },
+        "subsequent_events": [
+          {
+            "id": "6409711f52cd5d2301a2a8f0",
+            "title": "Six Promising Researchers Win the Infosys Prize 2026 Awarded by the Infosys Science Foundation",
+            "reason": "Rule-based category priority; unknown categories remain visible for review.",
+            "ticker": "INFY",
+            "company": "Infosys Limited",
+            "summary": "Infosys Limited has informed the Exchange regarding 'Six Promising Researchers Win the Infosys Prize 2026 Awarded by the Infosys Science Foundation'.",
+            "category": "Updates",
+            "priority": "review",
+            "source_url": "https://nsearchives.nseindia.in/corporate/Infosys_12112026111940_PR_12112026.pdf",
+            "evidence_id": null,
+            "source_urls": [
+              "https://nsearchives.nseindia.in/corporate/Infosys_12112026111940_PR_12112026.pdf"
+            ],
+            "availability": "Load matching filing text. Figures outside the prepared example are not independently verified.",
+            "published_at": "2026-11-12T11:19:58+05:30",
+            "summary_origin": "Exchange filing description \u00b7 not AI analysis"
+          },
+          {
+            "id": "34811fe123b41efdf0986a7d",
+            "title": "Investor Conference",
+            "reason": "Rule-based category priority; unknown categories remain visible for review.",
+            "ticker": "INFY",
+            "company": "Infosys Limited",
+            "summary": "Infosys Limited has informed the Exchange regarding 'Investor Conference'.",
+            "category": "Updates",
+            "priority": "review",
+            "source_url": "https://nsearchives.nseindia.in/corporate/INFY_04112026210117_SE_filing_Investor_conference_04112026_signed.pdf",
+            "evidence_id": null,
+            "source_urls": [
+              "https://nsearchives.nseindia.in/corporate/INFY_04112026210117_SE_filing_Investor_conference_04112026_signed.pdf"
+            ],
+            "availability": "Load matching filing text. Figures outside the prepared example are not independently verified.",
+            "published_at": "2026-11-04T21:01:36+05:30",
+            "summary_origin": "Exchange filing description \u00b7 not AI analysis"
+          },
+          {
+            "id": "4a52e590dc11e2d646b75cfd",
+            "title": "Infosys Announces Expansion of Pocharam Development Center in Hyderabad",
+            "reason": "Rule-based category priority; unknown categories remain visible for review.",
+            "ticker": "INFY",
+            "company": "Infosys Limited",
+            "summary": "Infosys Limited has informed the Exchange regarding 'Infosys Announces Expansion of Pocharam Development Center in Hyderabad'.",
+            "category": "Updates",
+            "priority": "review",
+            "source_url": "https://nsearchives.nseindia.in/corporate/INFY_30102026185037_PR_30102026.pdf",
+            "evidence_id": null,
+            "source_urls": [
+              "https://nsearchives.nseindia.in/corporate/INFY_30102026185037_PR_30102026.pdf"
+            ],
+            "availability": "Load matching filing text. Figures outside the prepared example are not independently verified.",
+            "published_at": "2026-10-30T18:50:50+05:30",
+            "summary_origin": "Exchange filing description \u00b7 not AI analysis"
+          },
+          {
+            "id": "0e02d3361bdf5cd014ff7ce9",
+            "title": "Copy of Newspaper Publication",
+            "reason": "Rule-based category priority; unknown categories remain visible for review.",
+            "ticker": "INFY",
+            "company": "Infosys Limited",
+            "summary": "Infosys Limited has informed the Exchange about Copy of Newspaper Publication",
+            "category": "Copy of Newspaper Publication",
+            "priority": "routine",
+            "source_url": "https://nsearchives.nseindia.in/corporate/INFY_29102026151445_SE_intimation_Newspaper_ad_2.pdf",
+            "evidence_id": null,
+            "source_urls": [
+              "https://nsearchives.nseindia.in/corporate/INFY_29102026151445_SE_intimation_Newspaper_ad_2.pdf"
+            ],
+            "availability": "Load matching filing text. Figures outside the prepared example are not independently verified.",
+            "published_at": "2026-10-29T15:15:01+05:30",
+            "summary_origin": "Exchange filing description \u00b7 not AI analysis"
+          },
+          {
+            "id": "f644bc7e986c08d7e0ddfe0c",
+            "title": "Winners of Qorus-Infosys Finacle Banking Innovation Awards 2026 Announced",
+            "reason": "Rule-based category priority; unknown categories remain visible for review.",
+            "ticker": "INFY",
+            "company": "Infosys Limited",
+            "summary": "Infosys Limited has informed the Exchange regarding 'Winners of Qorus-Infosys Finacle Banking Innovation Awards 2026 Announced'.",
+            "category": "Updates",
+            "priority": "review",
+            "source_url": "https://nsearchives.nseindia.in/corporate/INFY_29102026150417_PR_29102026.pdf",
+            "evidence_id": null,
+            "source_urls": [
+              "https://nsearchives.nseindia.in/corporate/INFY_29102026150417_PR_29102026.pdf"
+            ],
+            "availability": "Load matching filing text. Figures outside the prepared example are not independently verified.",
+            "published_at": "2026-10-29T15:05:32+05:30",
+            "summary_origin": "Exchange filing description \u00b7 not AI analysis"
+          },
+          {
+            "id": "d397b6277eec3db71441656e",
+            "title": "Earnings Call Transcript",
+            "reason": "Rule-based category priority; unknown categories remain visible for review.",
+            "ticker": "INFY",
+            "company": "Infosys Limited",
+            "summary": "Infosys Limited has informed the Exchange regarding 'Earnings Call Transcript'.",
+            "category": "Updates",
+            "priority": "review",
+            "source_url": "https://nsearchives.nseindia.in/corporate/Infosys_28102026173824_SE_filing_Earnings_call_transcript.pdf",
+            "evidence_id": null,
+            "source_urls": [
+              "https://nsearchives.nseindia.in/corporate/Infosys_28102026173824_SE_filing_Earnings_call_transcript.pdf"
+            ],
+            "availability": "Load matching filing text. Figures outside the prepared example are not independently verified.",
+            "published_at": "2026-10-28T17:38:42+05:30",
+            "summary_origin": "Exchange filing description \u00b7 not AI analysis"
+          },
+          {
+            "id": "f6cc5c082ed767b19668b063",
+            "title": "Canada s UNI Financial Cooperation Advances Branch Modernization with Infosys Finacle Universal Banker",
+            "reason": "Rule-based category priority; unknown categories remain visible for review.",
+            "ticker": "INFY",
+            "company": "Infosys Limited",
+            "summary": "Infosys Limited has informed the Exchange regarding 'Canada s UNI Financial Cooperation Advances Branch Modernization with Infosys Finacle Universal Banker'.",
+            "category": "Updates",
+            "priority": "review",
+            "source_url": "https://nsearchives.nseindia.in/corporate/Infosys_28102026173120_PR_28102026.pdf",
+            "evidence_id": null,
+            "source_urls": [
+              "https://nsearchives.nseindia.in/corporate/Infosys_28102026173120_PR_28102026.pdf"
+            ],
+            "availability": "Load matching filing text. Figures outside the prepared example are not independently verified.",
+            "published_at": "2026-10-28T17:31:34+05:30",
+            "summary_origin": "Exchange filing description \u00b7 not AI analysis"
+          },
+          {
+            "id": "8b3a081e37f2142db6e0dbc0",
+            "title": "Investor Conference",
+            "reason": "Rule-based category priority; unknown categories remain visible for review.",
+            "ticker": "INFY",
+            "company": "Infosys Limited",
+            "summary": "Infosys Limited has informed the Exchange regarding ' Investor Conference'.",
+            "category": "Updates",
+            "priority": "review",
+            "source_url": "https://nsearchives.nseindia.in/corporate/Infosys_27102026225301_SE_filing_Investor_Conference_27102026.pdf",
+            "evidence_id": null,
+            "source_urls": [
+              "https://nsearchives.nseindia.in/corporate/Infosys_27102026225301_SE_filing_Investor_Conference_27102026.pdf"
+            ],
+            "availability": "Load matching filing text. Figures outside the prepared example are not independently verified.",
+            "published_at": "2026-10-27T22:53:15+05:30",
+            "summary_origin": "Exchange filing description \u00b7 not AI analysis"
+          }
+        ],
+        "monitoring_note": "Only disclosures dated after the saved question appear here. Unrelated material events remain in the briefing.",
+        "research_available": true
+      }
+    },
+    {
+      "path": "/api/events/d397b6277eec3db71441656e/document",
+      "status": 200,
+      "data": {
+        "id": "d397b6277eec3db71441656e",
+        "ticker": "INFY",
+        "company": "Infosys Limited",
+        "kind": "filing",
+        "url": "https://nsearchives.nseindia.in/corporate/Infosys_28102026173824_SE_filing_Earnings_call_transcript.pdf",
+        "discovery_url": null,
+        "discovery_label": "",
+        "phase": "queued",
+        "completed_pages": 0,
+        "created_at": "2026-11-15T17:21:37.929839+00:00",
+        "document_date": "2026-10-28T17:38:42+05:30"
+      }
+    },
+    {
+      "path": "/api/documents/d397b6277eec3db71441656e/advance",
+      "status": 200,
+      "data": {
+        "id": "d397b6277eec3db71441656e",
+        "url": "https://nsearchives.nseindia.in/corporate/Infosys_28102026173824_SE_filing_Earnings_call_transcript.pdf",
+        "kind": "filing",
+        "phase": "stored",
+        "ticker": "INFY",
+        "company": "Infosys Limited",
+        "created_at": "2026-11-15T17:21:37.929839+00:00",
+        "discovery_url": null,
+        "document_date": "2026-10-28T17:38:42+05:30",
+        "completed_pages": 0,
+        "discovery_label": "",
+        "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+        "object_key": "sources/sha256/b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2.pdf",
+        "bytes": 3742339,
+        "fetched_at": "2026-11-15T17:21:39.092526+00:00",
+        "host": "finn-source-probe-tkef"
+      }
+    },
+    {
+      "path": "/api/documents/d397b6277eec3db71441656e/advance",
+      "status": 200,
+      "data": {
+        "id": "d397b6277eec3db71441656e",
+        "url": "https://nsearchives.nseindia.in/corporate/Infosys_28102026173824_SE_filing_Earnings_call_transcript.pdf",
+        "host": "finn-source-probe-tkef",
+        "kind": "filing",
+        "bytes": 3742339,
+        "phase": "extracting",
+        "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+        "ticker": "INFY",
+        "company": "Infosys Limited",
+        "created_at": "2026-11-15T17:21:37.929839+00:00",
+        "fetched_at": "2026-11-15T17:21:39.092526+00:00",
+        "object_key": "sources/sha256/b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2.pdf",
+        "discovery_url": null,
+        "document_date": "2026-10-28T17:38:42+05:30",
+        "completed_pages": 20,
+        "discovery_label": "",
+        "page_count": 48,
+        "updated_at": "2026-11-15T17:21:41.888002+00:00"
+      }
+    },
+    {
+      "path": "/api/documents/d397b6277eec3db71441656e/advance",
+      "status": 200,
+      "data": {
+        "id": "d397b6277eec3db71441656e",
+        "url": "https://nsearchives.nseindia.in/corporate/Infosys_28102026173824_SE_filing_Earnings_call_transcript.pdf",
+        "host": "finn-source-probe-tkef",
+        "kind": "filing",
+        "bytes": 3742339,
+        "phase": "extracting",
+        "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+        "ticker": "INFY",
+        "company": "Infosys Limited",
+        "created_at": "2026-11-15T17:21:37.929839+00:00",
+        "fetched_at": "2026-11-15T17:21:39.092526+00:00",
+        "object_key": "sources/sha256/b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2.pdf",
+        "page_count": 48,
+        "updated_at": "2026-11-15T17:21:44.981750+00:00",
+        "discovery_url": null,
+        "document_date": "2026-10-28T17:38:42+05:30",
+        "completed_pages": 40,
+        "discovery_label": ""
+      }
+    },
+    {
+      "path": "/api/documents/d397b6277eec3db71441656e/advance",
+      "status": 200,
+      "data": {
+        "id": "d397b6277eec3db71441656e",
+        "url": "https://nsearchives.nseindia.in/corporate/Infosys_28102026173824_SE_filing_Earnings_call_transcript.pdf",
+        "host": "finn-source-probe-tkef",
+        "kind": "filing",
+        "bytes": 3742339,
+        "phase": "complete",
+        "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+        "ticker": "INFY",
+        "company": "Infosys Limited",
+        "created_at": "2026-11-15T17:21:37.929839+00:00",
+        "fetched_at": "2026-11-15T17:21:39.092526+00:00",
+        "object_key": "sources/sha256/b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2.pdf",
+        "page_count": 48,
+        "updated_at": "2026-11-15T17:21:47.085163+00:00",
+        "discovery_url": null,
+        "document_date": "2026-10-28T17:38:42+05:30",
+        "completed_pages": 48,
+        "discovery_label": "",
+        "identity_match": true,
+        "document_type_match": true,
+        "period_mentions": [
+          "2026-2027",
+          "2026-\n2027"
+        ],
+        "completed_at": "2026-11-15T17:21:47.601874+00:00"
+      }
+    },
+    {
+      "path": "/api/companies/INFY/monitor/d397b6277eec3db71441656e",
+      "status": 200,
+      "data": {
+        "phase": "complete",
+        "answer": {
+          "claims": [
+            {
+              "text": "The provided sources do not contain quantitative data regarding cash generation or its direct link to growth.",
+              "kind": "reported",
+              "quote": "If you see last many years -- last couple of years, we have been able to maintain our margin at 21% despite all the headwinds while investing in the business, whether it is sales and marketing, whether it is talent building, AI talent or technology investment that we have done.",
+              "source_id": "d397b6277eec3db71441656e:14"
+            }
+          ],
+          "limitations": "The provided excerpts discuss margins, hiring, large deals, and AI investments, but do not provide explicit cash generation figures or cash flow metrics to evaluate whether growth is supported by cash generation.",
+          "verdict": "inconclusive",
+          "id": "07482b77b0fd467dabc3122b",
+          "owner": "8f4ace29-daa3-4fbc-9705-6981b119dbef",
+          "ticker": "INFY",
+          "question": "Assess whether this subsequent disclosure supports, challenges or is inconclusive for: Is growth supported by cash generation?",
+          "model": "gemini-3.5-flash-lite",
+          "created_at": "2026-11-15T17:21:53.959132+00:00",
+          "sources": [
+            {
+              "id": "d397b6277eec3db71441656e:1",
+              "page": 1,
+              "url": "https://nsearchives.nseindia.in/corporate/Infosys_28102026173824_SE_filing_Earnings_call_transcript.pdf",
+              "kind": "filing",
+              "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+              "fetched_at": "2026-11-15T17:21:39.092526+00:00",
+              "period_mentions": [
+                "2026-2027",
+                "2026-\n2027"
+              ]
+            },
+            {
+              "id": "d397b6277eec3db71441656e:10",
+              "page": 10,
+              "url": "https://nsearchives.nseindia.in/corporate/Infosys_28102026173824_SE_filing_Earnings_call_transcript.pdf",
+              "kind": "filing",
+              "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+              "fetched_at": "2026-11-15T17:21:39.092526+00:00",
+              "period_mentions": [
+                "2026-2027",
+                "2026-\n2027"
+              ]
+            },
+            {
+              "id": "d397b6277eec3db71441656e:11",
+              "page": 11,
+              "url": "https://nsearchives.nseindia.in/corporate/Infosys_28102026173824_SE_filing_Earnings_call_transcript.pdf",
+              "kind": "filing",
+              "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+              "fetched_at": "2026-11-15T17:21:39.092526+00:00",
+              "period_mentions": [
+                "2026-2027",
+                "2026-\n2027"
+              ]
+            },
+            {
+              "id": "d397b6277eec3db71441656e:12",
+              "page": 12,
+              "url": "https://nsearchives.nseindia.in/corporate/Infosys_28102026173824_SE_filing_Earnings_call_transcript.pdf",
+              "kind": "filing",
+              "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+              "fetched_at": "2026-11-15T17:21:39.092526+00:00",
+              "period_mentions": [
+                "2026-2027",
+                "2026-\n2027"
+              ]
+            },
+            {
+              "id": "d397b6277eec3db71441656e:13",
+              "page": 13,
+              "url": "https://nsearchives.nseindia.in/corporate/Infosys_28102026173824_SE_filing_Earnings_call_transcript.pdf",
+              "kind": "filing",
+              "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+              "fetched_at": "2026-11-15T17:21:39.092526+00:00",
+              "period_mentions": [
+                "2026-2027",
+                "2026-\n2027"
+              ]
+            },
+            {
+              "id": "d397b6277eec3db71441656e:14",
+              "page": 14,
+              "url": "https://nsearchives.nseindia.in/corporate/Infosys_28102026173824_SE_filing_Earnings_call_transcript.pdf",
+              "kind": "filing",
+              "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+              "fetched_at": "2026-11-15T17:21:39.092526+00:00",
+              "period_mentions": [
+                "2026-2027",
+                "2026-\n2027"
+              ]
+            },
+            {
+              "id": "d397b6277eec3db71441656e:15",
+              "page": 15,
+              "url": "https://nsearchives.nseindia.in/corporate/Infosys_28102026173824_SE_filing_Earnings_call_transcript.pdf",
+              "kind": "filing",
+              "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+              "fetched_at": "2026-11-15T17:21:39.092526+00:00",
+              "period_mentions": [
+                "2026-2027",
+                "2026-\n2027"
+              ]
+            },
+            {
+              "id": "d397b6277eec3db71441656e:16",
+              "page": 16,
+              "url": "https://nsearchives.nseindia.in/corporate/Infosys_28102026173824_SE_filing_Earnings_call_transcript.pdf",
+              "kind": "filing",
+              "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+              "fetched_at": "2026-11-15T17:21:39.092526+00:00",
+              "period_mentions": [
+                "2026-2027",
+                "2026-\n2027"
+              ]
+            }
+          ],
+          "citation_check": "Exact quotations matched to stored passages; interpretation still requires investor judgment",
+          "cached": false
+        }
+      }
+    }
+  ]
+}

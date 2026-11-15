@@ -1,0 +1,109 @@
+[
+  {
+    "ticker": "DABUR",
+    "kind": "annual_report",
+    "pages": 623,
+    "company": "Dabur India Ltd",
+    "company_match": true,
+    "type_match": true,
+    "period_mentions": [
+      "2026-27",
+      "2025 -26",
+      "2025-26",
+      "2025 - 26"
+    ],
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/81d939d7-ea85-443b-98c5-934c71afa68c.pdf",
+    "sha256": "e2677edfd9cc5a5035df98140ab2b8b54ab6c463d3456dca12d9c1980c9391b3",
+    "host_hash_check": {
+      "bytes": 28311115,
+      "origin": "finn-source-probe-tkef",
+      "sha256": "e2677edfd9cc5a5035df98140ab2b8b54ab6c463d3456dca12d9c1980c9391b3",
+      "checked_at": "2026-11-15T17:06:35.988780+00:00",
+      "matches_stored": true
+    },
+    "page_one_excerpt": " \nDABUR INDIA LIMITED, Punjabi Bhawan, 10, Rouse Avenue, New Delhi \u2013 110 002, Tel.: +91 11 71206000  \nRegd. Office: 8/3, Asaf Ali Road, New Delhi \u2013 110 002 (India) \n CIN: L24230DL1975PLC007908, Email: corpcomm@dabur.com Website: www.dabur.com \nRef: SEC/SE/2026-27 \nDate: July 06, 2026 \n \nTo, \nCorporate Relations Department  \nBSE Ltd. \nPhiroze Jeejeebhoy Towers, \nDalal Street,  \nMumbai- 400001 \n \nBSE Scrip Code: 500096 \nListing Department \nNational Stock Exchange of India Ltd. \nExchange Plaza, 5th Floor \nPlot No. C/1, G Block, Bandra \u2013 Kurla \nComplex, Bandra (E), Mumbai \u2013 400051 \n \nNSE Scrip Symbol - DABUR \n \nSub:   Submission of Integrated Annual Report 2025 -26 (including Notice of 51 st Annual General \nMeeting) and Business Responsibility and Sustainability Report 2025-26  \n \nDear Sir / Madam, \n \nIn terms of Regulations 34 and 53 of SEBI (Listing Obligations and Disclosure Requirements) Regulations, \n2015, as amended from time to time, we are submitting herewith the Integrated Annual Report of the \nCompany for the financial year 2025-26 along with the Notice of 51st AGM and the Business Responsibility \nand Sustainability Report for the financial year 2025-26. \n \nThe aforesaid documents are being sent to the Shareholders electronically who have registered their email \nIDs with th"
+  },
+  {
+    "ticker": "HCLTECH",
+    "kind": "transcript",
+    "pages": 26,
+    "company": "HCL Technologies Ltd",
+    "company_match": true,
+    "type_match": true,
+    "period_mentions": [],
+    "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ccce0001-ff5d-4875-b1e5-5c558669f49c.pdf",
+    "sha256": "baf227e394b6f6be0659c3c482d707ffc62e98c9bfe248d417560d3527af75ed",
+    "host_hash_check": {
+      "bytes": 570587,
+      "origin": "finn-source-probe-tkef",
+      "sha256": "baf227e394b6f6be0659c3c482d707ffc62e98c9bfe248d417560d3527af75ed",
+      "checked_at": "2026-11-15T17:03:31.353714+00:00",
+      "matches_stored": true
+    },
+    "page_one_excerpt": " \n \n \nHCL Technologies Ltd.   \nTechnology Hub, Special Economic Zone  \nPlot No. 3A, Sector 126, NOIDA\n \u2013 \n201304, UP, India  \nt: +91 \n1\n20 \n 4306000   \nCorporate Identity Number:  \nL74140DL1991\n PLC046369  \nRegistered Office:\n    \n806 Siddharth, 96, Nehru Place, New Delhi \n -\n 1100\n1\n9, India  \n \n \n \n \nOctober 15, 2026 \n \n \nThe General Manager \nBSE Limited \nListing Department \nPhiroze Jeejeebhoy Towers \nDalal Street \nMumbai- 400 001 \n \n \nBSE Scrip Code: 532281 \nThe Manager \nNational Stock Exchange of India Limited \nListing Department \nExchange Plaza \n5th Floor, Plot No. C-1, Block-G \nBandra-Kurla Complex, Bandra(E) \nMumbai-400 051 \n \nNSE Scrip Code: HCLTECH \n \n \nSubject: Transcript of the Conference Call held on October 12, 2026   \n \n \nDear Sir / Madam, \n \n \nIn terms of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015, enclosed \nplease find a copy of the transcript of the Conference Call held on October 12, 2026, post the \nannouncement of the financial results of the Company for the quarter ended September 30, 2026. \n \n \nThe is also available on our Company\u2019s website https://www.hcltech.com/investor-relations. \n \n \nThis is for your information and records. \n \n \nYours faithfully, \nFor HCL Technologies Limited \n \n \n \nManish Anand \nCompany Secretary \n \n \n"
+  },
+  {
+    "ticker": "DABUR",
+    "kind": "transcript",
+    "pages": 20,
+    "company": "Dabur India Ltd",
+    "company_match": true,
+    "type_match": true,
+    "period_mentions": [
+      "2026-27"
+    ],
+    "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=fb1c13ad-a722-44f3-963c-027b3cf3a093.pdf",
+    "sha256": "cd168fe1152c1f8cec06e6bf829915b7826d33009f5e9745e65e54f29754f72a",
+    "host_hash_check": {
+      "bytes": 672082,
+      "origin": "finn-source-probe-tkef",
+      "sha256": "cd168fe1152c1f8cec06e6bf829915b7826d33009f5e9745e65e54f29754f72a",
+      "checked_at": "2026-11-15T17:08:11.873513+00:00",
+      "matches_stored": true
+    },
+    "page_one_excerpt": " \nDABUR INDIA LIMITED, Punjabi Bhawan, 10, Rouse Avenue, New Delhi \u2013 110 002, Tel.: +91 11 71206000  \nRegd. Office: 8/3, Asaf Ali Road, New Delhi \u2013 110 002 (India) \n CIN: L24230DL1975PLC007908, Email: corpcomm@dabur.com Website: www.dabur.com \nRef: SEC/SE/2026-27 \nDate: November 10, 2026 \n \n  To, \nCorporate Relations Department  \nBSE Ltd. \nPhiroze Jeejeebhoy Towers  \nDalal Street,  \nMumbai- 400001 \n \nBSE Scrip Code: 500096   \nListing Department \nNational Stock Exchange of India Ltd. \nExchange Plaza, 5th Floor \nPlot No. C/1, G Block, Bandra Kurla Complex \nBandra (E), Mumbai \u2013 400051 \n \nNSE Scrip Symbol: DABUR \n \n \n \n \nSub: Transcript of Analyst/ Institutional Investor Meet  \n \nDear Sir/Madam, \n  \nIn furtherance of our letter dated October 26, 2026, and pursuant to Regulation 30 of SEBI (Listing \nObligations and Disclosure Requirements) Regulations, 2015, please find enclosed herewith the \nTranscript of Analyst/ Institutional Investor Meet held on November 05, 2026. \n \nThe aforementioned transcript is also available on the website of the Company at \nwww.dabur.com. \n \nThis is for your information and records. \n \nThanking You, \n \nYours faithfully, \nFor Dabur India Limited  \n \n \n \n \n(Ashok Kumar Jain) \nGroup Company Secretary and Chief Compliance Officer \n \nEncl.: as above \n "
+  },
+  {
+    "ticker": "INFY",
+    "kind": "annual_report",
+    "pages": 383,
+    "company": "Infosys Ltd",
+    "company_match": true,
+    "type_match": true,
+    "period_mentions": [
+      "2025-26"
+    ],
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/19dd605c-2b6b-4084-8dca-9d578a3eb7a0.pdf",
+    "sha256": "889ee382d055a528a645ae28017b17df9da306328997dfc1d14d9b98757d88c2",
+    "host_hash_check": {
+      "bytes": 8985010,
+      "origin": "finn-source-probe-tkef",
+      "sha256": "889ee382d055a528a645ae28017b17df9da306328997dfc1d14d9b98757d88c2",
+      "checked_at": "2026-11-15T16:53:58.646447+00:00",
+      "matches_stored": true
+    },
+    "page_one_excerpt": " \n \nTO ALL STOCK EXCHANGES \n \nBSE LIMITED \nNATIONAL STOCK EXCHANGE OF INDIA LIMITED \nNEW YORK STOCK EXCHANGE \n \nMay 29, 2026 \n \nDear Sir/ Madam, \n \nSub: Integrated Annual Report for the Financial Year 2025-26  \n \nIn compliance with the provisions of the Companies Act, 2013 (\u201cAct\u201d), the rules made thereunder, and the SEBI \n(Listing Obligations and Disclosure Requirements) Regulations, 2015 (\u201cListing Regulations\u201d), as amended from \ntime to time, please find enclosed the Integrated Annual Report, Business Responsibility and Sustainability Report \n(\u201cBRSR\u201d) and the Notice of the Annual General Meeting (\u201cAGM\u201d) for the financial year 2025-26. \n \nThese documents are being circulated to shareholders through electronic mode whose e -mail addresses are \nregistered with the Company or their Depository Participant(s) (\u201cDPs\u201d). \n \nFurther, in accordance with Regulation 36(1)(b) of the Listing Regulations, the Company will send a separate \ncommunication to shareholders whose e-mail addresses are not registered with the Company/DPs, providing a \nweb link to access the Integrated Annual Report on the Company\u2019s website. \n \nThe following report will be made available on the Company\u2019s website: \n \nName of the report Website link \n45th AGM Notice and Integrated Annual Report \n2025-26 (including BRSR). "
+  },
+  {
+    "ticker": "INFY",
+    "kind": "transcript",
+    "pages": 48,
+    "company": "Infosys Ltd",
+    "company_match": true,
+    "type_match": true,
+    "period_mentions": [
+      "2026-2027",
+      "2026-\n2027"
+    ],
+    "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7982fc61-7765-4981-ab3d-6aec36ba2137.pdf",
+    "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+    "host_hash_check": {
+      "bytes": 3742339,
+      "origin": "finn-source-probe-tkef",
+      "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+      "checked_at": "2026-11-15T16:58:11.198251+00:00",
+      "matches_stored": true
+    },
+    "page_one_excerpt": " \n \nTO ALL STOCK EXCHANGES \nBSE LIMITED \nNATIONAL STOCK EXCHANGE OF INDIA LIMITED  \nNEW YORK STOCK EXCHANGE \n \nOctober 28, 2026  \nDear Sir/ Madam, \nSub: Transcripts of the press conference and earnings call conducted after the Meeting of \n Board of directors on October 23, 2026 \n \nPlease find enclosed the transcripts of the press conference and earnings call conducted after the Board \nmeeting held on October 23, 2026, for your information and records. \n \nThis information will also be ho sted on the Company\u2019s website, at  \nhttps://www.infosys.com/investors/reports-filings/quarterly-results/2026-2027/q2.html  \n \nThe audio/video recordings of the press conference and earnings call are also made available on the \nCompany\u2019s website, at https://www.infosys.com/investors/reports-filings/quarterly-results/2026-\n2027/q2.html \nThis is for your information and records.  \nYours Sincerely, \nFor Infosys Limited \n \n \n \nA.G.S. Manikantha \nCompany Secretary \nMembership No: A21918 \n "
+  }
+]
