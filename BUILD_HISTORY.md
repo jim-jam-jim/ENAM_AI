@@ -15,6 +15,7 @@ This file supplements the original conversations; it is not their replacement. N
 - Prepared a small standard-library hosted diagnostic, environment template, Render blueprint and Dockerfile; no application framework was committed. Hosted run and Docker image build are unverified (Docker command unavailable locally).
 - Created a manually populated real-evidence briefing preview. Sandboxed preview was inaccessible to the browser; approved outside-sandbox server was reachable. Verified 390px and 320px widths, time-window selection and disclosure expansion; saved preview/mobile-briefing.jpg. No AI research was claimed.
 - Four local HTTP boundary tests initially failed because sandbox denied loopback sockets. Approved outside-sandbox rerun passed all four. pypdf successfully parsed 22/22 transcript pages. This does not establish PostgreSQL/object-store or hosted recovery integration.
+- Saved initial local milestone commit aefdbd7 after sandbox denied Git index writes and approved external execution succeeded. Staged whitespace check found a trailing space in preview CSS; removed it in a follow-up. No GitHub push or deployment performed.
 
 ## Export/link status
 - Current chat: original conversation exists in Codex; export/share location not yet available.
