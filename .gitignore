@@ -1,0 +1,11 @@
+tmp/
+data/raw/
+data/extracted/
+.env
+.env.*
+!.env.example
+__pycache__/
+.venv/
+node_modules/
+.next/
+out/

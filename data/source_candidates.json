@@ -1,0 +1,16 @@
+[
+  {"id":"INFY-prices","ticker":"INFY","kind":"prices","url":"https://query1.finance.yahoo.com/v8/finance/chart/INFY.NS?range=3mo&interval=1d"},
+  {"id":"DABUR-prices","ticker":"DABUR","kind":"prices","url":"https://query1.finance.yahoo.com/v8/finance/chart/DABUR.NS?range=3mo&interval=1d"},
+  {"id":"HCLTECH-prices","ticker":"HCLTECH","kind":"prices","url":"https://query1.finance.yahoo.com/v8/finance/chart/HCLTECH.NS?range=3mo&interval=1d"},
+  {"id":"CERA-prices","ticker":"CERA","kind":"prices","url":"https://query1.finance.yahoo.com/v8/finance/chart/CERA.NS?range=3mo&interval=1d"},
+  {"id":"INFY-annual","ticker":"INFY","kind":"annual_report","url":"https://www.infosys.com/investors/reports-filings/annual-report/annual/documents/infosys-ar-26.pdf"},
+  {"id":"INFY-transcript","ticker":"INFY","kind":"transcript","url":"https://www.infosys.com/investors/reports-filings/quarterly-results/2025-2026/q4/documents/transcripts/earningscall.pdf"},
+  {"id":"INFY-exchange","ticker":"INFY","kind":"filing","url":"https://nsearchives.nseindia.com/corporate/Infosys_23042026170027_outcome.pdf"},
+  {"id":"DABUR-transcript","ticker":"DABUR","kind":"transcript","url":"https://nsearchives.nseindia.com/corporate/DABUR_12052026173233_transcript.pdf"},
+  {"id":"DABUR-exchange","ticker":"DABUR","kind":"filing","url":"https://nsearchives.nseindia.com/corporate/DABUR_07052026163145_Presentation.pdf"},
+  {"id":"HCLTECH-annual-index","ticker":"HCLTECH","kind":"discovery","url":"https://www.hcltech.com/investor-relations/annual-report"},
+  {"id":"HCLTECH-transcript-index","ticker":"HCLTECH","kind":"discovery","url":"https://www.hcltech.com/en-us/investor-relations/call-transcripts"},
+  {"id":"DABUR-discovery","ticker":"DABUR","kind":"discovery","url":"https://www.screener.in/company/DABUR/consolidated/"},
+  {"id":"CERA-discovery","ticker":"CERA","kind":"discovery","url":"https://www.screener.in/company/CERA/consolidated/"},
+  {"id":"INFY-announcements","ticker":"INFY","kind":"announcements","url":"https://www.nseindia.com/api/corporate-announcements?index=equities&symbol=INFY&from_date=01-10-2026&to_date=15-11-2026"}
+]

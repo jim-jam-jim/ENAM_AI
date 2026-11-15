@@ -1,0 +1,25 @@
+# Diagnostic deployment only. Not the FINN application/backend decision.
+services:
+  - type: web
+    name: finn-source-probe
+    runtime: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./Dockerfile.probe
+    healthCheckPath: /healthz
+    autoDeployTrigger: off
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: AWS_ENDPOINT_URL_S3
+        sync: false
+      - key: AWS_REGION
+        sync: false
+      - key: AWS_ACCESS_KEY_ID
+        sync: false
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+      - key: DOCUMENT_BUCKET
+        value: finn-sources
+      - key: PROBE_TOKEN
+        sync: false

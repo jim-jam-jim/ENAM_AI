@@ -1,0 +1,8 @@
+FROM python:3.11-slim
+WORKDIR /app
+COPY requirements-probe.txt ./
+RUN pip install --no-cache-dir -r requirements-probe.txt
+COPY scripts/host_probe.py scripts/host_probe.py
+ENV PYTHONUNBUFFERED=1
+EXPOSE 10000
+CMD ["python", "scripts/host_probe.py"]

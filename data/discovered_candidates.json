@@ -1,0 +1,67 @@
+[
+  {
+    "id": "DABUR-annual_report-discovered",
+    "ticker": "DABUR",
+    "kind": "annual_report",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/81d939d7-ea85-443b-98c5-934c71afa68c.pdf",
+    "discovery_source": "https://www.screener.in/company/DABUR/consolidated/"
+  },
+  {
+    "id": "DABUR-transcript-discovered",
+    "ticker": "DABUR",
+    "kind": "transcript",
+    "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=fb1c13ad-a722-44f3-963c-027b3cf3a093.pdf",
+    "discovery_source": "https://www.screener.in/company/DABUR/consolidated/"
+  },
+  {
+    "id": "CERA-annual_report-discovered",
+    "ticker": "CERA",
+    "kind": "annual_report",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/903e8d5c-0373-4a07-9b1d-13920a29c910.pdf",
+    "discovery_source": "https://www.screener.in/company/CERA/consolidated/"
+  },
+  {
+    "id": "CERA-transcript-discovered",
+    "ticker": "CERA",
+    "kind": "transcript",
+    "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=769be2ca-bd51-4ac3-8e63-ce44e430d026.pdf",
+    "discovery_source": "https://www.screener.in/company/CERA/consolidated/"
+  },
+  {
+    "id": "HCLTECH-annual_report-discovered",
+    "ticker": "HCLTECH",
+    "kind": "annual_report",
+    "url": "https://www.hcltech.com/sites/default/files/document/open/annual-report/2026-09/annual-report-2025-26.pdf"
+  },
+  {
+    "id": "HCLTECH-transcript-discovered",
+    "ticker": "HCLTECH",
+    "kind": "transcript",
+    "url": "https://www.hcltech.com/sites/default/files/document/open/call-trans/2026-10/CallTrancript.pdf"
+  },
+  {
+    "id": "INFY-results-discovered",
+    "ticker": "INFY",
+    "kind": "filing",
+    "url": "https://nsearchives.nseindia.in/corporate/Infosys_23102026160704_BM_Outcome_Oct232026_1.pdf",
+    "exchange_date": "23-Oct-2026 16:08:26"
+  },
+  {
+    "id": "DABUR-announcements",
+    "ticker": "DABUR",
+    "kind": "announcements",
+    "url": "https://www.nseindia.com/api/corporate-announcements?index=equities&symbol=DABUR&from_date=01-10-2026&to_date=15-11-2026"
+  },
+  {
+    "id": "HCLTECH-announcements",
+    "ticker": "HCLTECH",
+    "kind": "announcements",
+    "url": "https://www.nseindia.com/api/corporate-announcements?index=equities&symbol=HCLTECH&from_date=01-10-2026&to_date=15-11-2026"
+  },
+  {
+    "id": "CERA-announcements",
+    "ticker": "CERA",
+    "kind": "announcements",
+    "url": "https://www.nseindia.com/api/corporate-announcements?index=equities&symbol=CERA&from_date=01-10-2026&to_date=15-11-2026"
+  }
+]

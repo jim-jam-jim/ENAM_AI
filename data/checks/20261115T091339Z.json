@@ -1,0 +1,145 @@
+{
+  "environment": "local Windows; NOT deployed-host verification",
+  "results": [
+    {
+      "id": "INFY-prices",
+      "ticker": "INFY",
+      "kind": "prices",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/INFY.NS?range=3mo&interval=1d",
+      "checked_at_utc": "2026-11-15T09:13:39.800098+00:00",
+      "outcome": "failed",
+      "error": "ConnectionError: HTTPSConnectionPool(host='query1.finance.yahoo.com', port=443): Max retries exceeded with url: /v8/finance/chart/INFY.NS?range=3mo&interval=1d (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x0000023A1E5A78D0>: Failed to resolve 'query1.finance.yahoo.com' ([Errno 11001] getaddrinfo failed)\"))",
+      "seconds": 0.03
+    },
+    {
+      "id": "DABUR-prices",
+      "ticker": "DABUR",
+      "kind": "prices",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/DABUR.NS?range=3mo&interval=1d",
+      "checked_at_utc": "2026-11-15T09:13:39.801097+00:00",
+      "outcome": "failed",
+      "error": "ConnectionError: HTTPSConnectionPool(host='query1.finance.yahoo.com', port=443): Max retries exceeded with url: /v8/finance/chart/DABUR.NS?range=3mo&interval=1d (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x0000023A1E5A6A10>: Failed to resolve 'query1.finance.yahoo.com' ([Errno 11001] getaddrinfo failed)\"))",
+      "seconds": 0.03
+    },
+    {
+      "id": "HCLTECH-prices",
+      "ticker": "HCLTECH",
+      "kind": "prices",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/HCLTECH.NS?range=3mo&interval=1d",
+      "checked_at_utc": "2026-11-15T09:13:39.801097+00:00",
+      "outcome": "failed",
+      "error": "ConnectionError: HTTPSConnectionPool(host='query1.finance.yahoo.com', port=443): Max retries exceeded with url: /v8/finance/chart/HCLTECH.NS?range=3mo&interval=1d (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x0000023A1E5B0810>: Failed to resolve 'query1.finance.yahoo.com' ([Errno 11001] getaddrinfo failed)\"))",
+      "seconds": 0.03
+    },
+    {
+      "id": "CERA-prices",
+      "ticker": "CERA",
+      "kind": "prices",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/CERA.NS?range=3mo&interval=1d",
+      "checked_at_utc": "2026-11-15T09:13:39.831056+00:00",
+      "outcome": "failed",
+      "error": "ConnectionError: HTTPSConnectionPool(host='query1.finance.yahoo.com', port=443): Max retries exceeded with url: /v8/finance/chart/CERA.NS?range=3mo&interval=1d (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x0000023A1E59A850>: Failed to resolve 'query1.finance.yahoo.com' ([Errno 11001] getaddrinfo failed)\"))",
+      "seconds": 0.0
+    },
+    {
+      "id": "INFY-annual",
+      "ticker": "INFY",
+      "kind": "annual_report",
+      "url": "https://www.infosys.com/investors/reports-filings/annual-report/annual/documents/infosys-ar-26.pdf",
+      "checked_at_utc": "2026-11-15T09:13:39.832107+00:00",
+      "outcome": "failed",
+      "error": "ConnectionError: HTTPSConnectionPool(host='www.infosys.com', port=443): Max retries exceeded with url: /investors/reports-filings/annual-report/annual/documents/infosys-ar-26.pdf (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x0000023A1E599810>: Failed to resolve 'www.infosys.com' ([Errno 11001] getaddrinfo failed)\"))",
+      "seconds": 0.0
+    },
+    {
+      "id": "INFY-transcript",
+      "ticker": "INFY",
+      "kind": "transcript",
+      "url": "https://www.infosys.com/investors/reports-filings/quarterly-results/2025-2026/q4/documents/transcripts/earningscall.pdf",
+      "checked_at_utc": "2026-11-15T09:13:39.832107+00:00",
+      "outcome": "failed",
+      "error": "ConnectionError: HTTPSConnectionPool(host='www.infosys.com', port=443): Max retries exceeded with url: /investors/reports-filings/quarterly-results/2025-2026/q4/documents/transcripts/earningscall.pdf (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x0000023A1E5A7990>: Failed to resolve 'www.infosys.com' ([Errno 11001] getaddrinfo failed)\"))",
+      "seconds": 0.0
+    },
+    {
+      "id": "INFY-exchange",
+      "ticker": "INFY",
+      "kind": "filing",
+      "url": "https://nsearchives.nseindia.com/corporate/Infosys_23042026170027_outcome.pdf",
+      "checked_at_utc": "2026-11-15T09:13:39.837057+00:00",
+      "outcome": "failed",
+      "error": "ConnectionError: HTTPSConnectionPool(host='nsearchives.nseindia.com', port=443): Max retries exceeded with url: /corporate/Infosys_23042026170027_outcome.pdf (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x0000023A1E5B4350>: Failed to resolve 'nsearchives.nseindia.com' ([Errno 11001] getaddrinfo failed)\"))",
+      "seconds": 0.01
+    },
+    {
+      "id": "DABUR-transcript",
+      "ticker": "DABUR",
+      "kind": "transcript",
+      "url": "https://nsearchives.nseindia.com/corporate/DABUR_12052026173233_transcript.pdf",
+      "checked_at_utc": "2026-11-15T09:13:39.839056+00:00",
+      "outcome": "failed",
+      "error": "ConnectionError: HTTPSConnectionPool(host='nsearchives.nseindia.com', port=443): Max retries exceeded with url: /corporate/DABUR_12052026173233_transcript.pdf (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x0000023A1E5B6290>: Failed to resolve 'nsearchives.nseindia.com' ([Errno 11001] getaddrinfo failed)\"))",
+      "seconds": 0.01
+    },
+    {
+      "id": "DABUR-exchange",
+      "ticker": "DABUR",
+      "kind": "filing",
+      "url": "https://nsearchives.nseindia.com/corporate/DABUR_07052026163145_Presentation.pdf",
+      "checked_at_utc": "2026-11-15T09:13:39.840052+00:00",
+      "outcome": "failed",
+      "error": "ConnectionError: HTTPSConnectionPool(host='nsearchives.nseindia.com', port=443): Max retries exceeded with url: /corporate/DABUR_07052026163145_Presentation.pdf (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x0000023A1E5B7190>: Failed to resolve 'nsearchives.nseindia.com' ([Errno 11001] getaddrinfo failed)\"))",
+      "seconds": 0.01
+    },
+    {
+      "id": "HCLTECH-annual-index",
+      "ticker": "HCLTECH",
+      "kind": "discovery",
+      "url": "https://www.hcltech.com/investor-relations/annual-report",
+      "checked_at_utc": "2026-11-15T09:13:39.842057+00:00",
+      "outcome": "failed",
+      "error": "ConnectionError: HTTPSConnectionPool(host='www.hcltech.com', port=443): Max retries exceeded with url: /investor-relations/annual-report (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x0000023A1E5B9210>: Failed to resolve 'www.hcltech.com' ([Errno 11001] getaddrinfo failed)\"))",
+      "seconds": 0.0
+    },
+    {
+      "id": "HCLTECH-transcript-index",
+      "ticker": "HCLTECH",
+      "kind": "discovery",
+      "url": "https://www.hcltech.com/en-us/investor-relations/call-transcripts",
+      "checked_at_utc": "2026-11-15T09:13:39.845057+00:00",
+      "outcome": "failed",
+      "error": "ConnectionError: HTTPSConnectionPool(host='www.hcltech.com', port=443): Max retries exceeded with url: /en-us/investor-relations/call-transcripts (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x0000023A1E5A4350>: Failed to resolve 'www.hcltech.com' ([Errno 11001] getaddrinfo failed)\"))",
+      "seconds": 0.0
+    },
+    {
+      "id": "DABUR-discovery",
+      "ticker": "DABUR",
+      "kind": "discovery",
+      "url": "https://www.screener.in/company/DABUR/consolidated/",
+      "checked_at_utc": "2026-11-15T09:13:39.846078+00:00",
+      "outcome": "failed",
+      "error": "ConnectionError: HTTPSConnectionPool(host='www.screener.in', port=443): Max retries exceeded with url: /company/DABUR/consolidated/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x0000023A1E5B3110>: Failed to resolve 'www.screener.in' ([Errno 11001] getaddrinfo failed)\"))",
+      "seconds": 0.0
+    },
+    {
+      "id": "CERA-discovery",
+      "ticker": "CERA",
+      "kind": "discovery",
+      "url": "https://www.screener.in/company/CERA/consolidated/",
+      "checked_at_utc": "2026-11-15T09:13:39.847072+00:00",
+      "outcome": "failed",
+      "error": "ConnectionError: HTTPSConnectionPool(host='www.screener.in', port=443): Max retries exceeded with url: /company/CERA/consolidated/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x0000023A1E5B0850>: Failed to resolve 'www.screener.in' ([Errno 11001] getaddrinfo failed)\"))",
+      "seconds": 0.0
+    },
+    {
+      "id": "INFY-announcements",
+      "ticker": "INFY",
+      "kind": "announcements",
+      "url": "https://www.nseindia.com/api/corporate-announcements?index=equities&symbol=INFY&from_date=01-10-2026&to_date=15-11-2026",
+      "checked_at_utc": "2026-11-15T09:13:39.851071+00:00",
+      "outcome": "failed",
+      "error": "ConnectionError: HTTPSConnectionPool(host='www.nseindia.com', port=443): Max retries exceeded with url: /api/corporate-announcements?index=equities&symbol=INFY&from_date=01-10-2026&to_date=15-11-2026 (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x0000023A1B440310>: Failed to resolve 'www.nseindia.com' ([Errno 11001] getaddrinfo failed)\"))",
+      "seconds": 0.0
+    }
+  ]
+}
