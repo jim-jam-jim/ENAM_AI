@@ -26,3 +26,5 @@ Manual refresh only; no scheduled or continuous monitoring. A sleeping service p
 BUILD_HISTORY.md indexes this real development conversation and meaningful failures/fixes. Original conversation exports/share links still need to be supplied; do not replace them with a generated summary or invent URLs. Earlier planning-chat export is also pending.
 
 This is a draft covering-note source, not a statement that every workflow has passed. No submission email has been sent.
+
+Final handoff: UI fixes are deployed and API/asset checks pass. Research answer quality is partial, not fully accepted: see MVP_ACCEPTANCE.md for claim-level review and required manual browser checks. Do not describe this prototype as fully verified.

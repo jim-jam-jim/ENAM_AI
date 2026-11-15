@@ -37,3 +37,5 @@ User configured Gemini privately and confirmed free billing. Model metadata acce
 Scope frozen: finish acceptance and blocking fixes only. Do not add price infrastructure to work around hosted Yahoo 429; retain source failure and stale-cache labels. Session advisory locks replaced with expiring row leases for the Neon transaction pooler. Reuse one database connection within a page batch while retaining per-page durable writes.
 
 Runtime generation revealed Gemini 2.5 Flash-Lite is unavailable to new users (HTTP 404), despite model metadata success. Google directs new users to gemini-3.5-flash-lite; official pricing checked and standard text input/output are free tier. Explicitly changed selected model to 3.5 Flash-Lite under user-approved free-tier Gemini choice, retaining the same caps and no paid fallback.
+
+Final review posture: hand over the deployed prototype with explicit partial research acceptance, stale-price/provider limits, and required manual visual checks. Do not equate exact-quote validation with a complete or useful answer. Scope remains frozen.

@@ -1,0 +1,8 @@
+{
+  "prediction_status": 409,
+  "prediction_message": "Company reports cannot reliably establish tomorrow\u2019s share price. Try: Is revenue growth supported by operating cash flow? No price prediction was generated.",
+  "primary_contrast_rule_present": true,
+  "disabled_contrast_rule_present": true,
+  "root_status": 200,
+  "verification": "HTTP assets/API only; browser unavailable"
+}
