@@ -1,5 +1,7 @@
 # Decisions
 
+Entries are chronological; later explicit decisions supersede earlier proposals and account assumptions. Current deployment/model facts are in README.md.
+
 ## Accepted by user — 15 November 2026
 - Three views: briefing, event evidence, company research. Briefing is the foundation; one saved question per company adds context without suppressing material unrelated events.
 - Build one verified end-to-end workflow first. Target 15 portfolio companies, three prepared research examples and a separate unfamiliar ticker test. Configurable in-app alerts follow the core evidence workflow.
@@ -39,3 +41,9 @@ Scope frozen: finish acceptance and blocking fixes only. Do not add price infras
 Runtime generation revealed Gemini 2.5 Flash-Lite is unavailable to new users (HTTP 404), despite model metadata success. Google directs new users to gemini-3.5-flash-lite; official pricing checked and standard text input/output are free tier. Explicitly changed selected model to 3.5 Flash-Lite under user-approved free-tier Gemini choice, retaining the same caps and no paid fallback.
 
 Final review posture: hand over the deployed prototype with explicit partial research acceptance, stale-price/provider limits, and required manual visual checks. Do not equate exact-quote validation with a complete or useful answer. Scope remains frozen.
+
+## Accepted submission scope and classification — 15 November 2026
+- User deliberately deferred scheduled background refresh/unattended monitoring for this prototype. Manual refresh is implemented. Scheduling belongs under limitations/future improvements, not broken functionality; this preserves the free-tier architecture and frozen scope.
+- Separate external service failures (Yahoo hosted 429 of unknown cause/duration; Infosys Gemini 503 availability failures) from research relevance/financial-context quality and final browser verification gaps. Do not attribute 429 definitively to daily/IP/free-tier quotas or promise recovery tomorrow. Other hosted Gemini calls succeeded.
+- Evaluate better retrieval, financial context, prompts and potentially a stronger model as future quality work; no guarantee that a stronger model fixes relevance, and no model switch or paid usage now.
+- Prepare exact email/checklist and public access/secret audit; no submission email authorization. Original initial-planning and this-development conversation exports/links remain user-supplied requirements.

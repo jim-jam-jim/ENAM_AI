@@ -1,64 +1,65 @@
 # FINN
 
-FINN is a mobile investor briefing with inspectable evidence, a 15-company mock portfolio, company research, one saved question per company, and configurable in-app EOD alerts. Static Next.js assets are served by one FastAPI application. See docs/MVP_ACCEPTANCE.md for the authoritative verification status: implemented features are not all accepted yet.
+[Prototype](https://finn-source-probe-tkef.onrender.com) · [Repository](https://github.com/jim-jam-jim/ENAM_AI)
 
-## Actual local app
-Install requirements.txt, run `npm ci` and `npm run build` inside web, then run `python -m uvicorn server.main:app --host 127.0.0.1 --port 8766` from the project root. Open http://127.0.0.1:8766. All application APIs are Python-owned. data/curated/infy.json is the reviewed seed for the historical example; the running API reads Neon records and stored source passages. The original design-review preview remains separate and labelled.
+FINN is a mobile-first investor briefing for a mock 15-company portfolio, with inspectable event evidence, document-grounded research, one saved question per company and configurable in-app EOD alerts. A static Next.js frontend is served by one FastAPI application on Render. Neon PostgreSQL retains structured evidence, questions and durable jobs; private object storage retains PDFs.
 
-## Current contents
-- PRD.md: approved scope/acceptance criteria; PLAN.md: progress and blockers.
-- DECISIONS.md: accepted decisions versus proposals; AGENTS.md: stable working rules.
-- BUILD_HISTORY.md: index to actual conversations and meaningful failures/fixes; original exports still needed.
-- scripts/probe_sources.py: public HTTP downloads, PDF text extraction, price/feed checks.
-- data/checks/: timestamped observed results, including sandbox failures.
-- Downloaded originals and extracted full text are in ignored data/raw and data/extracted folders. Original temporary PDF previews remain untouched.
+This is a deployed prototype with partial research acceptance, not a fully verified finished product. See [acceptance evidence](docs/MVP_ACCEPTANCE.md), [covering email](docs/SUBMISSION_DRAFT.md) and [submission checklist](docs/SUBMISSION_CHECKLIST.md).
 
-## Run the local source spike
-Python 3.11 is available in the inspected environment. Dependencies currently used: requests, PyMuPDF (import fitz), beautifulsoup4. These are spike tools, not a final production dependency decision.
+## Quick review
+Select Historical example, open the Infosys event and inspect the figures, code-calculated comparison, supporting passage and original PDF. This stored, manually curated example uses real dates and does not call Gemini. Recent windows can be empty. Inspect all 15 companies and their freshness/coverage, then company research and alert settings.
+
+Prior hosted research for Dabur, HCLTech and VOLTAS is retained in data/checks/mvp-hosted-research.json. Those test results are not a shared in-app cache for new visitors. Research caches belong to anonymous browser workspaces; a new question/workspace can make a new model call. Suggested HCLTech question: “What cash generation did management report for the last twelve months?” That exact question is a suggestion, not a previously verified answer.
+
+## Setup and running
+Use Python 3.11 and Node.js 22. Copy .env.example to ignored .env, enter values privately, then:
 
 ```powershell
-python -m pip install requests PyMuPDF beautifulsoup4
-python -X utf8 scripts/probe_sources.py
-python -X utf8 scripts/discover_probe_candidates.py
-python -X utf8 scripts/probe_sources.py --manifest data/discovered_candidates.json
+python -m pip install -r requirements.txt
+cd web
+npm ci
+npm run build
+cd ..
+python -m uvicorn server.main:app --host 127.0.0.1 --port 8766
 ```
 
-The discovery script currently targets the recorded first successful download directory; it is a reproducible investigation helper, not a generic ticker engine. The checked-in discovered manifest can be fetched independently. No API key is needed for these local public-source checks. Network restrictions may require approval outside the execution sandbox.
+Open http://127.0.0.1:8766. All application APIs are Python-owned. The historical API reads Neon records/passages, with no frontend fixture fallback. data/curated/infy.json is the reviewed seed; scripts/publish_read_model.py joins it to an existing completed hosted diagnostic source. A fresh empty database needs source processing and this seed publication before that historical example is available.
 
-## Deployment and secrets
-Neon PostgreSQL is selected; Render and Neon Object Storage have passed the bounded NSE PDF diagnostic; full application deployment remains pending. See docs/DEPLOYMENT.md and .env.example for setup. Do not store secrets in Git or chat. Do not store full PDF bytes in PostgreSQL. No runtime model provider is selected or required for the source check.
+Required private configuration (no secret values belong in Git):
+- DATABASE_URL: Neon connection string with SSL parameters.
+- AWS_ENDPOINT_URL_S3, AWS_REGION, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, DOCUMENT_BUCKET: private object storage configuration.
+- PROBE_TOKEN: protects diagnostic routes. PROBE_BASE_URL is used by local diagnostic clients; PORT defaults to the deployment setting.
+- GEMINI_API_KEY; GEMINI_MODEL=gemini-3.5-flash-lite; GEMINI_FREE_TIER_CONFIRMED=true only after confirming paid billing is disabled; GEMINI_REQUESTS_PER_DAY=20; GEMINI_REQUESTS_PER_MINUTE=2. Use lower caps if the account requires them. Failed attempts consume the conservative app quota. App caps cannot disable Google billing; use an unbilled project. No paid or model fallback.
 
-## Verification and limitations
-Successful download/text extraction does not prove numeric table correctness, automatic discovery coverage, production reliability or deployment success. Prepared URLs and date windows are explicit in data manifests. Full PDF text can contain stale hidden headers; use rendered checks for selected evidence. NSE PDF downloads, object hash round trips and checkpoint persistence across a Render restart have passed. See docs/HOSTED_CHECKS.md for measurements and limits. Cold-start testing, production research, continuous refresh and the 15-company portfolio remain incomplete.
+Dockerfile.probe builds the static frontend and serves it through FastAPI. render.yaml targets the existing service; docs/DEPLOYMENT.md retains setup/probe instructions. No local laptop process is required for the deployed app. No new deployment is required for submission-only documentation updates.
 
-## Visual review and diagnostic checks
+## Tests and evidence
 ```powershell
-python -X utf8 scripts/build_preview.py
-python -m http.server 8766 --bind 127.0.0.1 --directory preview
-```
-Open http://127.0.0.1:8766. This is one manually populated visual-review screen with real figures, not the working app. A screenshot is saved in preview/mobile-briefing.jpg.
-
-```powershell
-python -m pip install -r requirements-probe.txt
 python -m unittest discover -s tests -v
-python scripts/host_probe.py
+python scripts/audit_repository.py
 ```
-The standard-library diagnostic listens on PORT (default 10000); set .env before cloud integration checks. Its diagnostic Docker image is deployed on Render; it does not yet serve the application. requirements-probe.txt uses bounded version ranges; a deployment lock and Docker build remain pending.
 
-After setting PROBE_BASE_URL and PROBE_TOKEN privately, use `python scripts/probe_client.py health`, then `python scripts/probe_client.py step --job-id UUID` and `python scripts/probe_client.py verify --job-id UUID` with the same locally generated UUID. See docs/DEPLOYMENT.md for restart sequence.
+The recorded production build passed, as did 17 existing tests and two focused regressions. data/checks contains hosted/API verification records and failures; docs/HOSTED_CHECKS.md contains the original bounded PDF restart/memory diagnostic. scripts/probe_sources.py and scripts/discover_probe_candidates.py are historical source-investigation helpers; preview/ is a labelled design review, not the deployed app. Downloaded full PDFs/text remain ignored locally or in private object storage, not in this repository.
 
-Runtime model access first becomes necessary for grounded answer synthesis/evidence interpretation in milestone 2. Minimum: server-side text inference, sufficient context for selected passages, reliable structured claim/evidence IDs (native JSON schema preferred), and known limits/costs. Vision, embeddings, external search and agent frameworks are not initially required. No runtime model fixtures are presented as AI research.
+## Verified capabilities
+- Hosted announcement retrieval for all 15 companies; eight annual reports/transcripts fetched, hash-checked and extracted for INFY, DABUR, HCLTECH and separate unfamiliar ticker VOLTAS.
+- Real hosted cited Gemini responses for Dabur, HCLTech and VOLTAS; exact quotation checks and independently reviewed relevance limitations.
+- Durable document checkpoints, restart recovery, persisted questions/alert settings and a labelled historical saved-question assessment.
+- Deterministic price change vs prior close and volume vs mean of 20 prior completed sessions, excluding latest. Insufficient/corporate-action windows suspend comparisons.
+- Final deployed HTTP/API evidence, readiness, prediction guard and protected-diagnostic checks. Anonymous prototype/repository access returned 200 on 15 November 2026.
 
-Current application reads finn_read_models from Neon; it never falls back to frontend fixtures. Run python scripts/publish_read_model.py once to publish reviewed metadata joined to the existing hosted-extracted Infosys source (requires completed diagnostic job). Dockerfile.probe now builds Next.js then serves it through FastAPI; existing protected /verify and /step remain available. Existing documents/checkpoints are preserved.
+## External service limitations
+Yahoo hosted price requests returned HTTP 429: rate-limited hosted retrieval with real cached prices retained and labelled stale. The restriction's duration and whether it is daily, IP-based or otherwise have not been established. Alerts use cached data; no recovery promise or definitive free-tier explanation.
 
-## Full MVP runtime additions
-The API initialises additive finn_records storage on startup, preserving diagnostic and published data. /api/portfolio reads 15 mock holdings. Refresh sources advances a durable 30-step price/filing refresh; progress resumes on request, with a one-hour reuse interval. Company research discovers primary report/transcript links using Screener only as an index, stores PDFs in Neon object storage and page passages in PostgreSQL. Process documents before asking Gemini. Research sends selected passages, validates exact quotations and caches answers. Saved questions and thresholds belong to an anonymous browser workspace retained in localStorage; no account recovery or cross-device sync.
+Infosys hosted Gemini requests returned HTTP 503 twice: provider availability failures during those attempts, not a proven rate limit. Other hosted Gemini requests succeeded. Original Infosys company-hosted documents returned HTTP 403; separately identified exchange-hosted sources succeeded.
 
-Gemini variables: GEMINI_API_KEY, GEMINI_MODEL=gemini-3.5-flash-lite, GEMINI_FREE_TIER_CONFIRMED=true only after confirming paid billing is disabled, GEMINI_REQUESTS_PER_DAY=20, GEMINI_REQUESTS_PER_MINUTE=2. No frontend secret variables. Failed attempts consume the conservative application quota. App caps cannot disable billing on a Google project; use an unbilled project.
+## Product-quality limitations
+Some supported quotations do not adequately answer the research question. Exact quotation validation is not semantic relevance or complete financial analysis. Dabur cash evidence was indirect; HCLTech's narrow cash figures were useful without a growth comparison; VOLTAS's income/profit figures did not answer cash generation. Improvements to evaluate: retrieval, financial context, prompts and potentially a stronger model, without assuming a model change solves this. No model changes or paid usage are introduced.
 
-## Current service limitations
-Hosted announcement refresh works for all 15 companies. Yahoo returns HTTP 429 from Render; retained EOD histories are real but stale, and alert results use that cached data. Manual refresh only, no scheduler. Model generation is free-tier Gemini 3.5 Flash-Lite; provider errors stop generation without canned answers or paid fallback. The original Infosys company-site PDFs return hosted HTTP 403; BSE/NSE primary filings are retained as separately identified sources. See docs/MVP_ACCEPTANCE.md and docs/SUBMISSION_DRAFT.md before review or submission.
+## Deliberate omissions and verification gap
+Manual refresh is implemented with durable progress and a one-hour reuse interval. Scheduled background refresh/unattended monitoring is deliberately deferred; progress while the service sleeps is not promised. No trading, voice or elaborate authentication. Workspace IDs live in browser storage; clearing them loses access to that workspace, and there is no cross-device recovery. No general OCR/table-validation guarantee.
 
-Current verified corpus sizes (annual/transcript pages): INFY 383/48, DABUR 623/20, HCLTECH 485/26, VOLTAS 278/21. Hosted research answers passed for DABUR/HCLTECH/VOLTAS, but remain limited to retrieved excerpts; INFY broad research encountered provider 503. Final UI fixes are in 37dac53; see acceptance record for live deployment status.
+Final deployed browser verification was unavailable. HTTP/API checks and served CSS checks passed; earlier local phone/desktop checks do not verify final rendered contrast, focus, loading recovery, link clicks or save/reload interactions. Exact manual checks are in docs/SUBMISSION_CHECKLIST.md. Original planning and development conversation exports are still needed; BUILD_HISTORY.md is only an index.
 
-Handoff: user confirmed final UI-fix deployment; live readiness, prediction guard, served contrast rules and cached-answer evidence endpoints verified. Final browser interaction verification unavailable. Research usefulness remains partial despite matching quotations; detailed review and exact manual checks in docs/MVP_ACCEPTANCE.md. No further scope additions or submission email.
+## Project records
+PRD.md records scope; PLAN.md current status and historical progress; DECISIONS.md approvals/trade-offs; AGENTS.md working rules; BUILD_HISTORY.md actual development history. The submission email is prepared, not sent.

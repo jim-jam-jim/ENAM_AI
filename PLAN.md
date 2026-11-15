@@ -1,5 +1,10 @@
 # Plan and progress
 
+## Current submission status — 15 November 2026
+Deployed prototype handed over with partial research acceptance. Current facts and classifications are in docs/MVP_ACCEPTANCE.md; exact email and remaining original conversation exports are in docs/SUBMISSION_CHECKLIST.md. Scheduled background refresh is deliberately deferred by the user; manual refresh is implemented. Yahoo 429 is rate-limited hosted retrieval of unknown cause/duration; Infosys Gemini 503 is provider availability failure, not proven rate limiting. Research relevance is a separate quality limitation. Final deployed browser review is a separate verification gap. Public anonymous HTTP access to both links passed. No new features/model changes; no email sent.
+
+The entries below are retained chronological work records. Their earlier pending states are superseded by this status and the acceptance report.
+
 ## Current milestone: first evidence workflow and hosted feasibility
 
 Latest status (supersedes pending entries below): NSE documents have passed hosted download, object round trip and restart persistence. See docs/HOSTED_CHECKS.md and data/checks/render-*-exchange.json. Full application deployment, cold-start testing and forced in-flight interruption remain pending.

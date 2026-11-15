@@ -1,30 +1,27 @@
-# FINN submission preparation — not ready to send
+# Ready-to-copy covering email
 
-Working URL: https://finn-source-probe-tkef.onrender.com
+Replace the three bracketed placeholders before sending. The two conversation entries may be accessible share/export links or the filenames of actual attached exports. Do not send this file with unresolved placeholders.
+
+To: assessment@enam.com
+Subject: IIT Delhi – AI Engineer - 2027
+
+Hello,
+
+I built FINN, a mobile-first investment briefing prototype for a mock portfolio of 15 companies. It supports source-backed event investigation, document-grounded research, one saved question per company and configurable EOD alerts.
+
+Prototype: https://finn-source-probe-tkef.onrender.com
 Repository: https://github.com/jim-jam-jim/ENAM_AI
+Actual AI conversations:
+- Initial planning: [PLANNING CONVERSATION LINK OR ATTACHMENT FILENAME]
+- Development, debugging and deployment: [DEVELOPMENT CONVERSATION LINK OR ATTACHMENT FILENAME]
 
-FINN starts with a portfolio briefing and lets an investor inspect the source behind a disclosure, research a company using annual reports and earnings calls, and save one question to watch. The prototype uses a mock 15-company portfolio, a static Next.js interface, one FastAPI application, and Neon PostgreSQL/object storage. Gemini is restricted to the configured free-tier model and application quotas.
+I used static Next.js served by one FastAPI application, Neon PostgreSQL for evidence and job state, and object storage for PDFs. Durable checkpoints resume interrupted extraction. Gemini uses the configured free tier with application caps and no paid fallback. This keeps deployment simple, with manual refresh rather than an always-running service.
 
-## Review walkthrough to validate before submission
-1. Open the briefing; choose 24 hours, 7 days, or 30 days. Empty windows keep the real event dates. Open Historical example for the prepared Infosys cash-flow comparison.
-2. Inspect the reported figures, calculation, interpretation and source passage; follow the original PDF link.
-3. Expand portfolio coverage and EOD alerts. Inspect per-source freshness/failures and change the thresholds.
-4. Open Company research for INFY, DABUR or HCLTECH. Check source readiness, ask a question, inspect quotations, and save the question.
-5. Try an unfamiliar NSE ticker through the same document workflow. VOLTAS is the separate acceptance-test ticker, not a prepared example.
+For a short demo, select Historical example → Infosys and inspect the cash-flow calculation, passage and original PDF. This stored, manually curated example makes no model call; recent windows preserve actual dates. Then inspect portfolio coverage and alerts. Prior hosted research for Dabur, HCLTech and VOLTAS is recorded in data/checks/mvp-hosted-research.json. These records are not a shared in-app cache: new browser workspaces make new research requests.
 
-## Remaining limitations to disclose
-- All four companies have completed hosted annual-report/transcript extraction. Cited hosted answers passed for Dabur, HCLTech and VOLTAS, with limited coverage; Infosys broad research hit provider HTTP 503 twice.
-- Hosted announcements work for all 15 companies. Hosted Yahoo prices return HTTP 429; real cached histories remain stale. Alerts use those cached histories and state this limitation.
-- Saved questions/settings survive redeploy. Subsequent-evidence assessment passed in an explicitly labelled historical replay, not new live monitoring.
-- Final deployed mobile/desktop visual verification is unavailable because browser tooling is unavailable. Earlier local layout checks are not a substitute.
-- Original conversation exports/links remain to be supplied. This draft is honest review material, not a claim of complete challenge acceptance.
+Hosted announcement refresh succeeded for all 15 companies, and eight annual reports/transcripts completed hosted download and extraction. Persistence, checkpoint recovery and alert calculations were tested. Hosted Yahoo retrieval returned HTTP 429; real cached prices are retained and labelled stale, and the restriction's cause and duration are unknown. Infosys Gemini attempts returned HTTP 503 availability failures, while other hosted research succeeded. Some supported quotations did not adequately answer the question, so research quality remains partial. Final deployed browser checks remain a verification gap; HTTP/API and earlier local layout checks are recorded in docs/MVP_ACCEPTANCE.md.
 
-## Deliberate limits
-Manual refresh only; no scheduled or continuous monitoring. A sleeping service pauses work. Source coverage is partial and access can fail. No trading, voice, elaborate authentication, OCR guarantee or paid model fallback. Browser workspace settings have no cross-device account recovery.
+Scheduled monitoring, trading, voice and elaborate authentication are deliberately deferred. Next I would improve retrieval, financial context and prompts, evaluate whether a stronger model helps without assuming it will, and address reliable refresh and unattended monitoring. The prototype is not fully verified.
 
-## Actual build history
-BUILD_HISTORY.md indexes this real development conversation and meaningful failures/fixes. Original conversation exports/share links still need to be supplied; do not replace them with a generated summary or invent URLs. Earlier planning-chat export is also pending.
-
-This is a draft covering-note source, not a statement that every workflow has passed. No submission email has been sent.
-
-Final handoff: UI fixes are deployed and API/asset checks pass. Research answer quality is partial, not fully accepted: see MVP_ACCEPTANCE.md for claim-level review and required manual browser checks. Do not describe this prototype as fully verified.
+Regards,
+[YOUR NAME]

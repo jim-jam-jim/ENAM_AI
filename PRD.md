@@ -20,7 +20,7 @@ Source: ENAM_AI_Engineer_Build_Challenge_Main.pdf, pp. 1–3; reference glossary
 2. **Event:** show the change, why surfaced, available comparable numbers, and separate interpretation. Open original document and supporting page/passage. Group exact duplicate disclosures while preserving all source links; revised filings remain distinguishable. Unknown categories do not default to routine.
 3. **Research:** accept NSE ticker and a question; show a concise sourced answer and expandable evidence. Three prepared examples and one additional ticker run through the same pipeline. Missing documents or incomparable periods produce explicit limitations; unsupported claims are omitted.
 4. **Memory:** save/replace one question per company; persist across service restart. Later ingested evidence may support, challenge or be inconclusive about that question with an explanation. This is not an investment recommendation or a definitive thesis score.
-5. **Alerts, after core evidence workflow:** configurable daily price-change and volume-multiple thresholds, shown in-app. Calculations run in code after EOD ingestion. Proposed baseline: preceding 20 complete trading sessions, excluding the tested session. Insufficient history and corporate-action ambiguities are flagged, not silently interpreted. Final baseline is open.
+5. **Alerts, after core evidence workflow:** configurable daily price-change and volume-multiple thresholds, shown in-app. Calculations run in code after EOD ingestion. Proposed baseline: preceding 20 complete trading sessions, excluding the tested session. Insufficient history and corporate-action ambiguities are flagged, not silently interpreted. This baseline is implemented.
 
 ## Data and evidence
 - Record original URL, document date, retrieval timestamp, content hash, page/passage, period, units/currency and consolidated/standalone plus Ind AS/IFRS basis where applicable.
@@ -36,10 +36,12 @@ Three main views only. Professional light/neutral starting palette with one mute
 ## Exclusions and open questions
 No trading, voice, external notifications, elaborate authentication, biographies, portfolio optimisation, exhaustive financial dashboards, comprehensive guidance audits, multi-question monitoring or separate vector database.
 
-Open: full application deployment and cold-start verification; runtime model provider; refresh execution while free host sleeps; final alert baseline; exact deadline/time available. Neon PostgreSQL is selected by the user. Do not reduce the agreed coverage targets silently.
+Current acceptance is in docs/MVP_ACCEPTANCE.md. Deployment and free-tier Gemini are configured; final browser verification and research-quality acceptance remain incomplete. Exact submission deadline remains unknown. Scheduled background refresh is deliberately deferred by user decision; manual refresh is implemented. Neon PostgreSQL is selected; coverage targets have not been silently reduced.
 
 ## Completion direction
 User approved proceeding through all existing MVP workflows without intermediate review gates. Gemini free-tier research is approved; configured runtime access must be verified. Explicit manual/refresh-on-open processing will be distinguished from scheduled monitoring.
 
 ## MVP refresh and alerts detail
 Refresh is explicit manual processing while the app is open, with durable progress and a one-hour cache interval; no scheduled/continuous monitoring claim. Alerts use absolute unadjusted close change vs prior session and latest volume vs prior 20 completed-session mean. Missing history or corporate actions in that interval disable the comparison. Saved questions/settings are browser-workspace scoped and persist in PostgreSQL across restarts.
+
+Submission scope clarification: unattended monitoring is a deliberate prototype omission, not an implemented feature reported broken. External source/provider failures and research quality are documented separately.
