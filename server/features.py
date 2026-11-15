@@ -45,7 +45,7 @@ def company(symbol:str,x_finn_workspace:str|None=Header(default=None)):
     newer=[]
     if saved:
         newer=[e for e in store.get('filings',symbol,{}).get('events',[]) if datetime.fromisoformat(e['published_at'])>datetime.fromisoformat(saved['saved_at'])]
-    return {'ticker':symbol,'documents':[d for d in store.all_records('document') if d['ticker']==symbol],'saved_question':saved,'subsequent_events':newer,'monitoring_note':'Only disclosures dated after the saved question appear here. Unrelated material events remain in the briefing.','research_available':research.configured()}
+    return {'ticker':symbol,'documents':[d for d in store.all_records('document') if d['ticker']==symbol],'readiness':documents.readiness(symbol),'saved_question':saved,'subsequent_events':newer,'monitoring_note':'Only disclosures dated after the saved question appear here. Unrelated material events remain in the briefing.','research_available':research.configured()}
 
 @router.post('/companies/{symbol}/discover')
 def discover(symbol:str):

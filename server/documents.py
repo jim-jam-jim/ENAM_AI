@@ -98,6 +98,12 @@ def advance(key):
             if isinstance(exc,requests.HTTPError):d['http_status']=exc.response.status_code
         return store.put('document',key,d)
 
+def readiness(ticker):
+    docs=store.for_ticker('document',ticker)
+    ready=[d for d in docs if d['phase']=='complete' and d.get('identity_match') and d.get('document_type_match')]
+    missing=[kind for kind in ['annual_report','transcript'] if not any(d['kind']==kind for d in ready)]
+    return {'ready':not missing,'ready_count':len(ready),'missing':missing,'message':('Sources ready; question-specific evidence is checked when you ask.' if not missing else 'Not ready: complete identity-checked '+', '.join(k.replace('_',' ') for k in missing)+'.')}
+
 def passages(ticker,question,limit=10):
     docs={d['id']:d for d in store.all_records('document') if d['ticker']==ticker and d['phase']=='complete'}
     terms=set(re.findall(r'[a-z]{3,}',question.lower()))-{'the','and','this','company','with','what','does','how'}

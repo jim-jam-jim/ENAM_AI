@@ -38,10 +38,15 @@ def validate_answer(answer,evidence):
     return {'claims':claims,'limitations':str(answer.get('limitations',''))[:800],'verdict':answer.get('verdict') if answer.get('verdict') in ['supports','challenges','inconclusive'] else 'inconclusive'}
 
 def run(ticker,question,owner,evidence_override=None):
+    if re.search(r'predict|tomorrow|next day|price target|intraday',question,re.I):
+        raise ValueError('Company reports cannot reliably establish tomorrow’s share price. Try: Is revenue growth supported by operating cash flow? No price prediction was generated.')
     if not configured():raise ValueError('Gemini free-tier access is not configured')
+    if evidence_override is None:
+        state=documents.readiness(ticker)
+        if not state['ready']:raise ValueError(state['message'])
     evidence=evidence_override if evidence_override is not None else documents.passages(ticker,question)
     kinds={p['kind'] for p in evidence}
-    if evidence_override is None and not {'annual_report','transcript'}.issubset(kinds):raise ValueError('Research needs readable, identity-checked annual-report and transcript evidence; finish document processing first')
+    if evidence_override is None and not {'annual_report','transcript'}.issubset(kinds):raise ValueError('Documents are ready, but this question did not match readable evidence in both source types. Try a specific fundamentals question about revenue, cash flow, margins or management guidance. No model call was made.')
     if not evidence:raise ValueError('No readable evidence available')
     key=digest(owner+'|'+ticker+'|'+question+'|'+MODEL+'|'+','.join(p['id']+p['sha256'] for p in evidence))
     cached=store.get('answer',key)
