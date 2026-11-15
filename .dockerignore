@@ -1,4 +1,12 @@
-*
-!requirements-probe.txt
-!scripts/
-!scripts/host_probe.py
+.git
+.env
+.env.*
+!.env.example
+web/node_modules
+web/.next
+web/out
+**/__pycache__
+data
+tmp
+preview
+*.pdf

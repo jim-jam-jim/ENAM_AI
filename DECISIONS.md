@@ -27,3 +27,6 @@
 
 ## Verified hosting observations — 15 November 2026
 Render plus Neon passed bounded NSE PDF ingestion, storage and restart/resume checks (48 and 195 pages). Retain the approved architecture without adding infrastructure. This is evidence of diagnostic feasibility, not a new scope approval or proof of full production readiness. The NSE Q2 FY2027 documents are explicitly different from the blocked original Q4 transcript/annual report. See docs/HOSTED_CHECKS.md.
+
+## Latest user approvals
+Complete the full agreed MVP and deploy without waiting for each milestone review. Gemini runtime free tier only; use gemini-2.5-flash-lite after account verification, no paid fallback. Refresh will be explicit manual/refresh-on-open bounded work on the existing service; no new scheduler or continuous-monitoring claim.

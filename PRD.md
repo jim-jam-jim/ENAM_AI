@@ -37,3 +37,6 @@ Three main views only. Professional light/neutral starting palette with one mute
 No trading, voice, external notifications, elaborate authentication, biographies, portfolio optimisation, exhaustive financial dashboards, comprehensive guidance audits, multi-question monitoring or separate vector database.
 
 Open: full application deployment and cold-start verification; runtime model provider; refresh execution while free host sleeps; final alert baseline; exact deadline/time available. Neon PostgreSQL is selected by the user. Do not reduce the agreed coverage targets silently.
+
+## Completion direction
+User approved proceeding through all existing MVP workflows without intermediate review gates. Gemini free-tier research is approved; configured runtime access must be verified. Explicit manual/refresh-on-open processing will be distinguished from scheduled monitoring.

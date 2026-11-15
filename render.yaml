@@ -1,4 +1,4 @@
-# Diagnostic deployment only. Not the FINN application/backend decision.
+# FINN static Next.js frontend and one Python application API.
 services:
   - type: web
     name: finn-source-probe

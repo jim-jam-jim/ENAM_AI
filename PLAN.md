@@ -48,3 +48,6 @@ At each milestone: report working behaviour, checks actually run, incomplete wor
 
 ## Hosted milestone result
 NSE transcript (48 pages) and results bundle (195 pages) passed Render download, object hash verification and extraction. Restart preserved the completed transcript and the 20-page results checkpoint; resume completed 195 unique pages. Completed retry was unchanged. Active large-document processing 124.958 s; observed peak RSS 170.03 MiB against 512 MiB. Next: integrate the verified source path into the first application workflow; test cold start and forced in-flight recovery. Annual-report source access, runtime provider and unattended refresh remain unresolved. See docs/HOSTED_CHECKS.md.
+
+## Resumed implementation
+The interrupted final local server start was retried through normal approval and succeeded. Neon-backed briefing/event/passage workflow and static production build are ready; 10 tests passed before interruption. Browser checked at 1280px and 390px after restart; cash passage loads from Neon. Full MVP work continues without milestone review gates. Gemini setup pending.

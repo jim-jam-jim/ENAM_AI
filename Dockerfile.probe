@@ -1,8 +1,17 @@
+FROM node:22-slim AS frontend
+WORKDIR /web
+COPY web/package.json web/package-lock.json ./
+RUN npm ci
+COPY web/ ./
+RUN npm run build
+
 FROM python:3.11-slim
 WORKDIR /app
-COPY requirements-probe.txt ./
-RUN pip install --no-cache-dir -r requirements-probe.txt
+COPY requirements.txt requirements-probe.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
 COPY scripts/host_probe.py scripts/host_probe.py
+COPY server/ server/
+COPY --from=frontend /web/out web/out
 ENV PYTHONUNBUFFERED=1
 EXPOSE 10000
-CMD ["python", "scripts/host_probe.py"]
+CMD ["sh", "-c", "uvicorn server.main:app --host 0.0.0.0 --port ${PORT:-10000} --workers 1"]
