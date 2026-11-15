@@ -1,9 +1,19 @@
 import unittest
+from server import store
 from server.market import normalise,alert_values,classify
 from server.research import validate_answer
 from server.documents import safe_url
 
 class FeatureTests(unittest.TestCase):
+    def test_durable_lease_release_and_recovery(self):
+        store.initialise()
+        with store.lock('test-release') as first:
+            self.assertTrue(first)
+            with store.lock('test-release') as second:self.assertFalse(second)
+        with store.lock('test-release') as retry:self.assertTrue(retry)
+        with store.connect() as c:
+            c.execute("INSERT INTO finn_leases(name,owner,expires_at) VALUES('test-expired','00000000-0000-0000-0000-000000000001',now()-interval '1 second') ON CONFLICT(name) DO UPDATE SET expires_at=EXCLUDED.expires_at")
+        with store.lock('test-expired') as resumed:self.assertTrue(resumed)
     def test_duplicate_and_revised_filings(self):
         row={'symbol':'INFY','an_dt':'23-Oct-2026 16:00:00','attchmntFile':'https://nsearchives.nseindia.in/a.pdf','desc':'Financial Results'}
         self.assertEqual(len(normalise([row,row],'INFY')),1)

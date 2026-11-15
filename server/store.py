@@ -1,5 +1,6 @@
 """Durable application records; existing diagnostic tables are untouched."""
 import os
+import uuid
 import psycopg
 from psycopg.types.json import Jsonb
 from contextlib import contextmanager
@@ -12,6 +13,7 @@ def connect():
 def initialise():
     with connect() as c:
         c.execute('CREATE TABLE IF NOT EXISTS finn_records (kind text, id text, data jsonb NOT NULL, updated_at timestamptz NOT NULL DEFAULT now(), PRIMARY KEY(kind,id))')
+        c.execute('CREATE TABLE IF NOT EXISTS finn_leases (name text PRIMARY KEY, owner uuid NOT NULL, expires_at timestamptz NOT NULL)')
 
 def get(kind,key,default=None):
     with connect() as c:
@@ -33,10 +35,16 @@ def for_ticker(kind,ticker):
 
 @contextmanager
 def lock(name):
-    """Session lock releases on crash/disconnect; checkpoints are separate commits."""
+    """Atomic expiring lease works through Neon's transaction pooler.
+
+    Each bounded stage is <90s; abandoned ownership expires after 180s.
+    """
+    owner=str(uuid.uuid4())
     with connect() as c:
-        acquired=c.execute('SELECT pg_try_advisory_lock(hashtextextended(%s,0))',(name,)).fetchone()[0]
-        try:
-            yield acquired
-        finally:
-            if acquired:c.execute('SELECT pg_advisory_unlock(hashtextextended(%s,0))',(name,))
+        acquired=c.execute("INSERT INTO finn_leases(name,owner,expires_at) VALUES(%s,%s,now()+interval '180 seconds') ON CONFLICT(name) DO UPDATE SET owner=EXCLUDED.owner,expires_at=EXCLUDED.expires_at WHERE finn_leases.expires_at<now() RETURNING owner",(name,owner)).fetchone() is not None
+    try:
+        yield acquired
+    finally:
+        if acquired:
+            with connect() as c:
+                c.execute('DELETE FROM finn_leases WHERE name=%s AND owner=%s',(name,owner))

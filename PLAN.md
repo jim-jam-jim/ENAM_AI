@@ -54,3 +54,5 @@ The interrupted final local server start was retried through normal approval and
 
 ## Full MVP implementation in progress
 15-company prices/filings fetched locally and stored in Neon (all 15 returned histories and feeds). New bounded document discovery/extraction, manual refresh, anonymous per-browser saved questions/settings, deterministic EOD alerts, and Gemini grounded research routes implemented; hosted verification and research acceptance still pending. Prepared discovery INFY/DABUR/HCLTECH plus separate VOLTAS all found primary annual-report/transcript links. No annual-report hosted success claimed yet.
+
+Hosted full-MVP verification: all eight BSE annual-report/transcript downloads matched stored hashes on Render. Extraction stalled after 51 Infosys annual-report pages because session advisory locks were incompatible with the pooled connection. Replaced them with atomic expiring PostgreSQL leases. The previous verification command was rejected when automatic approval review hit its usage limit; no bypass attempted. Retried through normal approval on user continuation. Full extraction/research acceptance remains pending.

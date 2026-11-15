@@ -1,0 +1,217 @@
+{
+  "prices": [
+    {
+      "ticker": "ASIANPAINT",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:35:01.025119+00:00",
+      "http_status": null,
+      "count": 63
+    },
+    {
+      "ticker": "DABUR",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:30:56.172679+00:00",
+      "http_status": null,
+      "count": 63
+    },
+    {
+      "ticker": "HCLTECH",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:33:12.421463+00:00",
+      "http_status": null,
+      "count": 63
+    },
+    {
+      "ticker": "HDFCBANK",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:33:39.785815+00:00",
+      "http_status": null,
+      "count": 63
+    },
+    {
+      "ticker": "HINDUNILVR",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:34:15.551258+00:00",
+      "http_status": null,
+      "count": 63
+    },
+    {
+      "ticker": "ICICIBANK",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:33:49.781221+00:00",
+      "http_status": null,
+      "count": 63
+    },
+    {
+      "ticker": "INFY",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:30:46.978550+00:00",
+      "http_status": null,
+      "count": 63
+    },
+    {
+      "ticker": "ITC",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:34:06.215076+00:00",
+      "http_status": null,
+      "count": 63
+    },
+    {
+      "ticker": "LT",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:34:24.489352+00:00",
+      "http_status": null,
+      "count": 63
+    },
+    {
+      "ticker": "MARUTI",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:34:32.037367+00:00",
+      "http_status": null,
+      "count": 63
+    },
+    {
+      "ticker": "RELIANCE",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:33:30.327748+00:00",
+      "http_status": null,
+      "count": 63
+    },
+    {
+      "ticker": "SBIN",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:33:57.445747+00:00",
+      "http_status": null,
+      "count": 63
+    },
+    {
+      "ticker": "SUNPHARMA",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:34:39.961167+00:00",
+      "http_status": null,
+      "count": 63
+    },
+    {
+      "ticker": "TCS",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:33:21.783411+00:00",
+      "http_status": null,
+      "count": 63
+    },
+    {
+      "ticker": "TITAN",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:34:50.242782+00:00",
+      "http_status": null,
+      "count": 63
+    }
+  ],
+  "filings": [
+    {
+      "ticker": "ASIANPAINT",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:35:07.485399+00:00",
+      "http_status": null,
+      "count": 12
+    },
+    {
+      "ticker": "DABUR",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:31:01.801561+00:00",
+      "http_status": null,
+      "count": 31
+    },
+    {
+      "ticker": "HCLTECH",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:33:17.226085+00:00",
+      "http_status": null,
+      "count": 11
+    },
+    {
+      "ticker": "HDFCBANK",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:33:45.711656+00:00",
+      "http_status": null,
+      "count": 18
+    },
+    {
+      "ticker": "HINDUNILVR",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:34:20.800854+00:00",
+      "http_status": null,
+      "count": 16
+    },
+    {
+      "ticker": "ICICIBANK",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:33:53.927548+00:00",
+      "http_status": null,
+      "count": 14
+    },
+    {
+      "ticker": "INFY",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:30:51.746819+00:00",
+      "http_status": null,
+      "count": 15
+    },
+    {
+      "ticker": "ITC",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:34:10.676024+00:00",
+      "http_status": null,
+      "count": 6
+    },
+    {
+      "ticker": "LT",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:34:28.261143+00:00",
+      "http_status": null,
+      "count": 15
+    },
+    {
+      "ticker": "MARUTI",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:34:35.796388+00:00",
+      "http_status": null,
+      "count": 14
+    },
+    {
+      "ticker": "RELIANCE",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:33:34.733738+00:00",
+      "http_status": null,
+      "count": 18
+    },
+    {
+      "ticker": "SBIN",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:34:01.176915+00:00",
+      "http_status": null,
+      "count": 13
+    },
+    {
+      "ticker": "SUNPHARMA",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:34:44.549430+00:00",
+      "http_status": null,
+      "count": 13
+    },
+    {
+      "ticker": "TCS",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:33:25.841792+00:00",
+      "http_status": null,
+      "count": 5
+    },
+    {
+      "ticker": "TITAN",
+      "status": "available",
+      "fetched_at": "2026-11-15T16:34:55.926247+00:00",
+      "http_status": null,
+      "count": 17
+    }
+  ],
+  "environment": "Local ingestion into Neon, not host-origin fetch verification"
+}

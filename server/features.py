@@ -87,6 +87,19 @@ def event_document(event_id:str):
     d['document_date']=event['published_at'];store.put('document',d['id'],d)
     return d
 
+@router.get('/events/{event_id}/passage')
+def event_passage(event_id:str):
+    event=next((e for f in store.all_records('filings') for e in f.get('events',[]) if e['id']==event_id),None)
+    if not event:raise HTTPException(404,'Filing unavailable')
+    d=store.get('document',market.digest(event['ticker']+'|'+event['source_url']))
+    if not d:raise HTTPException(409,'Load document first')
+    candidates=[p for p in store.for_ticker('passage',event['ticker']) if p['document_id']==d['id']]
+    if not candidates:raise HTTPException(409,'No readable pages yet')
+    terms=set(re.findall(r'[a-z]{4,}',event.get('summary','').lower()))-{'limited','informed','exchange','regarding','about','company'}
+    score=lambda p:sum(min(p['text'].lower().count(t),3) for t in terms)
+    best=max(candidates,key=score)
+    return dict(best,document=d,match_score=score(best),scope='Text matched to exchange description; not independent verification of every claim. Extracted pages: '+str(d['completed_pages']))
+
 @router.post('/companies/{symbol}/monitor/{event_id}')
 def monitor(symbol:str,event_id:str,x_finn_workspace:str|None=Header(default=None)):
     symbol=ticker(symbol);workspace=owner(x_finn_workspace);saved=store.get('question',workspace+':'+symbol)

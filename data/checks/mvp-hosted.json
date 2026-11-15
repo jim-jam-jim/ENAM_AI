@@ -1,0 +1,763 @@
+{
+  "origin": "https://finn-source-probe-tkef.onrender.com",
+  "workspace": "4e60d4a5-5bd2-4b81-b5f4-90622bf33ce3",
+  "results": [
+    {
+      "at": "2026-11-15T16:44:10.517585+00:00",
+      "path": "/api/companies/INFY",
+      "method": "GET",
+      "status": 200,
+      "seconds": 0.407,
+      "data": {
+        "ticker": "INFY",
+        "documents": [
+          {
+            "id": "b1252f1dfe088f4fe8f99554",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/19dd605c-2b6b-4084-8dca-9d578a3eb7a0.pdf",
+            "host": "local",
+            "kind": "annual_report",
+            "bytes": 8985010,
+            "phase": "stored",
+            "sha256": "889ee382d055a528a645ae28017b17df9da306328997dfc1d14d9b98757d88c2",
+            "ticker": "INFY",
+            "company": "Infosys Ltd",
+            "created_at": "2026-11-15T16:32:50.622251+00:00",
+            "fetched_at": "2026-11-15T16:38:55.348484+00:00",
+            "object_key": "sources/sha256/889ee382d055a528a645ae28017b17df9da306328997dfc1d14d9b98757d88c2.pdf",
+            "discovery_url": "https://www.screener.in/company/INFY/consolidated/",
+            "completed_pages": 0,
+            "discovery_label": "Annual Report 2026"
+          },
+          {
+            "id": "edf542b8d69c82d164b79756",
+            "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7982fc61-7765-4981-ab3d-6aec36ba2137.pdf",
+            "host": "local",
+            "kind": "transcript",
+            "bytes": 3742339,
+            "phase": "stored",
+            "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+            "ticker": "INFY",
+            "company": "Infosys Ltd",
+            "created_at": "2026-11-15T16:32:53.298062+00:00",
+            "fetched_at": "2026-11-15T16:40:28.726398+00:00",
+            "object_key": "sources/sha256/b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2.pdf",
+            "discovery_url": "https://www.screener.in/company/INFY/consolidated/",
+            "completed_pages": 0,
+            "discovery_label": "Transcript"
+          }
+        ],
+        "saved_question": null,
+        "subsequent_events": [],
+        "monitoring_note": "Only disclosures dated after the saved question appear here. Unrelated material events remain in the briefing.",
+        "research_available": true
+      }
+    },
+    {
+      "at": "2026-11-15T16:44:11.107417+00:00",
+      "path": "/diagnostics/documents/b1252f1dfe088f4fe8f99554/fetch",
+      "method": "POST",
+      "status": 200,
+      "seconds": 0.578,
+      "data": {
+        "origin": "finn-source-probe-tkef",
+        "sha256": "889ee382d055a528a645ae28017b17df9da306328997dfc1d14d9b98757d88c2",
+        "bytes": 8985010,
+        "matches_stored": true,
+        "checked_at": "2026-11-15T16:44:11.103948+00:00"
+      }
+    },
+    {
+      "at": "2026-11-15T16:44:27.600864+00:00",
+      "path": "/api/documents/b1252f1dfe088f4fe8f99554/advance",
+      "method": "POST",
+      "status": 200,
+      "seconds": 16.485,
+      "data": {
+        "id": "b1252f1dfe088f4fe8f99554",
+        "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/19dd605c-2b6b-4084-8dca-9d578a3eb7a0.pdf",
+        "host": "local",
+        "kind": "annual_report",
+        "bytes": 8985010,
+        "phase": "extracting",
+        "sha256": "889ee382d055a528a645ae28017b17df9da306328997dfc1d14d9b98757d88c2",
+        "ticker": "INFY",
+        "company": "Infosys Ltd",
+        "created_at": "2026-11-15T16:32:50.622251+00:00",
+        "fetched_at": "2026-11-15T16:38:55.348484+00:00",
+        "object_key": "sources/sha256/889ee382d055a528a645ae28017b17df9da306328997dfc1d14d9b98757d88c2.pdf",
+        "discovery_url": "https://www.screener.in/company/INFY/consolidated/",
+        "completed_pages": 11,
+        "discovery_label": "Annual Report 2026",
+        "host_fetch_check": {
+          "bytes": 8985010,
+          "origin": "finn-source-probe-tkef",
+          "sha256": "889ee382d055a528a645ae28017b17df9da306328997dfc1d14d9b98757d88c2",
+          "checked_at": "2026-11-15T16:44:11.103948+00:00",
+          "matches_stored": true
+        },
+        "page_count": 383,
+        "updated_at": "2026-11-15T16:44:27.512863+00:00"
+      }
+    },
+    {
+      "at": "2026-11-15T16:44:39.185437+00:00",
+      "path": "/api/documents/b1252f1dfe088f4fe8f99554/advance",
+      "method": "POST",
+      "status": 200,
+      "seconds": 11.578,
+      "data": {
+        "id": "b1252f1dfe088f4fe8f99554",
+        "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/19dd605c-2b6b-4084-8dca-9d578a3eb7a0.pdf",
+        "host": "local",
+        "kind": "annual_report",
+        "bytes": 8985010,
+        "phase": "extracting",
+        "sha256": "889ee382d055a528a645ae28017b17df9da306328997dfc1d14d9b98757d88c2",
+        "ticker": "INFY",
+        "company": "Infosys Ltd",
+        "created_at": "2026-11-15T16:32:50.622251+00:00",
+        "fetched_at": "2026-11-15T16:38:55.348484+00:00",
+        "object_key": "sources/sha256/889ee382d055a528a645ae28017b17df9da306328997dfc1d14d9b98757d88c2.pdf",
+        "page_count": 383,
+        "updated_at": "2026-11-15T16:44:39.019160+00:00",
+        "discovery_url": "https://www.screener.in/company/INFY/consolidated/",
+        "completed_pages": 31,
+        "discovery_label": "Annual Report 2026",
+        "host_fetch_check": {
+          "bytes": 8985010,
+          "origin": "finn-source-probe-tkef",
+          "sha256": "889ee382d055a528a645ae28017b17df9da306328997dfc1d14d9b98757d88c2",
+          "checked_at": "2026-11-15T16:44:11.103948+00:00",
+          "matches_stored": true
+        }
+      }
+    },
+    {
+      "at": "2026-11-15T16:44:52.870399+00:00",
+      "path": "/api/documents/b1252f1dfe088f4fe8f99554/advance",
+      "method": "POST",
+      "status": 200,
+      "seconds": 13.671,
+      "data": {
+        "id": "b1252f1dfe088f4fe8f99554",
+        "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/19dd605c-2b6b-4084-8dca-9d578a3eb7a0.pdf",
+        "host": "local",
+        "kind": "annual_report",
+        "bytes": 8985010,
+        "phase": "extracting",
+        "sha256": "889ee382d055a528a645ae28017b17df9da306328997dfc1d14d9b98757d88c2",
+        "ticker": "INFY",
+        "company": "Infosys Ltd",
+        "created_at": "2026-11-15T16:32:50.622251+00:00",
+        "fetched_at": "2026-11-15T16:38:55.348484+00:00",
+        "object_key": "sources/sha256/889ee382d055a528a645ae28017b17df9da306328997dfc1d14d9b98757d88c2.pdf",
+        "page_count": 383,
+        "updated_at": "2026-11-15T16:44:52.723165+00:00",
+        "discovery_url": "https://www.screener.in/company/INFY/consolidated/",
+        "completed_pages": 51,
+        "discovery_label": "Annual Report 2026",
+        "host_fetch_check": {
+          "bytes": 8985010,
+          "origin": "finn-source-probe-tkef",
+          "sha256": "889ee382d055a528a645ae28017b17df9da306328997dfc1d14d9b98757d88c2",
+          "checked_at": "2026-11-15T16:44:11.103948+00:00",
+          "matches_stored": true
+        }
+      }
+    },
+    {
+      "at": "2026-11-15T16:44:53.429635+00:00",
+      "path": "/api/documents/b1252f1dfe088f4fe8f99554/advance",
+      "method": "POST",
+      "status": 200,
+      "seconds": 0.563,
+      "data": {
+        "phase": "busy",
+        "id": "b1252f1dfe088f4fe8f99554"
+      }
+    },
+    {
+      "at": "2026-11-15T16:44:54.212408+00:00",
+      "path": "/diagnostics/documents/edf542b8d69c82d164b79756/fetch",
+      "method": "POST",
+      "status": 200,
+      "seconds": 0.781,
+      "data": {
+        "origin": "finn-source-probe-tkef",
+        "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+        "bytes": 3742339,
+        "matches_stored": true,
+        "checked_at": "2026-11-15T16:44:54.116950+00:00"
+      }
+    },
+    {
+      "at": "2026-11-15T16:44:55.252257+00:00",
+      "path": "/api/documents/edf542b8d69c82d164b79756/advance",
+      "method": "POST",
+      "status": 200,
+      "seconds": 1.047,
+      "data": {
+        "phase": "busy",
+        "id": "edf542b8d69c82d164b79756"
+      }
+    },
+    {
+      "at": "2026-11-15T16:44:55.752570+00:00",
+      "path": "/api/companies/INFY",
+      "method": "GET",
+      "status": 200,
+      "seconds": 0.5,
+      "data": {
+        "ticker": "INFY",
+        "documents": [
+          {
+            "id": "b1252f1dfe088f4fe8f99554",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/19dd605c-2b6b-4084-8dca-9d578a3eb7a0.pdf",
+            "host": "local",
+            "kind": "annual_report",
+            "bytes": 8985010,
+            "phase": "extracting",
+            "sha256": "889ee382d055a528a645ae28017b17df9da306328997dfc1d14d9b98757d88c2",
+            "ticker": "INFY",
+            "company": "Infosys Ltd",
+            "created_at": "2026-11-15T16:32:50.622251+00:00",
+            "fetched_at": "2026-11-15T16:38:55.348484+00:00",
+            "object_key": "sources/sha256/889ee382d055a528a645ae28017b17df9da306328997dfc1d14d9b98757d88c2.pdf",
+            "page_count": 383,
+            "updated_at": "2026-11-15T16:44:52.723165+00:00",
+            "discovery_url": "https://www.screener.in/company/INFY/consolidated/",
+            "completed_pages": 51,
+            "discovery_label": "Annual Report 2026",
+            "host_fetch_check": {
+              "bytes": 8985010,
+              "origin": "finn-source-probe-tkef",
+              "sha256": "889ee382d055a528a645ae28017b17df9da306328997dfc1d14d9b98757d88c2",
+              "checked_at": "2026-11-15T16:44:11.103948+00:00",
+              "matches_stored": true
+            }
+          },
+          {
+            "id": "edf542b8d69c82d164b79756",
+            "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7982fc61-7765-4981-ab3d-6aec36ba2137.pdf",
+            "host": "local",
+            "kind": "transcript",
+            "bytes": 3742339,
+            "phase": "stored",
+            "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+            "ticker": "INFY",
+            "company": "Infosys Ltd",
+            "created_at": "2026-11-15T16:32:53.298062+00:00",
+            "fetched_at": "2026-11-15T16:40:28.726398+00:00",
+            "object_key": "sources/sha256/b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2.pdf",
+            "discovery_url": "https://www.screener.in/company/INFY/consolidated/",
+            "completed_pages": 0,
+            "discovery_label": "Transcript",
+            "host_fetch_check": {
+              "bytes": 3742339,
+              "origin": "finn-source-probe-tkef",
+              "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+              "checked_at": "2026-11-15T16:44:54.116950+00:00",
+              "matches_stored": true
+            }
+          }
+        ],
+        "saved_question": null,
+        "subsequent_events": [],
+        "monitoring_note": "Only disclosures dated after the saved question appear here. Unrelated material events remain in the briefing.",
+        "research_available": true
+      }
+    },
+    {
+      "at": "2026-11-15T16:44:56.287805+00:00",
+      "path": "/api/companies/DABUR",
+      "method": "GET",
+      "status": 200,
+      "seconds": 0.531,
+      "data": {
+        "ticker": "DABUR",
+        "documents": [
+          {
+            "id": "2a15f496704f2dd505bc0960",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/81d939d7-ea85-443b-98c5-934c71afa68c.pdf",
+            "host": "local",
+            "kind": "annual_report",
+            "bytes": 28311115,
+            "phase": "stored",
+            "sha256": "e2677edfd9cc5a5035df98140ab2b8b54ab6c463d3456dca12d9c1980c9391b3",
+            "ticker": "DABUR",
+            "company": "Dabur India Ltd",
+            "created_at": "2026-11-15T16:32:56.617145+00:00",
+            "fetched_at": "2026-11-15T16:37:34.726146+00:00",
+            "object_key": "sources/sha256/e2677edfd9cc5a5035df98140ab2b8b54ab6c463d3456dca12d9c1980c9391b3.pdf",
+            "discovery_url": "https://www.screener.in/company/DABUR/consolidated/",
+            "completed_pages": 0,
+            "discovery_label": "Annual Report 2026"
+          },
+          {
+            "id": "6c6b05581a314e85789e57a5",
+            "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=fb1c13ad-a722-44f3-963c-027b3cf3a093.pdf",
+            "host": "local",
+            "kind": "transcript",
+            "bytes": 672082,
+            "phase": "stored",
+            "sha256": "cd168fe1152c1f8cec06e6bf829915b7826d33009f5e9745e65e54f29754f72a",
+            "ticker": "DABUR",
+            "company": "Dabur India Ltd",
+            "created_at": "2026-11-15T16:32:58.453875+00:00",
+            "fetched_at": "2026-11-15T16:38:32.195849+00:00",
+            "object_key": "sources/sha256/cd168fe1152c1f8cec06e6bf829915b7826d33009f5e9745e65e54f29754f72a.pdf",
+            "discovery_url": "https://www.screener.in/company/DABUR/consolidated/",
+            "completed_pages": 0,
+            "discovery_label": "Transcript"
+          }
+        ],
+        "saved_question": null,
+        "subsequent_events": [],
+        "monitoring_note": "Only disclosures dated after the saved question appear here. Unrelated material events remain in the briefing.",
+        "research_available": true
+      }
+    },
+    {
+      "at": "2026-11-15T16:44:57.617097+00:00",
+      "path": "/diagnostics/documents/2a15f496704f2dd505bc0960/fetch",
+      "method": "POST",
+      "status": 200,
+      "seconds": 1.328,
+      "data": {
+        "origin": "finn-source-probe-tkef",
+        "sha256": "e2677edfd9cc5a5035df98140ab2b8b54ab6c463d3456dca12d9c1980c9391b3",
+        "bytes": 28311115,
+        "matches_stored": true,
+        "checked_at": "2026-11-15T16:44:57.505426+00:00"
+      }
+    },
+    {
+      "at": "2026-11-15T16:44:57.872337+00:00",
+      "path": "/api/documents/2a15f496704f2dd505bc0960/advance",
+      "method": "POST",
+      "status": 200,
+      "seconds": 0.25,
+      "data": {
+        "phase": "busy",
+        "id": "2a15f496704f2dd505bc0960"
+      }
+    },
+    {
+      "at": "2026-11-15T16:44:58.333410+00:00",
+      "path": "/diagnostics/documents/6c6b05581a314e85789e57a5/fetch",
+      "method": "POST",
+      "status": 200,
+      "seconds": 0.469,
+      "data": {
+        "origin": "finn-source-probe-tkef",
+        "sha256": "cd168fe1152c1f8cec06e6bf829915b7826d33009f5e9745e65e54f29754f72a",
+        "bytes": 672082,
+        "matches_stored": true,
+        "checked_at": "2026-11-15T16:44:58.298497+00:00"
+      }
+    },
+    {
+      "at": "2026-11-15T16:44:58.744478+00:00",
+      "path": "/api/documents/6c6b05581a314e85789e57a5/advance",
+      "method": "POST",
+      "status": 200,
+      "seconds": 0.406,
+      "data": {
+        "phase": "busy",
+        "id": "6c6b05581a314e85789e57a5"
+      }
+    },
+    {
+      "at": "2026-11-15T16:44:59.258041+00:00",
+      "path": "/api/companies/DABUR",
+      "method": "GET",
+      "status": 200,
+      "seconds": 0.516,
+      "data": {
+        "ticker": "DABUR",
+        "documents": [
+          {
+            "id": "2a15f496704f2dd505bc0960",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/81d939d7-ea85-443b-98c5-934c71afa68c.pdf",
+            "host": "local",
+            "kind": "annual_report",
+            "bytes": 28311115,
+            "phase": "stored",
+            "sha256": "e2677edfd9cc5a5035df98140ab2b8b54ab6c463d3456dca12d9c1980c9391b3",
+            "ticker": "DABUR",
+            "company": "Dabur India Ltd",
+            "created_at": "2026-11-15T16:32:56.617145+00:00",
+            "fetched_at": "2026-11-15T16:37:34.726146+00:00",
+            "object_key": "sources/sha256/e2677edfd9cc5a5035df98140ab2b8b54ab6c463d3456dca12d9c1980c9391b3.pdf",
+            "discovery_url": "https://www.screener.in/company/DABUR/consolidated/",
+            "completed_pages": 0,
+            "discovery_label": "Annual Report 2026",
+            "host_fetch_check": {
+              "bytes": 28311115,
+              "origin": "finn-source-probe-tkef",
+              "sha256": "e2677edfd9cc5a5035df98140ab2b8b54ab6c463d3456dca12d9c1980c9391b3",
+              "checked_at": "2026-11-15T16:44:57.505426+00:00",
+              "matches_stored": true
+            }
+          },
+          {
+            "id": "6c6b05581a314e85789e57a5",
+            "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=fb1c13ad-a722-44f3-963c-027b3cf3a093.pdf",
+            "host": "local",
+            "kind": "transcript",
+            "bytes": 672082,
+            "phase": "stored",
+            "sha256": "cd168fe1152c1f8cec06e6bf829915b7826d33009f5e9745e65e54f29754f72a",
+            "ticker": "DABUR",
+            "company": "Dabur India Ltd",
+            "created_at": "2026-11-15T16:32:58.453875+00:00",
+            "fetched_at": "2026-11-15T16:38:32.195849+00:00",
+            "object_key": "sources/sha256/cd168fe1152c1f8cec06e6bf829915b7826d33009f5e9745e65e54f29754f72a.pdf",
+            "discovery_url": "https://www.screener.in/company/DABUR/consolidated/",
+            "completed_pages": 0,
+            "discovery_label": "Transcript",
+            "host_fetch_check": {
+              "bytes": 672082,
+              "origin": "finn-source-probe-tkef",
+              "sha256": "cd168fe1152c1f8cec06e6bf829915b7826d33009f5e9745e65e54f29754f72a",
+              "checked_at": "2026-11-15T16:44:58.298497+00:00",
+              "matches_stored": true
+            }
+          }
+        ],
+        "saved_question": null,
+        "subsequent_events": [],
+        "monitoring_note": "Only disclosures dated after the saved question appear here. Unrelated material events remain in the briefing.",
+        "research_available": true
+      }
+    },
+    {
+      "at": "2026-11-15T16:44:59.557276+00:00",
+      "path": "/api/companies/HCLTECH",
+      "method": "GET",
+      "status": 200,
+      "seconds": 0.281,
+      "data": {
+        "ticker": "HCLTECH",
+        "documents": [
+          {
+            "id": "414302412fbe60d6def74b86",
+            "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ccce0001-ff5d-4875-b1e5-5c558669f49c.pdf",
+            "host": "local",
+            "kind": "transcript",
+            "bytes": 570587,
+            "phase": "stored",
+            "sha256": "baf227e394b6f6be0659c3c482d707ffc62e98c9bfe248d417560d3527af75ed",
+            "ticker": "HCLTECH",
+            "company": "HCL Technologies Ltd",
+            "created_at": "2026-11-15T16:33:04.425139+00:00",
+            "fetched_at": "2026-11-15T16:37:39.453118+00:00",
+            "object_key": "sources/sha256/baf227e394b6f6be0659c3c482d707ffc62e98c9bfe248d417560d3527af75ed.pdf",
+            "discovery_url": "https://www.screener.in/company/HCLTECH/consolidated/",
+            "completed_pages": 0,
+            "discovery_label": "Transcript"
+          },
+          {
+            "id": "56e95f8a6761a3447c8cd5f9",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4bc45f66-7fb5-4fab-a87a-b32321b63059.pdf",
+            "host": "local",
+            "kind": "annual_report",
+            "bytes": 16831072,
+            "phase": "stored",
+            "sha256": "aebe94916d38b46f2425688756d8ccebf73b0460803daa7af07cf72c928ca96e",
+            "ticker": "HCLTECH",
+            "company": "HCL Technologies Ltd",
+            "created_at": "2026-11-15T16:33:02.767101+00:00",
+            "fetched_at": "2026-11-15T16:38:26.996116+00:00",
+            "object_key": "sources/sha256/aebe94916d38b46f2425688756d8ccebf73b0460803daa7af07cf72c928ca96e.pdf",
+            "discovery_url": "https://www.screener.in/company/HCLTECH/consolidated/",
+            "completed_pages": 0,
+            "discovery_label": "Annual Report 2026"
+          }
+        ],
+        "saved_question": null,
+        "subsequent_events": [],
+        "monitoring_note": "Only disclosures dated after the saved question appear here. Unrelated material events remain in the briefing.",
+        "research_available": true
+      }
+    },
+    {
+      "at": "2026-11-15T16:45:00.073299+00:00",
+      "path": "/diagnostics/documents/414302412fbe60d6def74b86/fetch",
+      "method": "POST",
+      "status": 200,
+      "seconds": 0.516,
+      "data": {
+        "origin": "finn-source-probe-tkef",
+        "sha256": "baf227e394b6f6be0659c3c482d707ffc62e98c9bfe248d417560d3527af75ed",
+        "bytes": 570587,
+        "matches_stored": true,
+        "checked_at": "2026-11-15T16:45:00.001728+00:00"
+      }
+    },
+    {
+      "at": "2026-11-15T16:45:00.317353+00:00",
+      "path": "/api/documents/414302412fbe60d6def74b86/advance",
+      "method": "POST",
+      "status": 200,
+      "seconds": 0.235,
+      "data": {
+        "phase": "busy",
+        "id": "414302412fbe60d6def74b86"
+      }
+    },
+    {
+      "at": "2026-11-15T16:45:01.212942+00:00",
+      "path": "/diagnostics/documents/56e95f8a6761a3447c8cd5f9/fetch",
+      "method": "POST",
+      "status": 200,
+      "seconds": 0.89,
+      "data": {
+        "origin": "finn-source-probe-tkef",
+        "sha256": "aebe94916d38b46f2425688756d8ccebf73b0460803daa7af07cf72c928ca96e",
+        "bytes": 16831072,
+        "matches_stored": true,
+        "checked_at": "2026-11-15T16:45:01.204497+00:00"
+      }
+    },
+    {
+      "at": "2026-11-15T16:45:01.399144+00:00",
+      "path": "/api/documents/56e95f8a6761a3447c8cd5f9/advance",
+      "method": "POST",
+      "status": 200,
+      "seconds": 0.188,
+      "data": {
+        "phase": "busy",
+        "id": "56e95f8a6761a3447c8cd5f9"
+      }
+    },
+    {
+      "at": "2026-11-15T16:45:01.725351+00:00",
+      "path": "/api/companies/HCLTECH",
+      "method": "GET",
+      "status": 200,
+      "seconds": 0.328,
+      "data": {
+        "ticker": "HCLTECH",
+        "documents": [
+          {
+            "id": "414302412fbe60d6def74b86",
+            "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ccce0001-ff5d-4875-b1e5-5c558669f49c.pdf",
+            "host": "local",
+            "kind": "transcript",
+            "bytes": 570587,
+            "phase": "stored",
+            "sha256": "baf227e394b6f6be0659c3c482d707ffc62e98c9bfe248d417560d3527af75ed",
+            "ticker": "HCLTECH",
+            "company": "HCL Technologies Ltd",
+            "created_at": "2026-11-15T16:33:04.425139+00:00",
+            "fetched_at": "2026-11-15T16:37:39.453118+00:00",
+            "object_key": "sources/sha256/baf227e394b6f6be0659c3c482d707ffc62e98c9bfe248d417560d3527af75ed.pdf",
+            "discovery_url": "https://www.screener.in/company/HCLTECH/consolidated/",
+            "completed_pages": 0,
+            "discovery_label": "Transcript",
+            "host_fetch_check": {
+              "bytes": 570587,
+              "origin": "finn-source-probe-tkef",
+              "sha256": "baf227e394b6f6be0659c3c482d707ffc62e98c9bfe248d417560d3527af75ed",
+              "checked_at": "2026-11-15T16:45:00.001728+00:00",
+              "matches_stored": true
+            }
+          },
+          {
+            "id": "56e95f8a6761a3447c8cd5f9",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4bc45f66-7fb5-4fab-a87a-b32321b63059.pdf",
+            "host": "local",
+            "kind": "annual_report",
+            "bytes": 16831072,
+            "phase": "stored",
+            "sha256": "aebe94916d38b46f2425688756d8ccebf73b0460803daa7af07cf72c928ca96e",
+            "ticker": "HCLTECH",
+            "company": "HCL Technologies Ltd",
+            "created_at": "2026-11-15T16:33:02.767101+00:00",
+            "fetched_at": "2026-11-15T16:38:26.996116+00:00",
+            "object_key": "sources/sha256/aebe94916d38b46f2425688756d8ccebf73b0460803daa7af07cf72c928ca96e.pdf",
+            "discovery_url": "https://www.screener.in/company/HCLTECH/consolidated/",
+            "completed_pages": 0,
+            "discovery_label": "Annual Report 2026",
+            "host_fetch_check": {
+              "bytes": 16831072,
+              "origin": "finn-source-probe-tkef",
+              "sha256": "aebe94916d38b46f2425688756d8ccebf73b0460803daa7af07cf72c928ca96e",
+              "checked_at": "2026-11-15T16:45:01.204497+00:00",
+              "matches_stored": true
+            }
+          }
+        ],
+        "saved_question": null,
+        "subsequent_events": [],
+        "monitoring_note": "Only disclosures dated after the saved question appear here. Unrelated material events remain in the briefing.",
+        "research_available": true
+      }
+    },
+    {
+      "at": "2026-11-15T16:45:02.027749+00:00",
+      "path": "/api/companies/VOLTAS",
+      "method": "GET",
+      "status": 200,
+      "seconds": 0.297,
+      "data": {
+        "ticker": "VOLTAS",
+        "documents": [
+          {
+            "id": "cf13ac37a3be9802d6b82b1e",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/40b16328-fb45-49a5-b8ae-e7b1849cd2ba.pdf",
+            "host": "local",
+            "kind": "annual_report",
+            "bytes": 17535603,
+            "phase": "stored",
+            "sha256": "51aa9ec1c589a1504e519e29373ec3c012aabb9ed605ddfb64b867044cc5752b",
+            "ticker": "VOLTAS",
+            "company": "Voltas Ltd",
+            "created_at": "2026-11-15T16:33:06.815498+00:00",
+            "fetched_at": "2026-11-15T16:39:43.216167+00:00",
+            "object_key": "sources/sha256/51aa9ec1c589a1504e519e29373ec3c012aabb9ed605ddfb64b867044cc5752b.pdf",
+            "discovery_url": "https://www.screener.in/company/VOLTAS/consolidated/",
+            "completed_pages": 0,
+            "discovery_label": "Annual Report 2026"
+          },
+          {
+            "id": "fcf8b9bc47bc0b2193860718",
+            "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=770b03bf-b8c4-4922-8236-36f8e774247a.pdf",
+            "host": "local",
+            "kind": "transcript",
+            "bytes": 626008,
+            "phase": "stored",
+            "sha256": "ea3631fcab6158e7bf203b51ad38e17b6d1dad2e1ef2af34a85505da705e4dfd",
+            "ticker": "VOLTAS",
+            "company": "Voltas Ltd",
+            "created_at": "2026-11-15T16:33:08.580878+00:00",
+            "fetched_at": "2026-11-15T16:40:41.768446+00:00",
+            "object_key": "sources/sha256/ea3631fcab6158e7bf203b51ad38e17b6d1dad2e1ef2af34a85505da705e4dfd.pdf",
+            "discovery_url": "https://www.screener.in/company/VOLTAS/consolidated/",
+            "completed_pages": 0,
+            "discovery_label": "Transcript"
+          }
+        ],
+        "saved_question": null,
+        "subsequent_events": [],
+        "monitoring_note": "Only disclosures dated after the saved question appear here. Unrelated material events remain in the briefing.",
+        "research_available": true
+      }
+    },
+    {
+      "at": "2026-11-15T16:45:02.817308+00:00",
+      "path": "/diagnostics/documents/cf13ac37a3be9802d6b82b1e/fetch",
+      "method": "POST",
+      "status": 200,
+      "seconds": 0.782,
+      "data": {
+        "origin": "finn-source-probe-tkef",
+        "sha256": "51aa9ec1c589a1504e519e29373ec3c012aabb9ed605ddfb64b867044cc5752b",
+        "bytes": 17535603,
+        "matches_stored": true,
+        "checked_at": "2026-11-15T16:45:02.717272+00:00"
+      }
+    },
+    {
+      "at": "2026-11-15T16:45:02.984984+00:00",
+      "path": "/api/documents/cf13ac37a3be9802d6b82b1e/advance",
+      "method": "POST",
+      "status": 200,
+      "seconds": 0.171,
+      "data": {
+        "phase": "busy",
+        "id": "cf13ac37a3be9802d6b82b1e"
+      }
+    },
+    {
+      "at": "2026-11-15T16:45:03.659954+00:00",
+      "path": "/diagnostics/documents/fcf8b9bc47bc0b2193860718/fetch",
+      "method": "POST",
+      "status": 200,
+      "seconds": 0.672,
+      "data": {
+        "origin": "finn-source-probe-tkef",
+        "sha256": "ea3631fcab6158e7bf203b51ad38e17b6d1dad2e1ef2af34a85505da705e4dfd",
+        "bytes": 626008,
+        "matches_stored": true,
+        "checked_at": "2026-11-15T16:45:03.553012+00:00"
+      }
+    },
+    {
+      "at": "2026-11-15T16:45:03.929302+00:00",
+      "path": "/api/documents/fcf8b9bc47bc0b2193860718/advance",
+      "method": "POST",
+      "status": 200,
+      "seconds": 0.266,
+      "data": {
+        "phase": "busy",
+        "id": "fcf8b9bc47bc0b2193860718"
+      }
+    },
+    {
+      "at": "2026-11-15T16:45:04.272909+00:00",
+      "path": "/api/companies/VOLTAS",
+      "method": "GET",
+      "status": 200,
+      "seconds": 0.344,
+      "data": {
+        "ticker": "VOLTAS",
+        "documents": [
+          {
+            "id": "cf13ac37a3be9802d6b82b1e",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/40b16328-fb45-49a5-b8ae-e7b1849cd2ba.pdf",
+            "host": "local",
+            "kind": "annual_report",
+            "bytes": 17535603,
+            "phase": "stored",
+            "sha256": "51aa9ec1c589a1504e519e29373ec3c012aabb9ed605ddfb64b867044cc5752b",
+            "ticker": "VOLTAS",
+            "company": "Voltas Ltd",
+            "created_at": "2026-11-15T16:33:06.815498+00:00",
+            "fetched_at": "2026-11-15T16:39:43.216167+00:00",
+            "object_key": "sources/sha256/51aa9ec1c589a1504e519e29373ec3c012aabb9ed605ddfb64b867044cc5752b.pdf",
+            "discovery_url": "https://www.screener.in/company/VOLTAS/consolidated/",
+            "completed_pages": 0,
+            "discovery_label": "Annual Report 2026",
+            "host_fetch_check": {
+              "bytes": 17535603,
+              "origin": "finn-source-probe-tkef",
+              "sha256": "51aa9ec1c589a1504e519e29373ec3c012aabb9ed605ddfb64b867044cc5752b",
+              "checked_at": "2026-11-15T16:45:02.717272+00:00",
+              "matches_stored": true
+            }
+          },
+          {
+            "id": "fcf8b9bc47bc0b2193860718",
+            "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=770b03bf-b8c4-4922-8236-36f8e774247a.pdf",
+            "host": "local",
+            "kind": "transcript",
+            "bytes": 626008,
+            "phase": "stored",
+            "sha256": "ea3631fcab6158e7bf203b51ad38e17b6d1dad2e1ef2af34a85505da705e4dfd",
+            "ticker": "VOLTAS",
+            "company": "Voltas Ltd",
+            "created_at": "2026-11-15T16:33:08.580878+00:00",
+            "fetched_at": "2026-11-15T16:40:41.768446+00:00",
+            "object_key": "sources/sha256/ea3631fcab6158e7bf203b51ad38e17b6d1dad2e1ef2af34a85505da705e4dfd.pdf",
+            "discovery_url": "https://www.screener.in/company/VOLTAS/consolidated/",
+            "completed_pages": 0,
+            "discovery_label": "Transcript",
+            "host_fetch_check": {
+              "bytes": 626008,
+              "origin": "finn-source-probe-tkef",
+              "sha256": "ea3631fcab6158e7bf203b51ad38e17b6d1dad2e1ef2af34a85505da705e4dfd",
+              "checked_at": "2026-11-15T16:45:03.553012+00:00",
+              "matches_stored": true
+            }
+          }
+        ],
+        "saved_question": null,
+        "subsequent_events": [],
+        "monitoring_note": "Only disclosures dated after the saved question appear here. Unrelated material events remain in the briefing.",
+        "research_available": true
+      }
+    }
+  ]
+}

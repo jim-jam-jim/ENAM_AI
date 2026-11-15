@@ -29,7 +29,11 @@ def normalise(rows,ticker):
         except (KeyError,ValueError):continue
         key=digest(ticker+'|'+url)  # Same attachment is one disclosure; revised URL stays separate.
         subject=row.get('desc','Unclassified disclosure')
-        events[key]={'id':key,'ticker':ticker,'company':row.get('sm_name',ticker),'published_at':published,'category':subject,'title':subject,'summary':row.get('attchmntText',''), 'summary_origin':'Exchange filing description · not AI analysis','priority':classify(subject),'source_url':url,'source_urls':[url],'evidence_id':None,'availability':'Open the original filing or load its passage. Figures have not been verified.','reason':'Rule-based category priority; unknown categories remain visible for review.'}
+        description=row.get('attchmntText','')
+        import re
+        title=re.sub(r'^.*?has informed the Exchange\s*(?:regarding|about)?\s*','',description,flags=re.I).strip(" '.") or subject
+        if len(title)>180:title=title[:177]+'…'
+        events[key]={'id':key,'ticker':ticker,'company':row.get('sm_name',ticker),'published_at':published,'category':subject,'title':title,'summary':description, 'summary_origin':'Exchange filing description · not AI analysis','priority':classify(subject),'source_url':url,'source_urls':[url],'evidence_id':None,'availability':'Load matching filing text. Figures outside the prepared example are not independently verified.','reason':'Rule-based category priority; unknown categories remain visible for review.'}
     return list(events.values())
 
 def prices(ticker):
@@ -76,11 +80,11 @@ def advance_refresh():
 
 def alert_values(prices_data,price_threshold=3,volume_multiple=2):
     rows=prices_data.get('rows',[])
-    if len(rows)<21:return {'available':False,'reason':'Requires 21 completed sessions (latest plus 20 prior).'}
+    if len(rows)<21:return {'available':False,'date':rows[-1]['date'] if rows else None,'reason':'Requires 21 completed sessions (latest plus 20 prior).'}
     latest=rows[-1];previous=rows[-2];baseline=sum(r['volume'] for r in rows[-21:-1])/20
     actions=prices_data.get('corporate_actions',{})
     dates=[datetime.fromtimestamp(int(t),IST).date().isoformat() for group in actions.values() for t in group]
-    if any(d>=rows[-21]['date'] for d in dates):return {'available':False,'reason':'Corporate action in comparison window; review unadjusted price/volume before alerting.'}
+    if any(d>=rows[-21]['date'] for d in dates):return {'available':False,'date':latest['date'],'reason':'Corporate action in comparison window; review unadjusted price/volume before alerting.'}
     if previous['close']<=0 or baseline<=0:return {'available':False,'reason':'Invalid comparison baseline.'}
     change=(latest['close']/previous['close']-1)*100;multiple=latest['volume']/baseline
     return {'available':True,'date':latest['date'],'price_change_percent':round(change,2),'volume_multiple':round(multiple,2),'volume_baseline':round(baseline,2),'price_triggered':abs(change)>=price_threshold,'volume_triggered':multiple>=volume_multiple,'baseline':'Unadjusted close vs prior session; volume vs mean of preceding 20 completed sessions, excluding latest.'}
