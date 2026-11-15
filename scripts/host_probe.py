@@ -204,7 +204,11 @@ class Handler(BaseHTTPRequestHandler):
             self.reply(200,result)
         except Exception as exc:
             # Deliberately omit message/traceback: drivers may include secrets/DSNs.
-            self.reply(503, {'error_type':type(exc).__name__, 'message':'Probe stage failed; last committed checkpoint is retained. Inspect provider dashboards and retry the same job ID.', 'boot_id':BOOT})
+            details = {}
+            if isinstance(exc, requests.HTTPError) and exc.response is not None:
+                details = {'source_http_status':exc.response.status_code,
+                           'source_host':urlparse(exc.response.url).hostname}
+            self.reply(503, {'error_type':type(exc).__name__, **details, 'message':'Probe stage failed; last committed checkpoint is retained. Inspect provider dashboards and retry the same job ID.', 'boot_id':BOOT})
 
 if __name__ == '__main__':
     # One diagnostic operation at a time; no background execution guarantee.
