@@ -40,3 +40,6 @@ Open: full application deployment and cold-start verification; runtime model pro
 
 ## Completion direction
 User approved proceeding through all existing MVP workflows without intermediate review gates. Gemini free-tier research is approved; configured runtime access must be verified. Explicit manual/refresh-on-open processing will be distinguished from scheduled monitoring.
+
+## MVP refresh and alerts detail
+Refresh is explicit manual processing while the app is open, with durable progress and a one-hour cache interval; no scheduled/continuous monitoring claim. Alerts use absolute unadjusted close change vs prior session and latest volume vs prior 20 completed-session mean. Missing history or corporate actions in that interval disable the comparison. Saved questions/settings are browser-workspace scoped and persist in PostgreSQL across restarts.

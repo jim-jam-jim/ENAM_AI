@@ -51,3 +51,6 @@ NSE transcript (48 pages) and results bundle (195 pages) passed Render download,
 
 ## Resumed implementation
 The interrupted final local server start was retried through normal approval and succeeded. Neon-backed briefing/event/passage workflow and static production build are ready; 10 tests passed before interruption. Browser checked at 1280px and 390px after restart; cash passage loads from Neon. Full MVP work continues without milestone review gates. Gemini setup pending.
+
+## Full MVP implementation in progress
+15-company prices/filings fetched locally and stored in Neon (all 15 returned histories and feeds). New bounded document discovery/extraction, manual refresh, anonymous per-browser saved questions/settings, deterministic EOD alerts, and Gemini grounded research routes implemented; hosted verification and research acceptance still pending. Prepared discovery INFY/DABUR/HCLTECH plus separate VOLTAS all found primary annual-report/transcript links. No annual-report hosted success claimed yet.

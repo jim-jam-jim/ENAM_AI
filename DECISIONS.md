@@ -30,3 +30,6 @@ Render plus Neon passed bounded NSE PDF ingestion, storage and restart/resume ch
 
 ## Latest user approvals
 Complete the full agreed MVP and deploy without waiting for each milestone review. Gemini runtime free tier only; use gemini-2.5-flash-lite after account verification, no paid fallback. Refresh will be explicit manual/refresh-on-open bounded work on the existing service; no new scheduler or continuous-monitoring claim.
+
+## Runtime and refresh implementation
+User configured Gemini privately and confirmed free billing. Model metadata access returned 200 for gemini-2.5-flash-lite. Cap at 20 reserved calls/Pacific day and 2/minute, including failures; no automatic paid/model fallback. Manual bounded refresh while page stays open, one source at a time, cached for one hour. No scheduler added. Alert baseline implemented as 20 prior completed sessions, latest excluded; corporate-action windows suspend alerts. Anonymous browser UUID isolates settings without login; clearing browser storage loses workspace access, but not server records.

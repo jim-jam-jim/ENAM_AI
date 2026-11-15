@@ -10,6 +10,9 @@ import psycopg
 from dotenv import load_dotenv
 from fastapi import Header
 from scripts import host_probe
+from server import store
+from server.features import router
+from server import documents
 from pathlib import Path
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.staticfiles import StaticFiles
@@ -18,6 +21,16 @@ ROOT = Path(__file__).resolve().parents[1]
 load_dotenv(ROOT/'.env')
 app = FastAPI(title='FINN', docs_url=None, redoc_url=None, openapi_url=None)
 probe_lock = threading.Lock()
+app.include_router(router)
+
+@app.on_event('startup')
+def initialise_store():
+    store.initialise()
+
+@app.exception_handler(psycopg.Error)
+def database_unavailable(request,exc):
+    from fastapi.responses import JSONResponse
+    return JSONResponse(status_code=503,content={'detail':'Database temporarily unavailable; retry shortly'})
 
 def percentage(current, previous):
     current, previous = Decimal(str(current)), Decimal(str(previous))
@@ -64,6 +77,8 @@ def event(event_id:str):
     data=dataset()
     item=next((x for x in data['events'] if x['id']==event_id),None)
     if item is None:
+        item=next((e for f in store.all_records('filings') for e in f.get('events',[]) if e['id']==event_id),None)
+    if item is None:
         raise HTTPException(404,'Event unavailable')
     if item.get('metric'):
         metric=dict(item['metric'])
@@ -86,6 +101,22 @@ def protect(authorization):
     token=os.environ.get('PROBE_TOKEN','')
     if len(token)<32 or not hmac.compare_digest(authorization or '', 'Bearer '+token):
         raise HTTPException(401,'Unauthorised')
+
+@app.post('/diagnostics/documents/{key}/fetch')
+def verify_source_host(key:str,authorization:str|None=Header(default=None)):
+    protect(authorization)
+    import hashlib
+    d=store.get('document',key)
+    if not d:raise HTTPException(404,'Unknown document')
+    try:
+        data=documents.download(d['url'])
+        sha=hashlib.sha256(data).hexdigest()
+        result={'origin':os.environ.get('RENDER_SERVICE_NAME','local'),'sha256':sha,'bytes':len(data),'matches_stored':sha==d.get('sha256'),'checked_at':datetime.now(timezone.utc).isoformat()}
+        d['host_fetch_check']=result;store.put('document',key,d)
+        return result
+    except Exception as exc:
+        import requests
+        return {'error_type':type(exc).__name__,'http_status':exc.response.status_code if isinstance(exc,requests.HTTPError) else None}
 
 @app.get('/verify')
 def diagnostic_verify(job_id:uuid.UUID, authorization:str|None=Header(default=None)):

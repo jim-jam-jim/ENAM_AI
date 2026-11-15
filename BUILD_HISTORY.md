@@ -43,3 +43,6 @@ This file supplements the original conversations; it is not their replacement. N
 
 ## Resume after usage limit
 Implemented Neon read-model publication, static frontend root and protected diagnostic adapters. Production build and 10 tests passed. Local server restart was rejected when automatic approval review reached its usage limit; no bypass attempted. User asked to retry after reset; normal approval succeeded. Final local browser check passed at 1280px and 390px, with historical navigation and hosted-extracted cash passage. Full MVP continuation authorised; Gemini free-tier setup requested.
+
+## Expanded MVP work
+First user-facing commit fc7e002 deployed by user; actual root and evidence endpoints returned 200; unauthenticated verify returned 401. Gemini model metadata request returned 200. Implemented durable records, primary-link discovery for four tickers, 15-company feed/price ingestion, checkpointed document processing, quotation-validated Gemini answers, saved questions and alerts. Four additional tests passed (14 total). Frontend build caught a missing JSX brace and passed after fix. An npm command from repository root resolved an unrelated parent package and failed because vite was unavailable; reran only in web/. No parent files intentionally modified.
