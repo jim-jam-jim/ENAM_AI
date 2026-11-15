@@ -20,7 +20,10 @@ def get(kind,key,default=None):
         row=c.execute('SELECT data FROM finn_records WHERE kind=%s AND id=%s',(kind,key)).fetchone()
     return row[0] if row else default
 
-def put(kind,key,data):
+def put(kind,key,data,connection=None):
+    if connection is not None:
+        connection.execute('INSERT INTO finn_records(kind,id,data) VALUES(%s,%s,%s) ON CONFLICT(kind,id) DO UPDATE SET data=EXCLUDED.data,updated_at=now()',(kind,key,Jsonb(data)))
+        return data
     with connect() as c:
         c.execute('INSERT INTO finn_records(kind,id,data) VALUES(%s,%s,%s) ON CONFLICT(kind,id) DO UPDATE SET data=EXCLUDED.data,updated_at=now()',(kind,key,Jsonb(data)))
     return data

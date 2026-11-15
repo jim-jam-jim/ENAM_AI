@@ -1,0 +1,143 @@
+{
+  "claims": [
+    {
+      "text": "Free cash flow for fiscal 2026 was reported at \u20b933,097 crore, representing 112.3% of net profit, compared to \u20b934,549 crore (129.2% of net profit) in fiscal 2025.",
+      "kind": "reported",
+      "quote": "`34,549 2025 `33,097 2026 Free cash flows in ` crore and as a % of net profit 90.9% 129.2% 112.3%",
+      "source_id": "b1252f1dfe088f4fe8f99554:27"
+    },
+    {
+      "text": "Management interpreted the slight decrease in operating cash flows in fiscal 2026 compared to fiscal 2025 as being primarily due to higher income tax refunds received during fiscal 2025 and higher working capital outflows.",
+      "kind": "interpretation",
+      "quote": "Our operating cash flows have decreased marginally in fiscal 2026 as compared to fiscal 2025 primarily on account of higher income tax refunds received during fiscal 2025, higher outflow on working capital and partially offset by an increase in net profits adjusted for non-cash items.",
+      "source_id": "b1252f1dfe088f4fe8f99554:81"
+    }
+  ],
+  "limitations": "The provided documents do not supply exhaustive historical cash flow figures prior to fiscal 2024 or detailed breakdowns of working capital components beyond the stated drivers. Comparisons are limited to the reported fiscal years 2024, 2025, and 2026 as contained in the excerpts.",
+  "verdict": "supports",
+  "id": "f6b8d8bb05bf2250c73b9186",
+  "owner": "local-diagnostic-35",
+  "ticker": "INFY",
+  "question": "What do the annual report and earnings call say about cash generation and growth? Separate reported facts from interpretation and identify missing comparisons.",
+  "model": "gemini-3.5-flash-lite",
+  "created_at": "2026-11-15T17:00:46.941712+00:00",
+  "sources": [
+    {
+      "id": "b1252f1dfe088f4fe8f99554:27",
+      "page": 27,
+      "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/19dd605c-2b6b-4084-8dca-9d578a3eb7a0.pdf",
+      "kind": "annual_report",
+      "sha256": "889ee382d055a528a645ae28017b17df9da306328997dfc1d14d9b98757d88c2",
+      "fetched_at": "2026-11-15T16:38:55.348484+00:00",
+      "period_mentions": [
+        "2025-26"
+      ]
+    },
+    {
+      "id": "b1252f1dfe088f4fe8f99554:81",
+      "page": 81,
+      "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/19dd605c-2b6b-4084-8dca-9d578a3eb7a0.pdf",
+      "kind": "annual_report",
+      "sha256": "889ee382d055a528a645ae28017b17df9da306328997dfc1d14d9b98757d88c2",
+      "fetched_at": "2026-11-15T16:38:55.348484+00:00",
+      "period_mentions": [
+        "2025-26"
+      ]
+    },
+    {
+      "id": "b1252f1dfe088f4fe8f99554:82",
+      "page": 82,
+      "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/19dd605c-2b6b-4084-8dca-9d578a3eb7a0.pdf",
+      "kind": "annual_report",
+      "sha256": "889ee382d055a528a645ae28017b17df9da306328997dfc1d14d9b98757d88c2",
+      "fetched_at": "2026-11-15T16:38:55.348484+00:00",
+      "period_mentions": [
+        "2025-26"
+      ]
+    },
+    {
+      "id": "b1252f1dfe088f4fe8f99554:10",
+      "page": 10,
+      "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/19dd605c-2b6b-4084-8dca-9d578a3eb7a0.pdf",
+      "kind": "annual_report",
+      "sha256": "889ee382d055a528a645ae28017b17df9da306328997dfc1d14d9b98757d88c2",
+      "fetched_at": "2026-11-15T16:38:55.348484+00:00",
+      "period_mentions": [
+        "2025-26"
+      ]
+    },
+    {
+      "id": "b1252f1dfe088f4fe8f99554:78",
+      "page": 78,
+      "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/19dd605c-2b6b-4084-8dca-9d578a3eb7a0.pdf",
+      "kind": "annual_report",
+      "sha256": "889ee382d055a528a645ae28017b17df9da306328997dfc1d14d9b98757d88c2",
+      "fetched_at": "2026-11-15T16:38:55.348484+00:00",
+      "period_mentions": [
+        "2025-26"
+      ]
+    },
+    {
+      "id": "edf542b8d69c82d164b79756:25",
+      "page": 25,
+      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7982fc61-7765-4981-ab3d-6aec36ba2137.pdf",
+      "kind": "transcript",
+      "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+      "fetched_at": "2026-11-15T16:40:28.726398+00:00",
+      "period_mentions": [
+        "2026-2027",
+        "2026-\n2027"
+      ]
+    },
+    {
+      "id": "edf542b8d69c82d164b79756:27",
+      "page": 27,
+      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7982fc61-7765-4981-ab3d-6aec36ba2137.pdf",
+      "kind": "transcript",
+      "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+      "fetched_at": "2026-11-15T16:40:28.726398+00:00",
+      "period_mentions": [
+        "2026-2027",
+        "2026-\n2027"
+      ]
+    },
+    {
+      "id": "edf542b8d69c82d164b79756:42",
+      "page": 42,
+      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7982fc61-7765-4981-ab3d-6aec36ba2137.pdf",
+      "kind": "transcript",
+      "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+      "fetched_at": "2026-11-15T16:40:28.726398+00:00",
+      "period_mentions": [
+        "2026-2027",
+        "2026-\n2027"
+      ]
+    },
+    {
+      "id": "edf542b8d69c82d164b79756:44",
+      "page": 44,
+      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7982fc61-7765-4981-ab3d-6aec36ba2137.pdf",
+      "kind": "transcript",
+      "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+      "fetched_at": "2026-11-15T16:40:28.726398+00:00",
+      "period_mentions": [
+        "2026-2027",
+        "2026-\n2027"
+      ]
+    },
+    {
+      "id": "edf542b8d69c82d164b79756:28",
+      "page": 28,
+      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7982fc61-7765-4981-ab3d-6aec36ba2137.pdf",
+      "kind": "transcript",
+      "sha256": "b8e9a931ed54ee49a23fb36a7d6a37f15ab72c2f3bbd14d1e92d706b471f30e2",
+      "fetched_at": "2026-11-15T16:40:28.726398+00:00",
+      "period_mentions": [
+        "2026-2027",
+        "2026-\n2027"
+      ]
+    }
+  ],
+  "citation_check": "Exact quotations matched to stored passages; interpretation still requires investor judgment",
+  "cached": false
+}

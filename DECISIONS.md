@@ -33,3 +33,7 @@ Complete the full agreed MVP and deploy without waiting for each milestone revie
 
 ## Runtime and refresh implementation
 User configured Gemini privately and confirmed free billing. Model metadata access returned 200 for gemini-2.5-flash-lite. Cap at 20 reserved calls/Pacific day and 2/minute, including failures; no automatic paid/model fallback. Manual bounded refresh while page stays open, one source at a time, cached for one hour. No scheduler added. Alert baseline implemented as 20 prior completed sessions, latest excluded; corporate-action windows suspend alerts. Anonymous browser UUID isolates settings without login; clearing browser storage loses workspace access, but not server records.
+
+Scope frozen: finish acceptance and blocking fixes only. Do not add price infrastructure to work around hosted Yahoo 429; retain source failure and stale-cache labels. Session advisory locks replaced with expiring row leases for the Neon transaction pooler. Reuse one database connection within a page batch while retaining per-page durable writes.
+
+Runtime generation revealed Gemini 2.5 Flash-Lite is unavailable to new users (HTTP 404), despite model metadata success. Google directs new users to gemini-3.5-flash-lite; official pricing checked and standard text input/output are free tier. Explicitly changed selected model to 3.5 Flash-Lite under user-approved free-tier Gemini choice, retaining the same caps and no paid fallback.

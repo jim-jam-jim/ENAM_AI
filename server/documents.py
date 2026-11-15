@@ -79,12 +79,13 @@ def advance(key):
                 if hashlib.sha256(data).hexdigest()!=d['sha256']:raise ValueError('Stored source changed')
                 reader=PdfReader(io.BytesIO(data));d['page_count']=len(reader.pages)
                 started=time.monotonic()
-                for index in range(d['completed_pages'],min(d['completed_pages']+20,len(reader.pages))):
-                    text=reader.pages[index].extract_text() or ''
-                    store.put('passage',f'{key}:{index+1}',{'id':f'{key}:{index+1}','document_id':key,'ticker':d['ticker'],'kind':d['kind'],'page':index+1,'text':text,'url':d['url'],'sha256':d['sha256']})
-                    d.update(completed_pages=index+1,phase='extracting',updated_at=now())
-                    store.put('document',key,d)
-                    if time.monotonic()-started>12:break
+                with store.connect() as checkpoint_conn:
+                    for index in range(d['completed_pages'],min(d['completed_pages']+20,len(reader.pages))):
+                        text=reader.pages[index].extract_text() or ''
+                        store.put('passage',f'{key}:{index+1}',{'id':f'{key}:{index+1}','document_id':key,'ticker':d['ticker'],'kind':d['kind'],'page':index+1,'text':text,'url':d['url'],'sha256':d['sha256']},connection=checkpoint_conn)
+                        d.update(completed_pages=index+1,phase='extracting',updated_at=now())
+                        store.put('document',key,d,connection=checkpoint_conn)
+                        if time.monotonic()-started>12:break
                 if d['completed_pages']==d['page_count']:
                     sample=' '.join((store.get('passage',f'{key}:{i}',{}) or {}).get('text','') for i in range(1,min(12,d['page_count'])+1))
                     tokens=[t for t in re.findall(r'[a-z]+',d['company'].lower()) if len(t)>2 and t not in ['limited','ltd','india','industries']]

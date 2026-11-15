@@ -1,0 +1,16 @@
+{
+  "origin": "https://finn-source-probe-tkef.onrender.com",
+  "workspace": "30435702-2ce9-4b61-945b-24598157e33b",
+  "results": [
+    {
+      "at": "2026-11-15T16:58:35.689076+00:00",
+      "path": "/api/companies/INFY/research",
+      "method": "POST",
+      "status": 409,
+      "seconds": 5.235,
+      "data": {
+        "detail": "Gemini unavailable (HTTP 404); no fallback used"
+      }
+    }
+  ]
+}

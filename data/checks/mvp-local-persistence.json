@@ -1,0 +1,59 @@
+{
+  "environment": "local FastAPI with Neon persistence; not hosted verification",
+  "workspace": "aedddb82-5753-4647-b0df-db3c36c0567c",
+  "checks": [
+    {
+      "method": "PUT",
+      "path": "/api/companies/INFY/question",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "path": "/api/alerts",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/companies/INFY",
+      "status": 200,
+      "saved_question": {
+        "ticker": "INFY",
+        "question": "Does cash generation support reported growth?",
+        "saved_at": "2026-11-15T16:52:36.797186+00:00"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/alerts",
+      "status": 200,
+      "settings": {
+        "price_threshold": 1.7,
+        "volume_multiple": 1.8
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/passages/000000000000000000000000:1",
+      "status": 404
+    }
+  ],
+  "after_process_restart": [
+    {
+      "path": "/api/companies/INFY",
+      "status": 200,
+      "value": {
+        "ticker": "INFY",
+        "question": "Does cash generation support reported growth?",
+        "saved_at": "2026-11-15T16:52:36.797186+00:00"
+      }
+    },
+    {
+      "path": "/api/alerts",
+      "status": 200,
+      "value": {
+        "price_threshold": 1.7,
+        "volume_multiple": 1.8
+      }
+    }
+  ]
+}
